@@ -2,12 +2,12 @@
   "$schema": "https://raw.githubusercontent.com/jsonresume/resume-schema/v1.0.0/schema.json",
   "basics": {
     "name": "Simon Beaulieu",
-    "label": "Software Engineer at Pleo",
+    "label": "Software Engineer",
     "image": "https://media.licdn.com/dms/image/v2/D4E03AQHsNHwLfxafFA/profile-displayphoto-scale_200_200/B4EZudtP1dLAAY-/0/1767877443793",
     "email": "",
     "phone": "",
-    "url": "https://www.linkedin.com/in/sbeaulie2/",
-    "summary": "Book a 15 minute chat with me: https://calendar.app.google/6P2SKwYRVPhS9KRC9\n\nExperienced software engineer with a passion for technology and fitness, in an everlasting quest to achieve proper discipline. Expertise in modern web technologies, DevOps automation, and software engineering practices across multiple organizations including Pleo, Bell, and various tech companies.",
+    "url": "https://ca.linkedin.com/in/sbeaulie2",
+    "summary": "Book a 15 minute chat with me: https://calendar.app.google/6P2SKwYRVPhS9KRC9\n\nI am…",
     "location": {
       "address": "",
       "postalCode": "",
@@ -19,17 +19,7 @@
       {
         "network": "LinkedIn",
         "username": "sbeaulie2",
-        "url": "https://www.linkedin.com/in/sbeaulie2/"
-      },
-      {
-        "network": "GitHub",
-        "username": "Niceplace",
-        "url": "https://github.com/Niceplace"
-      },
-      {
-        "network": "GitHub Pages",
-        "username": "niceplace",
-        "url": "https://niceplace.github.io/"
+        "url": "https://ca.linkedin.com/in/sbeaulie2"
       }
     ]
   },
@@ -40,14 +30,15 @@
       "url": "https://dk.linkedin.com/company/pleo-company",
       "startDate": "",
       "endDate": "",
-      "summary": "Working at Pleo, a leading financial technology company. Based in the greater Montreal area.",
-      "highlights": []
+      "summary": "",
+      "highlights": [],
+      "location": "Montreal, Quebec, Canada"
     }
   ],
   "volunteer": [],
   "education": [
     {
-      "institution": "Université du Québec - École de Technologie Supérieure",
+      "institution": "Université du Québec - Ecole de Technologie supérieure",
       "url": "https://ca.linkedin.com/school/etsmtl/",
       "area": "IT Engineering",
       "studyType": "Bachelor's Degree",
@@ -55,223 +46,24 @@
       "endDate": "2016",
       "score": "",
       "courses": [],
-      "summary": "Bachelor's degree in IT engineering. This degree is oriented towards training generalist engineers that can understand and work with major technologies present in today's enterprises (development, systems administration, networking, administration, project management)"
+      "summary": "Bachelors' degree in IT engineering. This degree is oriented towards training generalist engineers that can understand and work with major technologies present in today's enterprises (development, systems administration, networking, administration, project management)"
     }
   ],
   "awards": [],
   "certificates": [],
   "publications": [],
-  "skills": [
-    {
-      "name": "Programming Languages",
-      "level": "Advanced",
-      "keywords": [
-        "TypeScript",
-        "JavaScript",
-        "Go",
-        "Python",
-        "Java"
-      ]
-    },
-    {
-      "name": "Web Development",
-      "level": "Advanced",
-      "keywords": [
-        "HTML",
-        "CSS",
-        "Frontend Development",
-        "Node.js"
-      ]
-    },
-    {
-      "name": "DevOps & Infrastructure",
-      "level": "Intermediate",
-      "keywords": [
-        "Ansible",
-        "Linux",
-        "Ubuntu",
-        "Shell Scripting"
-      ]
-    },
-    {
-      "name": "Testing",
-      "level": "Intermediate",
-      "keywords": [
-        "Mocha",
-        "Sinon",
-        "Unit Testing"
-      ]
-    },
-    {
-      "name": "Tools & Technologies",
-      "level": "Intermediate",
-      "keywords": [
-        "Git",
-        "GitHub",
-        "CLI Development"
-      ]
-    }
-  ],
+  "skills": [],
   "languages": [
-    {
-      "language": "English",
-      "fluency": "Native or bilingual"
-    },
     {
       "language": "French",
       "fluency": "Native or bilingual"
-    }
-  ],
-  "interests": [
-    {
-      "name": "Technology",
-      "keywords": [
-        "Software Development",
-        "Open Source",
-        "DevOps",
-        "Automation"
-      ]
     },
     {
-      "name": "Fitness",
-      "keywords": [
-        "Physical Training",
-        "Discipline",
-        "Health"
-      ]
-    },
-    {
-      "name": "Personal Development",
-      "keywords": [
-        "Self-Discipline",
-        "Continuous Learning",
-        "Self-Improvement"
-      ]
+      "language": "English",
+      "fluency": "Native or bilingual"
     }
   ],
+  "interests": [],
   "references": [],
-  "projects": [
-    {
-      "name": "mastercrab",
-      "description": "A CLI tool built in Golang for daily work summary, integrating with Linear and GitHub to summarize development activity",
-      "highlights": [
-        "Built with Go for performance and cross-platform compatibility",
-        "Integrates with Linear API and GitHub API",
-        "Generates automated daily summaries of development activity"
-      ],
-      "keywords": [
-        "Go",
-        "CLI",
-        "GitHub API",
-        "Linear API",
-        "Automation"
-      ],
-      "startDate": "2025-01-25",
-      "endDate": "",
-      "url": "https://github.com/Niceplace/mastercrab",
-      "roles": [
-        "Creator",
-        "Developer"
-      ],
-      "entity": "Personal Project",
-      "type": "application"
-    },
-    {
-      "name": "ts-mocha-sinon-playground",
-      "description": "A playground project for exploring testing patterns with Sinon and Mocha in TypeScript",
-      "highlights": [
-        "Demonstrates TypeScript testing best practices",
-        "Uses Mocha and Sinon for unit testing"
-      ],
-      "keywords": [
-        "TypeScript",
-        "Testing",
-        "Mocha",
-        "Sinon"
-      ],
-      "startDate": "2022-05-04",
-      "endDate": "",
-      "url": "https://github.com/Niceplace/ts-mocha-sinon-playground",
-      "roles": [
-        "Creator",
-        "Developer"
-      ],
-      "entity": "Personal Project",
-      "type": "library"
-    },
-    {
-      "name": "ts-app-boilerplate",
-      "description": "Minimal boilerplate code to start an app in TypeScript with development helpers",
-      "highlights": [
-        "Created reusable TypeScript project template",
-        "Includes modern development tooling and best practices"
-      ],
-      "keywords": [
-        "TypeScript",
-        "Boilerplate",
-        "Development Tools"
-      ],
-      "startDate": "2018-11-10",
-      "endDate": "",
-      "url": "https://github.com/Niceplace/ts-app-boilerplate",
-      "roles": [
-        "Creator",
-        "Developer"
-      ],
-      "entity": "Personal Project",
-      "type": "application"
-    },
-    {
-      "name": "labrador-maison",
-      "description": "Home lab configuration management using shell scripts",
-      "highlights": [
-        "Infrastructure as Code for personal home lab",
-        "Automated configuration management"
-      ],
-      "keywords": [
-        "Shell",
-        "Infrastructure",
-        "Automation",
-        "DevOps"
-      ],
-      "startDate": "2022-01-13",
-      "endDate": "",
-      "url": "https://github.com/Niceplace/labrador-maison",
-      "roles": [
-        "Creator",
-        "Developer"
-      ],
-      "entity": "Personal Project",
-      "type": "application"
-    },
-    {
-      "name": "Niceplace's Blog",
-      "description": "Personal tech blog built with Hugo covering development topics including Ansible, Java, Linux, and Python",
-      "highlights": [
-        "Built with Hugo static site generator",
-        "Covers various technology topics and tutorials"
-      ],
-      "keywords": [
-        "Hugo",
-        "Blogging",
-        "HTML",
-        "CSS"
-      ],
-      "startDate": "2015-01-09",
-      "endDate": "",
-      "url": "https://niceplace.github.io/",
-      "roles": [
-        "Author",
-        "Developer"
-      ],
-      "entity": "Personal Blog",
-      "type": "website"
-    }
-  ],
-  "meta": {
-    "canonical": "https://raw.githubusercontent.com/Niceplace/cv/main/resume.json",
-    "version": "v1.0.0",
-    "lastModified": "2026-01-19T21:44:00.000Z",
-    "note": "This resume follows the JSON Resume schema v1.0.0. Please fill in the empty fields with data from LinkedIn profile at https://www.linkedin.com/in/sbeaulie2/"
-  }
+  "projects": []
 }
