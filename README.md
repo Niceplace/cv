@@ -11,9 +11,17 @@ This CV follows the [JSON Resume schema](https://jsonresume.org/schema/) v1.0.0,
 - `resume.json` - Main CV file in JSON Resume format
 - `check_resume.py` - Helper script to identify empty/incomplete fields
 - `fill_resume.py` - Interactive script to help fill in missing data from LinkedIn
+- `preview_resume.py` - Generate a human-readable text preview of the resume
 - `LINKEDIN_DATA_NEEDED.md` - Documentation of data needed from LinkedIn profile
 
 ## Quick Start
+
+### Preview Your Resume
+
+Generate a text preview of your resume:
+```bash
+python3 preview_resume.py
+```
 
 ### View Current Status
 
