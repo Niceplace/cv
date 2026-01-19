@@ -1,0 +1,97 @@
+{
+  "$schema": "https://raw.githubusercontent.com/jsonresume/resume-schema/v1.0.0/schema.json",
+  "basics": {
+    "name": "Stephane Beaulieu",
+    "label": "Software Developer",
+    "image": "",
+    "email": "",
+    "phone": "",
+    "url": "https://www.linkedin.com/in/sbeaulie2/",
+    "summary": "Experienced software developer with expertise in modern web technologies and software engineering practices. Passionate about building scalable applications and contributing to open-source projects.",
+    "location": {
+      "address": "",
+      "postalCode": "",
+      "city": "",
+      "countryCode": "",
+      "region": ""
+    },
+    "profiles": [
+      {
+        "network": "LinkedIn",
+        "username": "sbeaulie2",
+        "url": "https://www.linkedin.com/in/sbeaulie2/"
+      },
+      {
+        "network": "GitHub",
+        "username": "Niceplace",
+        "url": "https://github.com/Niceplace"
+      }
+    ]
+  },
+  "work": [
+    {
+      "name": "",
+      "position": "",
+      "url": "",
+      "startDate": "",
+      "endDate": "",
+      "summary": "",
+      "highlights": []
+    }
+  ],
+  "volunteer": [],
+  "education": [
+    {
+      "institution": "",
+      "url": "",
+      "area": "",
+      "studyType": "",
+      "startDate": "",
+      "endDate": "",
+      "score": "",
+      "courses": []
+    }
+  ],
+  "awards": [],
+  "certificates": [],
+  "publications": [],
+  "skills": [
+    {
+      "name": "",
+      "level": "",
+      "keywords": []
+    }
+  ],
+  "languages": [
+    {
+      "language": "English",
+      "fluency": "Native or bilingual"
+    },
+    {
+      "language": "French",
+      "fluency": "Native or bilingual"
+    }
+  ],
+  "interests": [],
+  "references": [],
+  "projects": [
+    {
+      "name": "",
+      "description": "",
+      "highlights": [],
+      "keywords": [],
+      "startDate": "",
+      "endDate": "",
+      "url": "",
+      "roles": [],
+      "entity": "",
+      "type": ""
+    }
+  ],
+  "meta": {
+    "canonical": "https://raw.githubusercontent.com/Niceplace/cv/main/resume.json",
+    "version": "v1.0.0",
+    "lastModified": "2026-01-19T21:44:00.000Z",
+    "note": "This resume follows the JSON Resume schema v1.0.0. Please fill in the empty fields with data from LinkedIn profile at https://www.linkedin.com/in/sbeaulie2/"
+  }
+}
