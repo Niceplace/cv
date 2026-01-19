@@ -1,13 +1,13 @@
 {
   "$schema": "https://raw.githubusercontent.com/jsonresume/resume-schema/v1.0.0/schema.json",
   "basics": {
-    "name": "Stephane Beaulieu",
+    "name": "Simon Beaulieu",
     "label": "Software Developer",
-    "image": "",
+    "image": "https://www.gravatar.com/avatar/ca81a1bb53eb70478f40786fb6d08603",
     "email": "",
     "phone": "",
     "url": "https://www.linkedin.com/in/sbeaulie2/",
-    "summary": "Experienced software developer with expertise in modern web technologies and software engineering practices. Passionate about building scalable applications and contributing to open-source projects.",
+    "summary": "Vast interest in technology and fitness, in a everlasting quest to achieve proper discipline. Experienced software developer with expertise in modern web technologies, DevOps automation, and software engineering practices.",
     "location": {
       "address": "",
       "postalCode": "",
@@ -25,6 +25,11 @@
         "network": "GitHub",
         "username": "Niceplace",
         "url": "https://github.com/Niceplace"
+      },
+      {
+        "network": "GitHub Pages",
+        "username": "niceplace",
+        "url": "https://niceplace.github.io/"
       }
     ]
   },
@@ -57,9 +62,53 @@
   "publications": [],
   "skills": [
     {
-      "name": "",
-      "level": "",
-      "keywords": []
+      "name": "Programming Languages",
+      "level": "Advanced",
+      "keywords": [
+        "TypeScript",
+        "JavaScript",
+        "Go",
+        "Python",
+        "Java"
+      ]
+    },
+    {
+      "name": "Web Development",
+      "level": "Advanced",
+      "keywords": [
+        "HTML",
+        "CSS",
+        "Frontend Development",
+        "Node.js"
+      ]
+    },
+    {
+      "name": "DevOps & Infrastructure",
+      "level": "Intermediate",
+      "keywords": [
+        "Ansible",
+        "Linux",
+        "Ubuntu",
+        "Shell Scripting"
+      ]
+    },
+    {
+      "name": "Testing",
+      "level": "Intermediate",
+      "keywords": [
+        "Mocha",
+        "Sinon",
+        "Unit Testing"
+      ]
+    },
+    {
+      "name": "Tools & Technologies",
+      "level": "Intermediate",
+      "keywords": [
+        "Git",
+        "GitHub",
+        "CLI Development"
+      ]
     }
   ],
   "languages": [
@@ -72,20 +121,150 @@
       "fluency": "Native or bilingual"
     }
   ],
-  "interests": [],
+  "interests": [
+    {
+      "name": "Technology",
+      "keywords": [
+        "Software Development",
+        "Open Source",
+        "DevOps",
+        "Automation"
+      ]
+    },
+    {
+      "name": "Fitness",
+      "keywords": [
+        "Physical Training",
+        "Discipline",
+        "Health"
+      ]
+    },
+    {
+      "name": "Personal Development",
+      "keywords": [
+        "Self-Discipline",
+        "Continuous Learning",
+        "Self-Improvement"
+      ]
+    }
+  ],
   "references": [],
   "projects": [
     {
-      "name": "",
-      "description": "",
-      "highlights": [],
-      "keywords": [],
-      "startDate": "",
+      "name": "mastercrab",
+      "description": "A CLI tool built in Golang for daily work summary, integrating with Linear and GitHub to summarize development activity",
+      "highlights": [
+        "Built with Go for performance and cross-platform compatibility",
+        "Integrates with Linear API and GitHub API",
+        "Generates automated daily summaries of development activity"
+      ],
+      "keywords": [
+        "Go",
+        "CLI",
+        "GitHub API",
+        "Linear API",
+        "Automation"
+      ],
+      "startDate": "2025-01-25",
       "endDate": "",
-      "url": "",
-      "roles": [],
-      "entity": "",
-      "type": ""
+      "url": "https://github.com/Niceplace/mastercrab",
+      "roles": [
+        "Creator",
+        "Developer"
+      ],
+      "entity": "Personal Project",
+      "type": "application"
+    },
+    {
+      "name": "ts-mocha-sinon-playground",
+      "description": "A playground project for exploring testing patterns with Sinon and Mocha in TypeScript",
+      "highlights": [
+        "Demonstrates TypeScript testing best practices",
+        "Uses Mocha and Sinon for unit testing"
+      ],
+      "keywords": [
+        "TypeScript",
+        "Testing",
+        "Mocha",
+        "Sinon"
+      ],
+      "startDate": "2022-05-04",
+      "endDate": "",
+      "url": "https://github.com/Niceplace/ts-mocha-sinon-playground",
+      "roles": [
+        "Creator",
+        "Developer"
+      ],
+      "entity": "Personal Project",
+      "type": "library"
+    },
+    {
+      "name": "ts-app-boilerplate",
+      "description": "Minimal boilerplate code to start an app in TypeScript with development helpers",
+      "highlights": [
+        "Created reusable TypeScript project template",
+        "Includes modern development tooling and best practices"
+      ],
+      "keywords": [
+        "TypeScript",
+        "Boilerplate",
+        "Development Tools"
+      ],
+      "startDate": "2018-11-10",
+      "endDate": "",
+      "url": "https://github.com/Niceplace/ts-app-boilerplate",
+      "roles": [
+        "Creator",
+        "Developer"
+      ],
+      "entity": "Personal Project",
+      "type": "application"
+    },
+    {
+      "name": "labrador-maison",
+      "description": "Home lab configuration management using shell scripts",
+      "highlights": [
+        "Infrastructure as Code for personal home lab",
+        "Automated configuration management"
+      ],
+      "keywords": [
+        "Shell",
+        "Infrastructure",
+        "Automation",
+        "DevOps"
+      ],
+      "startDate": "2022-01-13",
+      "endDate": "",
+      "url": "https://github.com/Niceplace/labrador-maison",
+      "roles": [
+        "Creator",
+        "Developer"
+      ],
+      "entity": "Personal Project",
+      "type": "application"
+    },
+    {
+      "name": "Niceplace's Blog",
+      "description": "Personal tech blog built with Hugo covering development topics including Ansible, Java, Linux, and Python",
+      "highlights": [
+        "Built with Hugo static site generator",
+        "Covers various technology topics and tutorials"
+      ],
+      "keywords": [
+        "Hugo",
+        "Blogging",
+        "HTML",
+        "CSS"
+      ],
+      "startDate": "2015-01-09",
+      "endDate": "",
+      "url": "https://niceplace.github.io/",
+      "roles": [
+        "Author",
+        "Developer"
+      ],
+      "entity": "Personal Blog",
+      "type": "website"
     }
   ],
   "meta": {
