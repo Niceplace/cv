@@ -3,7 +3,7 @@
   "basics": {
     "name": "Simon Beaulieu",
     "label": "Software Engineer at Pleo",
-    "image": "https://media.licdn.com/dms/image/v2/D4E03AQHsNHwLfxafFA/profile-displayphoto-scale_200_200/B4EZudtP1dLAAY-/0/1767877443793?e=2147483647&v=beta&t=rU5t8u6HsrKJT_-fM1yY69XMPutDI3Xz0KMwkDiDVSo",
+    "image": "https://media.licdn.com/dms/image/v2/D4E03AQHsNHwLfxafFA/profile-displayphoto-scale_200_200/B4EZudtP1dLAAY-/0/1767877443793",
     "email": "",
     "phone": "",
     "url": "https://www.linkedin.com/in/sbeaulie2/",
@@ -40,7 +40,7 @@
       "url": "https://dk.linkedin.com/company/pleo-company",
       "startDate": "",
       "endDate": "",
-      "summary": "Working at Pleo, a leading financial technology company in Montreal, Quebec, Canada.",
+      "summary": "Working at Pleo, a leading financial technology company. Based in the greater Montreal area.",
       "highlights": []
     }
   ],
