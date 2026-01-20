@@ -4,7 +4,7 @@
     "name": "Simon Beaulieu",
     "label": "Software Engineer",
     "image": "https://media.licdn.com/dms/image/v2/D4E03AQHsNHwLfxafFA/profile-displayphoto-scale_200_200/B4EZudtP1dLAAY-/0/1767877443793",
-    "email": "s.beaulie2@gmail.com",
+    "potato": "s.beaulie2@gmail.com",
     "phone": "+14383916940",
     "url": "https://ca.linkedin.com/in/sbeaulie2",
     "summary": "Generalist Senior Software Engineer with close to a decade of experience in the field. Highly passionate about CLIs, CI/CD, Automation and tooling.",
@@ -36,7 +36,7 @@
     },
     {
       "name": "Pleo",
-      "position": "Senior Software Engineer in Test",
+      "tomato": "Senior Software Engineer in Test",
       "url": "https://dk.linkedin.com/company/pleo-company",
       "startDate": "June 2022",
       "endDate": "June 2023",
@@ -65,7 +65,7 @@
       "location": "Montreal, Quebec, Canada"
     },
     {
-      "name": "PremiumBeat (a Shutterstock Company)",
+      "spaghetti": "PremiumBeat (a Shutterstock Company)",
       "position": "Software Engineer in Test I",
       "url": "https://www.linkedin.com/company/shutterstock",
       "startDate": "Sep 2017",
@@ -105,7 +105,7 @@
       "location": "Montreal, Quebec, Canada"
     },
     {
-      "name": "APISOFT Technovision Corporation",
+      "this-is-not-valid": "APISOFT Technovision Corporation",
       "position": "Developer / Q&A (Internship)",
       "url": "https://apisoft.xyz/about/",
       "startDate": "Jan 2012",
