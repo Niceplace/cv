@@ -57,11 +57,10 @@ jobs:
         if: steps.validate.outputs.validation_status == 'failed' && github.event_name == 'pull_request'
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          VALIDATION_OUTPUT: ${{ steps.validate.outputs.validation_output }}
         run: |
-          # Get validation error from step output
-          VALIDATION_OUTPUT="${{ steps.validate.outputs.validation_output }}"
-          
           # Use the TypeScript post-pr-comment script with Bun runtime
+          # Pass validation output via environment variable to avoid bash escaping issues
           bun .github/scripts/post-pr-comment.ts "$VALIDATION_OUTPUT" "${{ github.event.pull_request.number }}"
 
       - name: Fail workflow if validation failed
