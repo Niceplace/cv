@@ -34,6 +34,7 @@ jobs:
       - name: Validate resume
         id: validate
         run: |
+          # Note: resume-base.json is the canonical CV file per repository conventions
           if resumed validate resume-base.json; then
             echo "validation_status=success" >> $GITHUB_OUTPUT
           else
@@ -60,7 +61,7 @@ $COMMENT_MARKER
 
 The resume validation failed with the following errors:
 
-\`\`\`
+\`\`\`text
 $VALIDATION_OUTPUT
 \`\`\`
 
@@ -69,7 +70,7 @@ EOF
 )
 
           # Check if a comment already exists with our unique marker
-          COMMENT_ID=$(gh pr view ${{ github.event.pull_request.number }} --json comments --jq '.comments[] | select(.body | contains("<!-- resume-validation-workflow-comment -->")) | .id' | head -1)
+          COMMENT_ID=$(gh pr view ${{ github.event.pull_request.number }} --json comments --jq ".comments[] | select(.body | contains(\"$COMMENT_MARKER\")) | .id" | head -1)
 
           if [ -n "$COMMENT_ID" ]; then
             # Update existing comment
