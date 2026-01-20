@@ -91,3 +91,20 @@ jobs:
       - name: Fail workflow if validation failed
         if: steps.validate.outputs.validation_status == 'failed'
         run: exit 1
+
+  publish-resume:
+      needs: validate-resume
+      runs-on: ubuntu-latest
+      if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+      permissions:
+        contents: read
+        
+      steps:
+        - name: Checkout code
+          uses: actions/checkout@v4
+
+        - name: Publish resume to gist
+          env:
+            GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          run: |
+            gh gist edit 8e587fe79ca40a637589b1d2d5c9373d resume-base.json
