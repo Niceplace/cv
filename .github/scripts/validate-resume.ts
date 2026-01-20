@@ -22,6 +22,7 @@ async function main() {
   let validate: (...args: any[]) => Promise<any>;
   
   // Import the resumed module (ES6 module)
+  // Note: This is possible because the workflow installs https://www.npmjs.com/package/resumed via `bun add resumed`
   try {
     const resumed = await import('resumed');
     validate = resumed.validate;
