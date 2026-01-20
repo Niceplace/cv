@@ -3,10 +3,21 @@
 const resumeFile = process.argv[2] || 'resume-base.json';
 
 (async () => {
+  let validate;
+  
+  // Import the resumed module (handling ES6 module separately)
   try {
-    // Dynamic import for ES6 module
-    const { validate } = await import('resumed');
-    
+    const resumed = await import('resumed');
+    validate = resumed.validate;
+  } catch (importErr) {
+    console.error('\n❌ Failed to import resumed module:\n');
+    console.error(importErr.message || importErr);
+    console.error('\nPlease ensure "resumed" is installed: npm install resumed');
+    process.exit(1);
+  }
+  
+  // Validate the resume file
+  try {
     console.log(`Validating ${resumeFile} with resumed CLI...\n`);
     await validate(resumeFile);
     console.log(`✓ Your ${resumeFile} looks amazing! ✨`);

@@ -4,8 +4,25 @@ set -euo pipefail
 # Script to post or update a PR comment with validation errors
 # Usage: post-pr-comment.sh <validation_output> <pr_number>
 
+# Input validation
+if [ $# -ne 2 ]; then
+  echo "Error: Invalid number of arguments" >&2
+  echo "Usage: $0 <validation_output> <pr_number>" >&2
+  exit 1
+fi
+
 VALIDATION_OUTPUT="$1"
 PR_NUMBER="$2"
+
+if [ -z "$VALIDATION_OUTPUT" ]; then
+  echo "Error: Validation output cannot be empty" >&2
+  exit 1
+fi
+
+if [ -z "$PR_NUMBER" ]; then
+  echo "Error: PR number cannot be empty" >&2
+  exit 1
+fi
 
 # Create a unique identifier for our validation comment
 COMMENT_MARKER="<!-- resume-validation-workflow-comment -->"
