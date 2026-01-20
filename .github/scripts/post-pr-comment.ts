@@ -2,7 +2,7 @@
 
 /**
  * Post or update a PR comment with validation errors
- * Uses Bun runtime with native utilities (shell, fetch)
+ * Uses Bun runtime with native fetch (GitHub API)
  * Usage: bun post-pr-comment.ts <validation_output> <pr_number>
  */
 
@@ -21,8 +21,9 @@ if (!validationOutput) {
   process.exit(1);
 }
 
-if (!prNumber) {
-  console.error('Error: PR number cannot be empty');
+// Validate PR number is a positive integer
+if (!/^\d+$/.test(prNumber)) {
+  console.error('Error: PR number must be a positive integer');
   process.exit(1);
 }
 
@@ -60,23 +61,38 @@ interface Comment {
   body: string;
 }
 
-interface PullRequest {
-  comments: Comment[];
+interface Issue {
+  number: number;
+  comments?: Comment[];
 }
 
 async function main() {
   try {
-    // Use Bun's native shell to execute gh command to get PR comments
-    const viewResult = await Bun.$`gh pr view ${prNumber} --json comments`.quiet();
-    const prData: PullRequest = await viewResult.json();
+    // Fetch PR comments using GitHub API
+    const commentsResponse = await fetch(
+      `https://api.github.com/repos/${githubRepo}/issues/${prNumber}/comments`,
+      {
+        headers: {
+          'Accept': 'application/vnd.github+json',
+          'Authorization': `Bearer ${githubToken}`,
+          'X-GitHub-Api-Version': '2022-11-28',
+        },
+      }
+    );
+    
+    if (!commentsResponse.ok) {
+      throw new Error(`Failed to fetch comments: ${commentsResponse.statusText}`);
+    }
+    
+    const comments: Comment[] = await commentsResponse.json();
     
     // Find existing comment with our marker
-    const existingComment = prData.comments?.find((comment: Comment) => 
+    const existingComment = comments.find((comment: Comment) => 
       comment.body?.includes(COMMENT_MARKER)
     );
     
     if (existingComment) {
-      // Update existing comment using GitHub API with Bun's fetch
+      // Update existing comment using GitHub API
       const updateResponse = await fetch(
         `https://api.github.com/repos/${githubRepo}/issues/comments/${existingComment.id}`,
         {
@@ -85,6 +101,7 @@ async function main() {
             'Accept': 'application/vnd.github+json',
             'Authorization': `Bearer ${githubToken}`,
             'X-GitHub-Api-Version': '2022-11-28',
+            'Content-Type': 'application/json',
           },
           body: JSON.stringify({ body: commentBody }),
         }
@@ -96,8 +113,25 @@ async function main() {
       
       console.log(`Updated existing PR comment #${existingComment.id}`);
     } else {
-      // Create new comment using Bun's shell with gh CLI
-      await Bun.$`gh pr comment ${prNumber} --body ${commentBody}`.quiet();
+      // Create new comment using GitHub API
+      const createResponse = await fetch(
+        `https://api.github.com/repos/${githubRepo}/issues/${prNumber}/comments`,
+        {
+          method: 'POST',
+          headers: {
+            'Accept': 'application/vnd.github+json',
+            'Authorization': `Bearer ${githubToken}`,
+            'X-GitHub-Api-Version': '2022-11-28',
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({ body: commentBody }),
+        }
+      );
+      
+      if (!createResponse.ok) {
+        throw new Error(`Failed to create comment: ${createResponse.statusText}`);
+      }
+      
       console.log('Created new PR comment');
     }
   } catch (error: any) {

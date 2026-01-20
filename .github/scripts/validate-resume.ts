@@ -7,6 +7,12 @@
 
 const resumeFile = Bun.argv[2] || 'resume-base.json';
 
+// Validate file path to prevent security issues
+if (!resumeFile.endsWith('.json') || resumeFile.includes('..') || resumeFile.startsWith('/')) {
+  console.error('Error: Invalid resume file path. Must be a JSON file in the current directory.');
+  process.exit(1);
+}
+
 interface ValidationError {
   path: string;
   message: string;
@@ -19,6 +25,10 @@ async function main() {
   try {
     const resumed = await import('resumed');
     validate = resumed.validate;
+    
+    if (typeof validate !== 'function') {
+      throw new Error('validate function not found in resumed module');
+    }
   } catch (importErr: any) {
     console.error('\n❌ Failed to import resumed module:\n');
     console.error(importErr.message || importErr);
