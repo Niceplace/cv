@@ -4,3 +4,4 @@ package-lock.json
 bun.lockb
 *.js
 !.github/scripts/*.ts
+!.github/scripts/tsconfig.json
