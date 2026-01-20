@@ -50,19 +50,26 @@ jobs:
           # Capture validation error
           VALIDATION_OUTPUT=$(resumed validate resume-base.json 2>&1 || true)
 
-          # Create comment body
-          COMMENT_BODY="## ❌ Resume Validation Failed
+          # Create a unique identifier for our validation comment
+          COMMENT_MARKER="<!-- resume-validation-workflow-comment -->"
 
-          The resume validation failed with the following errors:
+          # Create comment body using GitHub's heredoc
+          COMMENT_BODY=$(cat <<EOF
+$COMMENT_MARKER
+## ❌ Resume Validation Failed
 
-          \`\`\`
-          ${VALIDATION_OUTPUT}
-          \`\`\`
+The resume validation failed with the following errors:
 
-          Please fix the validation errors and push the changes again."
+\`\`\`
+$VALIDATION_OUTPUT
+\`\`\`
 
-          # Check if a comment already exists
-          COMMENT_ID=$(gh pr view ${{ github.event.pull_request.number }} --json comments --jq '.comments[] | select(.body | contains("Resume Validation Failed")) | .id' | head -1)
+Please fix the validation errors and push the changes again.
+EOF
+)
+
+          # Check if a comment already exists with our unique marker
+          COMMENT_ID=$(gh pr view ${{ github.event.pull_request.number }} --json comments --jq '.comments[] | select(.body | contains("<!-- resume-validation-workflow-comment -->")) | .id' | head -1)
 
           if [ -n "$COMMENT_ID" ]; then
             # Update existing comment
