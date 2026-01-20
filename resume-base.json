@@ -5,7 +5,7 @@
     "image": "https://media.licdn.com/dms/image/v2/D4E03AQHsNHwLfxafFA/profile-displayphoto-scale_200_200/B4EZudtP1dLAAY-/0/1767877443793",
     "email": "s.beaulie2@gmail.com",
     "phone": "+14383916940",
-    "url": "https://ca.linkedin.com/in/sbeaulie2",
+    "url": "https://www.linkedin.com/in/sbeaulie2",
     "summary": "Generalist Senior Software Engineer with close to a decade of experience in the field. Highly passionate about CLIs, CI/CD, Automation and tooling.",
     "location": {
       "address": "",
@@ -18,7 +18,7 @@
       {
         "network": "LinkedIn",
         "username": "sbeaulie2",
-        "url": "https://ca.linkedin.com/in/sbeaulie2"
+        "url": "https://www.linkedin.com/in/sbeaulie2"
       }
     ]
   },
@@ -26,7 +26,7 @@
     {
       "name": "Pleo",
       "position": "Senior Software Engineer, Developper Experience",
-      "url": "https://dk.linkedin.com/company/pleo-company",
+      "url": "https://www.linkedin.com/company/pleo-company",
       "startDate": "2023-06",
       "endDate": "2026-01",
       "summary": "- Implemented infrastructure-as-code solutions using Terraform and GitHub Actions for managing blueprints, scorecards, automations, and self-service actions in Port, ensuring maintainability and scalability.\n- Architected enterprise developer experience platforms including Port (software catalog), DX (engineering metrics), and Claude Code integrations, establishing infrastructure standards and operational excellence across 300+ engineering resources.\n- Mentored other platform teams (Mobile, Frontend, Security) to help them establish a baseline of engineering standards through scorecards while acting as the main point of contact between teams and our vendor.\n- Led and assisted with migrations of engineering SaaS tools (Internal developer portal, Engineering metrics) involving infrastructure-as-code refactoring, stakeholder communication, and minimal-downtime transitions impacting all engineering teams.\n- Optimized CI/CD pipelines and automation workflows across 50+ repositories, reducing build times, standardizing dependency management with Renovate, and enabling self-service deployments through Port's orchestration platform.\n- Architected enterprise AI tooling infrastructure using AWS Bedrock, implementing cost-tracked inference profiles and centralized configuration management enabling 200+ engineers to use Claude Code with zero configuration to support their development workflows.\n- Resolved complex technical challenges through a rotation support role spanning Gradle dependency conflicts, GitHub OAuth integrations, Kubernetes deployments, API standards enforcement, and cloud infrastructure configuration to unblock teams and maintain system reliability.\n- Created content as written and video guides to support the engineering onboarding process for new employees. Participated in several backend and tooling focused systems design interviews.",
@@ -36,7 +36,7 @@
     {
       "name": "Pleo",
       "position": "Senior Software Engineer in Test",
-      "url": "https://dk.linkedin.com/company/pleo-company",
+      "url": "https://www.linkedin.com/company/pleo-company",
       "startDate": "2022-06",
       "endDate": "2023-06",
       "summary": "",
@@ -46,7 +46,7 @@
     {
       "name": "Pleo",
       "position": "Test Engineer",
-      "url": "https://dk.linkedin.com/company/pleo-company",
+      "url": "https://www.linkedin.com/company/pleo-company",
       "startDate": "2020-01",
       "endDate": "2022-07",
       "summary": "- Play a key role in a special project to measure DORA metrics for the engineering organisation\n- Revamp the bug triaging & prioritizing process involving customer support & engineering teams by measuring key metrics against SLAs\n- Coach development teams to increase quality in their projects with better tooling and processes\n- Advocate for quality in general in the company, with a focus on build pipelines and test driven development\n- Participate in the development and implementation of tooling to help with quality automation\n- Gather metrics across multiple systems (Source code management, Mobile device statistics, Project management tools) to help orient decisions for the quality team\n- Coach development teams to increase quality in their projects with better tooling and processes\n- Advocate for quality in general in the company, with a focus on build pipelines and test driven development\n- Participate in the development and implementation of tooling to help with quality automation\n- Gather metrics across multiple systems (Source code management, Mobile device statistics, Project management tools) to help orient decisions for the quality team",
@@ -96,7 +96,7 @@
     {
       "name": "Expertus Technologies",
       "position": "Intern Java Developer",
-      "url": "",
+      "url": "https://www.linkedin.com/company/expertus-an-ibm-company",
       "startDate": "2013-04",
       "endDate": "2014-08",
       "summary": "- Responsible for the application build process and build process improvement\n- Performed various fixes in legacy versions of the application and assisted the quality assurance and support team during all stages of testing and deployment\n- Developed software using J2EE, Struts, and Vaadin\n- Provided bug fixing and level 3 support\n- Automated builds with Maven and Bash\n- Installed and configured a build server using Jenkins",
@@ -106,7 +106,7 @@
     {
       "name": "APISOFT Technovision Corporation",
       "position": "Developer / Q&A (Internship)",
-      "url": "https://apisoft.xyz/about/",
+      "url": "https://apisoft.xyz/about",
       "startDate": "2012-01",
       "endDate": "2012-04",
       "summary": "- Participated in the development of a database module for an alert management software solution\n- Tested existing code and fixed errors\n- Implemented file-based database management with Java\n- Performed unit testing in Java with JUnit",
@@ -116,7 +116,7 @@
     {
       "name": "IBM Canada Ltd.",
       "position": "Computer Technician",
-      "url": "https://www.linkedin.com/company/ibm-canada-ibm-canada-limitee/",
+      "url": "https://www.linkedin.com/company/ibm-canada-ibm-canada-limitee",
       "startDate": "2010-05",
       "endDate": "2011-08",
       "summary": "Summer job and internship, back to school from Sept 2010 to Jan 2011\n- Scheduled down-time on a large array of production machines to apply fixes and updates to attached computers\n- Deployed Windows XP Service Pack 3 manually on 700+ computers across a production line\n- Programmed scripts to extract firewall rules from existing configuration files for migration to newer versions\n- Provided level 1-2 technical support for production environments\n- Deployed and managed Symantec Anti-virus on Windows XP systems\n- Configured Symantec Endpoint Protection firewall rules\n- Performed initial configuration on new computers and replaced faulty hardware components",
@@ -128,7 +128,7 @@
   "education": [
     {
       "institution": "Université du Québec - Ecole de Technologie supérieure",
-      "url": "https://ca.linkedin.com/school/etsmtl/",
+      "url": "https://www.linkedin.com/school/etsmtl",
       "area": "IT Engineering",
       "studyType": "Bachelor's Degree",
       "startDate": "2011",
@@ -139,7 +139,7 @@
     },
     {
       "institution": "Cégep de Granby Haute-Yamaska",
-      "url": "https://www.cegepgranby.qc.ca/",
+      "url": "https://cegepgranby.ca/programme/dec-techniques-de-linformatique",
       "area": "Computer Technology",
       "studyType": "Technician",
       "startDate": "2008",
