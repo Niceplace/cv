@@ -61,11 +61,6 @@ interface Comment {
   body: string;
 }
 
-interface Issue {
-  number: number;
-  comments?: Comment[];
-}
-
 async function main() {
   try {
     // Fetch PR comments using GitHub API

@@ -19,7 +19,7 @@ interface ValidationError {
 }
 
 async function main() {
-  let validate: (file: string) => Promise<void>;
+  let validate: (...args: any[]) => Promise<any>;
   
   // Import the resumed module (ES6 module)
   try {
