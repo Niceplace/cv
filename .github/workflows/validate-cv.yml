@@ -1,4 +1,4 @@
-name: Validate CV
+name: Validate and publish resume
 
 on:
   push:
@@ -80,6 +80,6 @@ jobs:
 
         - name: Publish resume to gist
           env:
-            GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+            GH_TOKEN: ${{ secrets.GH_GIST_TOKEN }}
           run: |
             gh gist edit 8e587fe79ca40a637589b1d2d5c9373d resume-base.json
