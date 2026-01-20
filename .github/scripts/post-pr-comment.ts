@@ -6,6 +6,12 @@
  * Usage: bun post-pr-comment.ts <validation_output> <pr_number>
  */
 
+// Type definitions
+interface Comment {
+  id: number;
+  body: string;
+}
+
 // Input validation
 if (Bun.argv.length !== 4) {
   console.error('Error: Invalid number of arguments');
@@ -28,11 +34,11 @@ if (!/^\d+$/.test(prNumber)) {
 }
 
 // Get environment variables
-const githubToken = process.env.GH_TOKEN || process.env.GITHUB_TOKEN;
+const githubToken = process.env.GITHUB_TOKEN;
 const githubRepo = process.env.GITHUB_REPOSITORY;
 
 if (!githubToken) {
-  console.error('Error: GH_TOKEN or GITHUB_TOKEN environment variable not set');
+  console.error('Error: GITHUB_TOKEN environment variable not set');
   process.exit(1);
 }
 
@@ -55,11 +61,6 @@ ${validationOutput}
 \`\`\`
 
 Please fix the validation errors and push the changes again.`;
-
-interface Comment {
-  id: number;
-  body: string;
-}
 
 async function main() {
   try {
