@@ -1,0 +1,90 @@
+name: Validate CV
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - 'resume-*.json'
+  pull_request:
+    branches:
+      - main
+    paths:
+      - 'resume-*.json'
+
+jobs:
+  validate-resume:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      pull-requests: write
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 'lts/*'
+
+      - name: Install resumed
+        run: npm install -g resumed
+
+      - name: Validate resume
+        id: validate
+        run: |
+          # Note: resume-base.json is the canonical CV file per repository conventions
+          if resumed validate resume-base.json; then
+            echo "validation_status=success" >> $GITHUB_OUTPUT
+          else
+            echo "validation_status=failed" >> $GITHUB_OUTPUT
+            exit 1
+          fi
+        continue-on-error: true
+
+      - name: Post PR comment on validation failure
+        if: failure() && github.event_name == 'pull_request'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          # Capture validation error
+          VALIDATION_OUTPUT=$(resumed validate resume-base.json 2>&1 || true)
+
+          # Create a unique identifier for our validation comment
+          COMMENT_MARKER="<!-- resume-validation-workflow-comment -->"
+
+          # Create comment body using GitHub's heredoc
+          COMMENT_BODY=$(cat <<EOF
+$COMMENT_MARKER
+## ❌ Resume Validation Failed
+
+The resume validation failed with the following errors:
+
+\`\`\`text
+$VALIDATION_OUTPUT
+\`\`\`
+
+Please fix the validation errors and push the changes again.
+EOF
+)
+
+          # Check if a comment already exists with our unique marker
+          COMMENT_ID=$(gh pr view ${{ github.event.pull_request.number }} --json comments --jq ".comments[] | select(.body | contains(\"$COMMENT_MARKER\")) | .id" | head -1)
+
+          if [ -n "$COMMENT_ID" ]; then
+            # Update existing comment
+            gh api \
+              --method PATCH \
+              -H "Accept: application/vnd.github+json" \
+              -H "X-GitHub-Api-Version: 2022-11-28" \
+              "/repos/${{ github.repository }}/issues/comments/$COMMENT_ID" \
+              -f body="$COMMENT_BODY"
+          else
+            # Create new comment
+            gh pr comment ${{ github.event.pull_request.number }} --body "$COMMENT_BODY"
+          fi
+
+      - name: Fail workflow if validation failed
+        if: steps.validate.outputs.validation_status == 'failed'
+        run: exit 1
