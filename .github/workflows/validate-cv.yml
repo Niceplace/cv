@@ -23,22 +23,22 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v6.0.1
 
-      - name: Setup Node.js
-        uses: actions/setup-node@v6.2.0
+      - name: Setup Bun
+        uses: oven-sh/setup-bun@v2
         with:
-          node-version: 'lts/*'
+          bun-version: latest
 
       - name: Install validation dependencies
-        run: npm install resumed
+        run: bun add resumed
 
       - name: Validate resume
         id: validate
         run: |
           # Note: resume-base.json is the canonical CV file per repository conventions
           
-          # Run validation using the script in .github/scripts/validate-resume.js
+          # Run validation using the TypeScript script with Bun runtime
           set +e
-          VALIDATION_RESULT=$(node .github/scripts/validate-resume.js resume-base.json 2>&1)
+          VALIDATION_RESULT=$(bun .github/scripts/validate-resume.ts resume-base.json 2>&1)
           VALIDATION_EXIT_CODE=$?
           set -e
           
@@ -61,8 +61,8 @@ jobs:
           # Get validation error from step output
           VALIDATION_OUTPUT="${{ steps.validate.outputs.validation_output }}"
           
-          # Use the post-pr-comment.sh script
-          bash .github/scripts/post-pr-comment.sh "$VALIDATION_OUTPUT" "${{ github.event.pull_request.number }}"
+          # Use the TypeScript post-pr-comment script with Bun runtime
+          bun .github/scripts/post-pr-comment.ts "$VALIDATION_OUTPUT" "${{ github.event.pull_request.number }}"
 
       - name: Fail workflow if validation failed
         if: steps.validate.outputs.validation_status == 'failed'

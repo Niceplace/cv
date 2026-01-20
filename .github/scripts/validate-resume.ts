@@ -1,18 +1,28 @@
-#!/usr/bin/env node
+#!/usr/bin/env bun
 
-const resumeFile = process.argv[2] || 'resume-base.json';
+/**
+ * Validate JSON Resume using the resumed CLI
+ * Uses Bun runtime with TypeScript support
+ */
 
-(async () => {
-  let validate;
+const resumeFile = Bun.argv[2] || 'resume-base.json';
+
+interface ValidationError {
+  path: string;
+  message: string;
+}
+
+async function main() {
+  let validate: (file: string) => Promise<void>;
   
-  // Import the resumed module (handling ES6 module separately)
+  // Import the resumed module (ES6 module)
   try {
     const resumed = await import('resumed');
     validate = resumed.validate;
-  } catch (importErr) {
+  } catch (importErr: any) {
     console.error('\n❌ Failed to import resumed module:\n');
     console.error(importErr.message || importErr);
-    console.error('\nPlease ensure "resumed" is installed: npm install resumed');
+    console.error('\nPlease ensure "resumed" is installed: bun add resumed');
     process.exit(1);
   }
   
@@ -22,12 +32,12 @@ const resumeFile = process.argv[2] || 'resume-base.json';
     await validate(resumeFile);
     console.log(`✓ Your ${resumeFile} looks amazing! ✨`);
     process.exit(0);
-  } catch (err) {
+  } catch (err: any) {
     // Check if it's the expected validation error array from @jsonresume/schema
     if (Array.isArray(err)) {
       console.error(`❌ Resume validation failed with ${err.length} error(s):\n`);
       
-      err.forEach((error, index) => {
+      err.forEach((error: ValidationError, index: number) => {
         console.error(`Error ${index + 1}:`);
         console.error(`  Location: ${error.path || 'unknown'}`);
         console.error(`  Issue: ${error.message}`);
@@ -65,4 +75,6 @@ const resumeFile = process.argv[2] || 'resume-base.json';
       process.exit(1);
     }
   }
-})();
+}
+
+main();
