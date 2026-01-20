@@ -37,7 +37,7 @@ printf -v COMMENT_BODY '%s\n%s\n\n%s\n\n```text\n%s\n```\n\n%s' \
   "Please fix the validation errors and push the changes again."
 
 # Check if a comment already exists with our unique marker
-COMMENT_ID=$(gh pr view "$PR_NUMBER" --json comments --jq ".comments[] | select(.body | contains(\"$COMMENT_MARKER\")) | .id" | head -1)
+COMMENT_ID=$(gh pr view "$PR_NUMBER" --json comments --jq ".comments[] | select(.body | contains(\"$COMMENT_MARKER\")) | .id" 2>/dev/null | head -1 || true)
 
 if [ -n "$COMMENT_ID" ]; then
   # Update existing comment
