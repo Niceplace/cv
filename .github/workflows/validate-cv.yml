@@ -21,10 +21,10 @@ jobs:
 
     steps:
       - name: Checkout code
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6.0.1
 
       - name: Setup Node.js
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v6.2.0
         with:
           node-version: 'lts/*'
 
@@ -35,40 +35,43 @@ jobs:
         id: validate
         run: |
           # Note: resume-base.json is the canonical CV file per repository conventions
-          if resumed validate resume-base.json; then
-            echo "validation_status=success" >> $GITHUB_OUTPUT
+          # Store validation output and capture exit code
+          set +e
+          VALIDATION_RESULT=$(resumed validate resume-base.json 2>&1)
+          VALIDATION_EXIT_CODE=$?
+          set -e
+          
+          if [ "$VALIDATION_EXIT_CODE" -eq 0 ]; then
+            echo "validation_status=success" >> "$GITHUB_OUTPUT"
           else
-            echo "validation_status=failed" >> $GITHUB_OUTPUT
-            exit 1
+            echo "validation_status=failed" >> "$GITHUB_OUTPUT"
+            {
+              echo "validation_output<<EOF"
+              echo "$VALIDATION_RESULT"
+              echo "EOF"
+            } >> "$GITHUB_OUTPUT"
           fi
-        continue-on-error: true
 
       - name: Post PR comment on validation failure
-        if: failure() && github.event_name == 'pull_request'
+        if: steps.validate.outputs.validation_status == 'failed' && github.event_name == 'pull_request'
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          # Capture validation error
-          VALIDATION_OUTPUT=$(resumed validate resume-base.json 2>&1 || true)
-
+          # Get validation error from step output
+          VALIDATION_OUTPUT="${{ steps.validate.outputs.validation_output }}"
+          
           # Create a unique identifier for our validation comment
           COMMENT_MARKER="<!-- resume-validation-workflow-comment -->"
-
-          # Create comment body using GitHub's heredoc
-          COMMENT_BODY=$(cat <<EOF
-$COMMENT_MARKER
-## ❌ Resume Validation Failed
-
-The resume validation failed with the following errors:
-
-\`\`\`text
-$VALIDATION_OUTPUT
-\`\`\`
-
-Please fix the validation errors and push the changes again.
-EOF
-)
-
+          
+          # Create comment body (using printf for proper formatting)
+          # shellcheck disable=SC2016
+          printf -v COMMENT_BODY '%s\n%s\n\n%s\n\n```text\n%s\n```\n\n%s' \
+            "$COMMENT_MARKER" \
+            "## ❌ Resume Validation Failed" \
+            "The resume validation failed with the following errors:" \
+            "$VALIDATION_OUTPUT" \
+            "Please fix the validation errors and push the changes again."
+          
           # Check if a comment already exists with our unique marker
           COMMENT_ID=$(gh pr view ${{ github.event.pull_request.number }} --json comments --jq ".comments[] | select(.body | contains(\"$COMMENT_MARKER\")) | .id" | head -1)
 
@@ -88,20 +91,3 @@ EOF
       - name: Fail workflow if validation failed
         if: steps.validate.outputs.validation_status == 'failed'
         run: exit 1
-
-  publish-resume:
-    needs: validate-resume
-    runs-on: ubuntu-latest
-    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
-    permissions:
-      contents: read
-
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v4
-
-      - name: Publish resume to gist
-        env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: |
-          gh gist edit 8e587fe79ca40a637589b1d2d5c9373d resume-base.json
