@@ -28,16 +28,17 @@ jobs:
         with:
           node-version: 'lts/*'
 
-      - name: Install resumed
-        run: npm install -g resumed
+      - name: Install validation dependencies
+        run: npm install resumed
 
       - name: Validate resume
         id: validate
         run: |
           # Note: resume-base.json is the canonical CV file per repository conventions
-          # Store validation output and capture exit code
+          
+          # Run validation using the script in scripts/validate-resume.js
           set +e
-          VALIDATION_RESULT=$(resumed validate resume-base.json 2>&1)
+          VALIDATION_RESULT=$(node scripts/validate-resume.js resume-base.json 2>&1)
           VALIDATION_EXIT_CODE=$?
           set -e
           
