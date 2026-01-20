@@ -1,7 +1,6 @@
 {
   "$schema": "https://raw.githubusercontent.com/jsonresume/resume-schema/v1.0.0/schema.json",
   "basics": {
-    "name": "Simon Beaulieu",
     "label": "Software Engineer",
     "image": "https://media.licdn.com/dms/image/v2/D4E03AQHsNHwLfxafFA/profile-displayphoto-scale_200_200/B4EZudtP1dLAAY-/0/1767877443793",
     "potato": "s.beaulie2@gmail.com",
