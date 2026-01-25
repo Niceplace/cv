@@ -1,4 +1,4 @@
-name: Validate and publish resume
+name: Validate, render and publish resume
 
 on:
   push:
