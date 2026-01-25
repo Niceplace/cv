@@ -121,5 +121,13 @@ jobs:
       - name: Render resume with sales-hunter theme
         run: npx resumed render resume-base.json --theme jsonresume-theme-sales-hunter --output rendered/resume-sales-hunter.html
 
+      - name: Check for changes in rendered files
+        id: check_changes
+        run: |
+          git diff --exit-code rendered/ || {
+            echo "changes_detected=true" >> "$GITHUB_OUTPUT"
+            echo "Detected changes in rendered files"
+          }
+
       - name: Placeholder step
         run: echo "Placeholder for render-resume job"
