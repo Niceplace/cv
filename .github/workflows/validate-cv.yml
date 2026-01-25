@@ -92,5 +92,8 @@ jobs:
       contents: write
 
     steps:
+      - name: Checkout code
+        uses: actions/checkout@v6.0.1
+
       - name: Placeholder step
         run: echo "Placeholder for render-resume job"
