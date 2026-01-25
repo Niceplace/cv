@@ -129,5 +129,13 @@ jobs:
             echo "Detected changes in rendered files"
           }
 
+      - name: Create new branch for rendered CV
+        if: steps.check_changes.outputs.changes_detected == 'true'
+        run: |
+          BRANCH_NAME="update-rendered-cv-$(date +%Y%m%d-%H%M%S)"
+          echo "branch_name=$BRANCH_NAME" >> "$GITHUB_OUTPUT"
+          git checkout -b "$BRANCH_NAME"
+        id: create_branch
+
       - name: Placeholder step
         run: echo "Placeholder for render-resume job"
