@@ -115,5 +115,8 @@ jobs:
       - name: Render resume with nordic-minimal theme
         run: npx resumed render resume-base.json --theme jsonresume-theme-nordic-minimal --output rendered/resume-nordic-minimal.html
 
+      - name: Render resume with french-atelier theme
+        run: npx resumed render resume-base.json --theme jsonresume-theme-french-atelier --output rendered/resume-french-atelier.html
+
       - name: Placeholder step
         run: echo "Placeholder for render-resume job"
