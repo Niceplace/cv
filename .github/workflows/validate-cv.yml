@@ -137,5 +137,13 @@ jobs:
           git checkout -b "$BRANCH_NAME"
         id: create_branch
 
+      - name: Commit rendered files
+        if: steps.check_changes.outputs.changes_detected == 'true'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add rendered/
+          git commit -m "chore: update rendered CV files"
+
       - name: Placeholder step
         run: echo "Placeholder for render-resume job"
