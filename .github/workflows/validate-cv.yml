@@ -118,5 +118,8 @@ jobs:
       - name: Render resume with french-atelier theme
         run: npx resumed render resume-base.json --theme jsonresume-theme-french-atelier --output rendered/resume-french-atelier.html
 
+      - name: Render resume with sales-hunter theme
+        run: npx resumed render resume-base.json --theme jsonresume-theme-sales-hunter --output rendered/resume-sales-hunter.html
+
       - name: Placeholder step
         run: echo "Placeholder for render-resume job"
