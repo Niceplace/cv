@@ -83,3 +83,14 @@ jobs:
             GH_TOKEN: ${{ secrets.GH_GIST_TOKEN }}
           run: |
             gh gist edit 8e587fe79ca40a637589b1d2d5c9373d resume-base.json
+
+  render-resume:
+    needs: validate-resume
+    runs-on: ubuntu-latest
+    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+    permissions:
+      contents: write
+
+    steps:
+      - name: Placeholder step
+        run: echo "Placeholder for render-resume job"
