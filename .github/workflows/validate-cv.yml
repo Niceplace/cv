@@ -145,5 +145,14 @@ jobs:
           git add rendered/
           git commit -m "chore: update rendered CV files"
 
-      - name: Placeholder step
-        run: echo "Placeholder for render-resume job"
+      - name: Create pull request
+        if: steps.check_changes.outputs.changes_detected == 'true'
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          BRANCH_NAME="${{ steps.create_branch.outputs.branch_name }}"
+          gh pr create \
+            --base main \
+            --head "$BRANCH_NAME" \
+            --title "chore: update rendered CV files" \
+            --body "This PR updates the rendered CV HTML files. Generated automatically by the validate-cv workflow."
