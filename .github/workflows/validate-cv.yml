@@ -107,5 +107,10 @@ jobs:
           bun add jsonresume-theme-french-atelier
           bun add jsonresume-theme-sales-hunter
 
+      - name: Render resume with bold-header-statement theme
+        run: |
+          mkdir -p rendered
+          npx resumed render resume-base.json --theme jsonresume-theme-bold-header-statement --output rendered/resume-bold-header-statement.html
+
       - name: Placeholder step
         run: echo "Placeholder for render-resume job"
