@@ -112,5 +112,8 @@ jobs:
           mkdir -p rendered
           npx resumed render resume-base.json --theme jsonresume-theme-bold-header-statement --output rendered/resume-bold-header-statement.html
 
+      - name: Render resume with nordic-minimal theme
+        run: npx resumed render resume-base.json --theme jsonresume-theme-nordic-minimal --output rendered/resume-nordic-minimal.html
+
       - name: Placeholder step
         run: echo "Placeholder for render-resume job"
