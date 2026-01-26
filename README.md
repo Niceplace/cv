@@ -39,6 +39,26 @@ Available themes:
 
 Rendered HTML files are saved in the `rendered/` directory with the naming convention `{lang}-resume-{theme}.html`
 
+- **Rendered HTML CV published to GitHub Pages** - View the latest version at `https://niceplace.github.io/cv/`
+
+## GitHub Pages Setup
+
+The CV is automatically rendered to HTML and published to GitHub Pages on every push to the `main` branch that modifies the `rendered/` directory.
+
+### How to Enable GitHub Pages (One-time setup)
+
+1. Go to the repository **Settings** → **Pages**
+2. Under **Source**, select **GitHub Actions**
+3. Save the settings
+
+Once enabled, the CV will be automatically deployed to `https://niceplace.github.io/cv/` whenever changes are pushed to the `rendered/` directory on the `main` branch.
+
+The deployment uses GitHub's free tier, which provides:
+- Free hosting for public repositories
+- Automatic HTTPS
+- Fast CDN distribution
+- No build minute limits for public repositories
+
 # Out of scope
 
 I absolutely will not share any confidential information related to offers that I might receive. This repository will publish information that is already public i.e. available in the job posting or the employer's public website.
