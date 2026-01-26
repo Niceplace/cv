@@ -42,7 +42,7 @@ jobs:
 
           # Run validation using the TypeScript script with Bun runtime
           set +e
-          VALIDATION_RESULT=$(bun .github/scripts/validate-resume.ts resume-base.json 2>&1)
+          VALIDATION_RESULT=$(bun .github/scripts/validate-resume.ts 2>&1)
           VALIDATION_EXIT_CODE=$?
           set -e
 
