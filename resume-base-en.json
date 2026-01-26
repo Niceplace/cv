@@ -20,7 +20,7 @@
         "url": "https://www.linkedin.com/in/sbeaulie2"
       },
       {
-        "network": "Github",
+        "network": "GitHub",
         "username": "Niceplace",
         "url": "https://www.github.com/Niceplace"
       }
@@ -29,7 +29,7 @@
   "work": [
     {
       "name": "Pleo",
-      "position": "Senior Software Engineer, Developper Experience",
+      "position": "Senior Software Engineer, Developer Experience",
       "url": "https://www.linkedin.com/company/pleo-company",
       "startDate": "2023-06",
       "endDate": "2026-01",
@@ -257,7 +257,7 @@
         "Zed",
         "Mistral.ai",
         "Z.ai",
-        "Github Actions",
+        "GitHub Actions",
         "React",
         "JsonResume"
       ]
