@@ -15,6 +15,25 @@ I will leverage copilot to build the tooling around this repository and fix it b
     - Naming convention will be `resume-$POSITION-$COMPANY.json`, ex: `resume-devx-engineer-linkedin.json`
 - Automated validation of resume formats against the json resume [schema](https://jsonresume.org/schema)
 - Automated publishing (only for the base version) of the CV against the [public gist](https://gist.github.com/Niceplace/8e587fe79ca40a637589b1d2d5c9373d) of my resume
+- **Rendered HTML CV published to GitHub Pages** - View the latest version at `https://niceplace.github.io/cv/`
+
+## GitHub Pages Setup
+
+The CV is automatically rendered to HTML and published to GitHub Pages on every push to the `main` branch that modifies the `rendered/` directory.
+
+### How to Enable GitHub Pages (One-time setup)
+
+1. Go to the repository **Settings** → **Pages**
+2. Under **Source**, select **GitHub Actions**
+3. Save the settings
+
+Once enabled, the CV will be automatically deployed to `https://niceplace.github.io/cv/` whenever changes are pushed to the `rendered/` directory on the `main` branch.
+
+The deployment uses GitHub's free tier, which provides:
+- Free hosting for public repositories
+- Automatic HTTPS
+- Fast CDN distribution
+- No build minute limits for public repositories
 
 # Out of scope
 
