@@ -11,6 +11,10 @@ on:
       - main
     paths:
       - "resume-*.json"
+      - "render-resume.js"
+      - "bold-header-niceplace/**"
+      - ".github/scripts/**"
+      - ".github/workflows/validate-cv.yml"
 
 jobs:
   validate-resume:
@@ -87,7 +91,7 @@ jobs:
   render-resume:
     needs: validate-resume
     runs-on: ubuntu-latest
-    # if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
     permissions:
       contents: write
       pull-requests: write
