@@ -1,0 +1,276 @@
+{
+  "$schema": "https://raw.githubusercontent.com/jsonresume/resume-schema/v1.0.0/schema.json",
+  "basics": {
+    "name": "Simon Beaulieu",
+    "label": "Développeur Logiciel Principal, Expérience Développeur",
+    "email": "s.beaulie2@gmail.com",
+    "phone": "+14383916940",
+    "summary": "Développeur logiciel généraliste avec près d'une décennie d'expérience. Passionné par les CLIs, l'intégration et le déploiement en continu (CI/CD), l'automatisation logicielle et les outils IA",
+    "location": {
+      "address": "",
+      "postalCode": "",
+      "city": "Montréal",
+      "countryCode": "CA",
+      "region": "Québec"
+    },
+    "profiles": [
+      {
+        "network": "LinkedIn",
+        "username": "sbeaulie2",
+        "url": "https://www.linkedin.com/in/sbeaulie2"
+      },
+      {
+        "network": "GitHub",
+        "username": "Niceplace",
+        "url": "https://www.github.com/Niceplace"
+      }
+    ]
+  },
+  "work": [
+    {
+      "name": "Pleo",
+      "position": "Développeur Logiciel Senior, Expérience Développeur",
+      "url": "https://www.linkedin.com/company/pleo-company",
+      "startDate": "2023-06",
+      "endDate": "2026-01",
+      "summary": "Contribuer à l'amélioration de l'expérience développeur par la simplification des processus et la création et maintenance d'outillage. Gestion et contribution à divers projets dans les domaines d'automatisation d'infrastructure, de catalogue de services, de gestion de dépendances et de distribution et configuration d'outils d'IA.",
+      "highlights": [
+        "Créer du contenu sous forme de guides écrits et vidéo pour supporter le processus d'intégration des nouveaux employés en ingénierie. Participer à plusieurs entretiens de design de systèmes orientés backend et outillage.",
+        "Résoudre des défis techniques complexes via un rôle de support en rotation couvrant les conflits de dépendances Gradle, l'utilisation et la gestion du portail développeur Port, l'application des standards API et l'analyse de problèmes de nature variées reliées à l'utilisation de GitHub Actions.",
+        "Diriger et assister plusieurs projets dans le cadre d'une migration de portail développeur interne de OpsLevel vers Port. Assurer une transition en douceur en impliquant les équipes de support spécialisées et la communication avec le fournisseur de services.",
+        "Concevoir l'infrastructure d'outils d'IA d'entreprise avec AWS Bedrock, automatisation la création de profils et la configuration d'outil client en offrant un point d'entrée unique avec configuration minimale permettant à 200+ développeurs d'utiliser Claude Code rapidement.",
+        "Accompagner les équipes de support spécialisées d'outillage (Mobile, Frontend, Backend, Sécurité) afin d'établir des standards de conformité dans leurs domaines respectifs. Agir en tant que point de contact principal avec l'équipe de support de la plateforme Port.",
+        "Implanter et configurer des plateformes d'entreprise incluant Port (portail développeur interne), DX (métriques) et les intégrations Claude Code, établissant des standards d'infrastructure et d'excellence opérationnelle.",
+        "Optimiser les pipelines (CI/CD) en réduisant les coûts et les temps d'exécution globaux. Réduire le temps d'exécution pour les tests, optimiser la gestion des dépendances avec Renovate."
+      ],
+      "location": "Télétravail depuis Montréal, Québec, Canada"
+    },
+    {
+      "name": "Pleo",
+      "position": "Développeur Logiciel Senior en Ingénierie de la qualité",
+      "url": "https://www.linkedin.com/company/pleo-company",
+      "startDate": "2022-06",
+      "endDate": "2023-06",
+      "summary": "Développer et maintenir des solutions de test avancées pour améliorer la qualité des produits logiciels.",
+      "highlights": [
+        "Mettre en place des métriques DORA pour mesurer la performance de l'organisation d'ingénierie",
+        "Maintenir et améliorer une plateforme ETL pour collecter et analyser des données pour concevoir et analyser des métriques reliées à la qualité logicielle à travers l'organisation",
+        "Améliorer les processus de tri et de priorisation des bugs entre les équipes de support et d'ingénierie",
+        "Créer des solutions d'automatisation pour améliorer l'efficacité des tests",
+        "Analyser et optimiser les pipelines CI/CD pour les projets de test"
+      ],
+      "location": "Montréal, Québec, Canada"
+    },
+    {
+      "name": "Pleo",
+      "position": "Développeur Logiciel en Ingénierie de la qualité",
+      "url": "https://www.linkedin.com/company/pleo-company",
+      "startDate": "2020-01",
+      "endDate": "2022-07",
+      "summary": "Promouvoir les pratiques de qualité par la mise en place de métriques DORA et l'amélioration des processus de test.",
+      "highlights": [
+        "Concevoir une plateforme ETL pour collecter et analyser des données pour concevoir et analyser des métriques reliées à la qualité logicielle à travers l'organisation",
+        "Améliorer le processus de tri et de priorisation des bugs avec les équipes de support client",
+        "Coacher les équipes de développement sur les meilleures pratiques de test et d'automatisation",
+        "Développer des outils pour automatiser les tests et améliorer la qualité des produits"
+      ],
+      "location": "Montréal, Québec, Canada"
+    },
+    {
+      "name": "PremiumBeat (une société Shutterstock)",
+      "position": "Développeur Logiciel en Test II",
+      "url": "https://www.linkedin.com/company/shutterstock",
+      "startDate": "2019-04",
+      "endDate": "2019-12",
+      "summary": "Optimiser les frameworks de test et les pipelines CI/CD tout en participant aux initiatives qualité de l'entreprise.",
+      "highlights": [
+        "Refactoriser un outil de reporting pour mesurer les tendances de test",
+        "Collaborer à la création d'une suite de tests automatisés supportant la conformité SoX pour valider les cas d'utilisations critiques du processus d'achat",
+        "Analyser et évaluer différents frameworks de test E2E",
+        "Participer aux initiatives qualité de l'entreprise pour améliorer les pratiques de développement",
+        "Optimiser les pipelines de build Jenkins pour divers projets"
+      ],
+      "location": "Montréal, Québec, Canada"
+    },
+    {
+      "name": "PremiumBeat (une société Shutterstock)",
+      "position": "Développeur Logiciel en Test I",
+      "url": "https://www.linkedin.com/company/shutterstock",
+      "startDate": "2017-09",
+      "endDate": "2019-04",
+      "summary": "Maintenir les frameworks de test et assurer la conformité qualité pour des applications à grande échelle.",
+      "highlights": [
+        "Agir en tant que point de contact avec les auditeurs pour une partie critique des audits de conformité (SoX)",
+        "Maintenir et améliorer les frameworks de test (Cypress, TestCafe, Puppeteer, Selenium)",
+        "Proposer et implémenter des améliorations architecturales pour la pile d'automatisation des tests",
+        "Migrer et maintenir les processus CI/CD pour les applications web"
+      ],
+      "location": "Montréal, Québec, Canada"
+    },
+    {
+      "name": "Bell",
+      "position": "Spécialiste, Technologie",
+      "url": "https://www.linkedin.com/company/bell",
+      "startDate": "2016-05",
+      "endDate": "2017-08",
+      "summary": "Automatiser l'infrastructure et gérer les environnements de développement avec Ansible et Docker.",
+      "highlights": [
+        "Créer des playbooks Ansible pour configurer automatiquement les environnements de développement",
+        "Gérer des serveurs RHEL 7 et effectuer des tâches d'administration système",
+        "Déployer et configurer des applications avec Docker et Docker-compose",
+        "Évaluer et recommander des solutions technologiques DevOps",
+        "Participer à des projets de développement logiciel avec Java et Spring Boot"
+      ],
+      "location": "Montréal, Québec, Canada"
+    },
+    {
+      "name": "Bell",
+      "position": "Architecte Technique IT",
+      "url": "https://www.linkedin.com/company/bell",
+      "startDate": "2015-01",
+      "endDate": "2015-04",
+      "summary": "Concevoir des architectures cloud avec OpenStack et développer des solutions d'automatisation.",
+      "highlights": [
+        "Participer à la conception d'une architecture cloud avec OpenStack",
+        "Développer une application web de preuve de concept pour le déploiement automatique de pare-feux virtuels",
+        "Créer des solutions web pour le déploiement automatisé de VM sur VMware ESXi"
+      ],
+      "location": "Montréal, Québec, Canada"
+    },
+    {
+      "name": "Expertus Technologies",
+      "position": "Développeur Java Stagiaire",
+      "url": "https://www.linkedin.com/company/expertus-an-ibm-company",
+      "startDate": "2013-04",
+      "endDate": "2014-08",
+      "summary": "Développer des applications logicielles et automatiser les processus de build.",
+      "highlights": [
+        "Améliorer le processus de build de l'application",
+        "Corriger des bugs dans les versions héritées de l'application",
+        "Développer des logiciels avec J2EE, Struts et Vaadin",
+        "Automatiser les builds avec Maven et Bash",
+        "Configurer et maintenir un serveur de build Jenkins"
+      ],
+      "location": "Montréal, Québec, Canada"
+    },
+    {
+      "name": "APISOFT Technovision Corporation",
+      "position": "Développeur/QA (Stage)",
+      "url": "https://apisoft.xyz/about",
+      "startDate": "2012-01",
+      "endDate": "2012-04",
+      "summary": "Développer des modules logiciels et effectuer des tests de qualité.",
+      "highlights": [
+        "Développer un module de base de données pour une solution logicielle de gestion d'alertes",
+        "Tester le code existant et corriger les erreurs",
+        "Implémenter la gestion de base de données basée sur des fichiers avec Java",
+        "Effectuer des tests unitaires avec JUnit"
+      ],
+      "location": "Lachine, Québec, Canada"
+    },
+    {
+      "name": "IBM Canada Ltd.",
+      "position": "Technicien Informatique",
+      "url": "https://www.linkedin.com/company/ibm-canada-ibm-canada-limitee",
+      "startDate": "2010-05",
+      "endDate": "2011-08",
+      "summary": "Fournir un support technique et gérer les configurations système dans un environnement supportant la production de paquetages de puces informatiques.",
+      "highlights": [
+        "Planifier et exécuter des mises à jour système (Windows XP Service Pack 3) sur plus de 700 ordinateurs à travers les différentes lignes de production",
+        "Créer des scripts pour extraire et migrer des règles de pare-feu",
+        "Fournir un support technique de niveau 1-2"
+      ],
+      "location": "Bromont, Québec, Canada"
+    }
+  ],
+  "volunteer": [],
+  "education": [
+    {
+      "institution": "Université du Québec - École de Technologie supérieure",
+      "url": "https://www.linkedin.com/school/etsmtl",
+      "area": "Génie Informatique",
+      "studyType": "Baccalauréat",
+      "startDate": "2011",
+      "endDate": "2016",
+      "score": "3.55/4.3",
+      "courses": [],
+      "summary": "Baccalauréat en génie informatique formant des professionnels capables de travailler avec les principales technologies des entreprises (développement, administration système, réseaux, gestion de projet)."
+    },
+    {
+      "institution": "Cégep de Granby Haute-Yamaska",
+      "url": "https://cegepgranby.ca/programme/dec-techniques-de-linformatique",
+      "area": "Technique de l'informatique de gestion",
+      "studyType": "Technicien",
+      "startDate": "2008",
+      "endDate": "2011",
+      "score": "29.0",
+      "courses": [],
+      "summary": "Programme technique en informatique avec activités de tutorat en programmation et informatique."
+    }
+  ],
+  "awards": [],
+  "certificates": [],
+  "publications": [],
+  "skills": [],
+  "languages": [
+    {
+      "language": "Français",
+      "fluency": "Langue maternelle"
+    },
+    {
+      "language": "Anglais",
+      "fluency": "Bilingue"
+    }
+  ],
+  "interests": [
+    {
+      "name": "Travail du bois"
+    },
+    {
+      "name": "Outils manuels"
+    },
+    {
+      "name": "Gestion de la poussière et de la qualité de l'air"
+    },
+    {
+      "name": "Aiguisage/Affûtage"
+    }
+  ],
+  "references": [],
+  "projects": [
+    {
+      "name": "Sur-ingénierie du rendu de mon CV",
+      "description": "Utilisation d'outils d'IA et JsonResume pour ajouter un défi durant la mise à jour de mon CV",
+      "url": "https://github.com/Niceplace/cv",
+      "startDate": "2026",
+      "technologies": [
+        "Copilot",
+        "Zed",
+        "Mistral.ai",
+        "Z.ai",
+        "GitHub Actions",
+        "React",
+        "JsonResume"
+      ]
+    },
+    {
+      "name": "Infrastructure de mon laboratoire maison",
+      "description": "Référence pour la configuration de l'infrastructure de mes serveurs et postes de travail locaux",
+      "url": "https://github.com/Niceplace/labrador-maison",
+      "startDate": "2022",
+      "technologies": [
+        "Docker & Docker-compose",
+        "Concourse CI",
+        "Traefik",
+        "Bash"
+      ]
+    },
+    {
+      "name": "CLI à usages multiples",
+      "description": "Exploration du language GO et développement de CLI pour divers usages personnels",
+      "url": "https://github.com/Niceplace/mastercrab",
+      "startDate": "2025",
+      "technologies": ["Golang", "Cobra", "Viper", "SqLite"]
+    }
+  ]
+}

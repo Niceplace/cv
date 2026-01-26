@@ -3,10 +3,9 @@
   "basics": {
     "name": "Simon Beaulieu",
     "label": "Senior DevX Engineer",
-    "image": "https://media.licdn.com/dms/image/v2/D4E03AQHsNHwLfxafFA/profile-displayphoto-scale_200_200/B4EZudtP1dLAAY-/0/1767877443793",
     "email": "s.beaulie2@gmail.com",
     "phone": "+14383916940",
-    "summary": "Generalist Software Engineer with close to a decade of experience in the field. Highly passionate about CLIs, CI/CD, Automation and tooling.",
+    "summary": "Generalist Software Engineer with close to a decade of experience in the field. Highly passionate about CLIs, CI/CD, Automation and AI tooling.",
     "location": {
       "address": "",
       "postalCode": "",
@@ -21,7 +20,7 @@
         "url": "https://www.linkedin.com/in/sbeaulie2"
       },
       {
-        "network": "Github",
+        "network": "GitHub",
         "username": "Niceplace",
         "url": "https://www.github.com/Niceplace"
       }
@@ -30,20 +29,20 @@
   "work": [
     {
       "name": "Pleo",
-      "position": "Senior Software Engineer, Developper Experience",
+      "position": "Senior Software Engineer, Developer Experience",
       "url": "https://www.linkedin.com/company/pleo-company",
       "startDate": "2023-06",
       "endDate": "2026-01",
-      "summary": "Led enterprise developer experience initiatives including infrastructure automation with Terraform and AI tooling across 300+ resources.",
+      "summary": "Led enterprise developer experience initiatives including service catalog migration, microservice infrastructure automation and rollout of AI tooling across the engineering organization.",
       "highlights": [
-        "Implemented infrastructure-as-code solutions using Terraform and GitHub Actions for managing blueprints, scorecards, automations, and self-service actions in Port, ensuring maintainability and scalability.",
-        "Architected enterprise developer experience platforms including Port (software catalog), DX (engineering metrics), and Claude Code integrations, establishing infrastructure standards and operational excellence across 300+ engineering resources.",
-        "Mentored other platform teams (Mobile, Frontend, Security) to help them establish a baseline of engineering standards through scorecards while acting as the main point of contact between teams and our vendor.",
+        "Created content in the form of written and video guides to support the engineering onboarding process for new employees. Participated in several backend and tooling focused systems design interviews.",
+        "Resolved complex technical challenges through a rotation support role spanning Gradle dependency conflicts, Kubernetes deployments, API standards enforcement, and various issues related to GitHub Action workflows.",
+        "Implemented infrastructure-as-code solutions using Terraform and GitHub Actions for managing blueprints, scorecards, automations, and self-service actions in Port.",
+        "Architected enterprise developer experience platforms including Port (software catalog), DX (engineering metrics), and Claude Code integrations.",
+        "Coached and assisted other platform teams (Mobile, Frontend, Security) to help them establish a baseline of engineering standards through scorecards while acting as the main point of contact between teams and our vendor.",
         "Led and assisted with migrations of engineering SaaS tools (Internal developer portal, Engineering metrics) involving infrastructure-as-code refactoring, stakeholder communication, and minimal-downtime transitions impacting all engineering teams.",
-        "Optimized CI/CD pipelines and automation workflows across 50+ repositories, reducing build times, standardizing dependency management with Renovate, and enabling self-service deployments through Port's orchestration platform.",
-        "Architected enterprise AI tooling infrastructure using AWS Bedrock, implementing cost-tracked inference profiles and centralized configuration management enabling 200+ engineers to use Claude Code with zero configuration to support their development workflows.",
-        "Resolved complex technical challenges through a rotation support role spanning Gradle dependency conflicts, GitHub OAuth integrations, Kubernetes deployments, API standards enforcement, and cloud infrastructure configuration to unblock teams and maintain system reliability.",
-        "Created content as written and video guides to support the engineering onboarding process for new employees. Participated in several backend and tooling focused systems design interviews."
+        "Optimized CI/CD pipelines and automation workflows to reduce overall execution time, help standardize dependency management with Renovate, and reduce usage complexity for several CD supporting workflows through Port's self-service capabilities.",
+        "Enabled AI tooling infrastructure using AWS Bedrock, automating the creation of inference profiles and the configuration of Claude Code with Bedrock enabling 200+ engineers to easily use Claude Code with minimal configuration."
       ],
       "location": "Remote from Montreal, Quebec, Canada"
     },
@@ -54,7 +53,13 @@
       "startDate": "2022-06",
       "endDate": "2023-06",
       "summary": "",
-      "highlights": [],
+      "highlights": [
+        "Play a key role in a special project to measure DORA metrics for the engineering organisation",
+        "Maintain and improve a custom ETL platform to collect and analyze data supporting quality metrics across the organization",
+        "Revamp the bug triaging & prioritizing process involving customer support & engineering teams by measuring key metrics against SLAs",
+        "Create automation solutions to improve test efficiency",
+        "Analyze and optimize CI/CD pipelines for test projects"
+      ],
       "location": "Montreal, Quebec, Canada"
     },
     {
@@ -65,16 +70,10 @@
       "endDate": "2022-07",
       "summary": "Championed quality practices through DORA metrics implementation, bug triage process improvements, and team coaching on testing tooling.",
       "highlights": [
-        "Play a key role in a special project to measure DORA metrics for the engineering organisation",
         "Revamp the bug triaging & prioritizing process involving customer support & engineering teams by measuring key metrics against SLAs",
-        "Coach development teams to increase quality in their projects with better tooling and processes",
-        "Advocate for quality in general in the company, with a focus on build pipelines and test driven development",
-        "Participate in the development and implementation of tooling to help with quality automation",
-        "Gather metrics across multiple systems (Source code management, Mobile device statistics, Project management tools) to help orient decisions for the quality team",
-        "Coach development teams to increase quality in their projects with better tooling and processes",
-        "Advocate for quality in general in the company, with a focus on build pipelines and test driven development",
-        "Participate in the development and implementation of tooling to help with quality automation",
-        "Gather metrics across multiple systems (Source code management, Mobile device statistics, Project management tools) to help orient decisions for the quality team"
+        "Coach development teams to increase quality in their projects with better tooling and processes with a focus on build pipelines and automated testing",
+        "Design and implement a custom ETL tool to gather metrics across multiple systems (Source code management, Mobile device statistics, Project management tools) to help orient decisions for the quality team",
+        "Participate in the development and implementation of tooling to help with quality automation"
       ],
       "location": "Remote from Montreal, Quebec, Canada"
     },
@@ -136,7 +135,7 @@
       "endDate": "2015-04",
       "summary": "Designed cloud architectures using OpenStack and developed automation solutions for enterprise infrastructure deployment.",
       "highlights": [
-        "Participated in the design of a cloud architecture with OpenStack (Green field installation)",
+        "Participated in the design of a cloud architecture with OpenStack",
         "Gained knowledge on the inner workings of OpenStack Neutron to advise senior Architects with their decisions",
         "Created a proof of concept web application to automatically deploy virtual firewalls in remote environments",
         "Developed web solutions using Python, HTML, and Twitter Bootstrap for automated VM deployment on VMware ESXi"
@@ -183,7 +182,6 @@
       "endDate": "2011-08",
       "summary": "Provided level 1-2 technical support, deployed system updates, and managed antivirus configurations across production environments.",
       "highlights": [
-        "Scheduled down-time on a large array of production machines to apply fixes and updates to attached computers",
         "Deployed Windows XP Service Pack 3 manually on 700+ computers across a production line",
         "Programmed scripts to extract firewall rules from existing configuration files for migration to newer versions",
         "Provided level 1-2 technical support for production environments",
@@ -203,7 +201,7 @@
       "studyType": "Bachelor's Degree",
       "startDate": "2011",
       "endDate": "2016",
-      "score": "",
+      "score": "3.55/4.3",
       "courses": [],
       "summary": "Bachelor's degree in IT engineering. This degree is oriented towards training generalist engineers that can understand and work with major technologies present in today's enterprises (development, systems administration, networking, administration, project management)"
     },
@@ -211,10 +209,10 @@
       "institution": "Cégep de Granby Haute-Yamaska",
       "url": "https://cegepgranby.ca/programme/dec-techniques-de-linformatique",
       "area": "Computer Technology",
-      "studyType": "Technician",
+      "studyType": "Technical degree in Computer Science",
       "startDate": "2008",
       "endDate": "2011",
-      "score": "",
+      "score": "29.0",
       "courses": [],
       "summary": "Activities and societies: Tutoring in programming and computer science courses"
     }
@@ -233,7 +231,55 @@
       "fluency": "Bilingual (highly proficient)"
     }
   ],
-  "interests": [],
+  "interests": [
+    {
+      "name": "Woodworking"
+    },
+    {
+      "name": "Sharpening"
+    },
+    {
+      "name": "Dust collection and air quality"
+    },
+    {
+      "name": "Hand tools"
+    }
+  ],
   "references": [],
-  "projects": []
+  "projects": [
+    {
+      "name": "Over-engineering my CV",
+      "description": "Using AI tooling and JsonResume to make things a little more challenging while updating my CV",
+      "url": "https://github.com/Niceplace/cv",
+      "startDate": "2026",
+      "technologies": [
+        "Copilot",
+        "Zed",
+        "Mistral.ai",
+        "Z.ai",
+        "GitHub Actions",
+        "React",
+        "JsonResume"
+      ]
+    },
+    {
+      "name": "Infrastructure of my home lab",
+      "description": "Reference for the configuration of my local servers and workstations",
+      "url": "https://github.com/Niceplace/labrador-maison",
+      "startDate": "2022",
+      "technologies": [
+        "Docker & Docker-compose",
+        "Concourse CI",
+        "Traefik",
+        "Bash"
+      ]
+    },
+    {
+      "name": "Multi-purpose CLI",
+      "description": "Exploration of the GO language and development of CLI for various personal uses",
+      "url": "https://github.com/Niceplace/mastercrab",
+      "startDate": "2025",
+      "technologies": ["Golang", "Cobra", "Viper", "SqLite"]
+    }
+  ]
 }
