@@ -11,6 +11,10 @@ on:
       - main
     paths:
       - "resume-*.json"
+      - "render-resume.js"
+      - "bold-header-niceplace/**"
+      - ".github/scripts/**"
+      - ".github/workflows/validate-cv.yml"
 
 jobs:
   validate-resume:
