@@ -86,7 +86,7 @@
       "summary": "Optimiser les frameworks de test et les pipelines CI/CD tout en participant aux initiatives qualité de l'entreprise.",
       "highlights": [
         "Refactoriser un outil de reporting pour mesurer les tendances de test",
-        "Collaborer à la création d'un quadriciel de tests automatisés, supportant la conformité SoX pour valider les cas d'utilisations critiques du processus d'achat",
+        "Collaborer à la création d'une suite de tests automatisés supportant la conformité SoX pour valider les cas d'utilisations critiques du processus d'achat",
         "Analyser et évaluer différents frameworks de test E2E",
         "Participer aux initiatives qualité de l'entreprise pour améliorer les pratiques de développement",
         "Optimiser les pipelines de build Jenkins pour divers projets"
@@ -177,7 +177,7 @@
       "endDate": "2011-08",
       "summary": "Fournir un support technique et gérer les configurations système dans un environnement supportant la production de paquetages de puces informatiques.",
       "highlights": [
-        "Planifier et exécuter des mises à jour système (Windows XP Service Pack 2) sur plus de 700 ordinateurs à travers les différentes lignes de production",
+        "Planifier et exécuter des mises à jour système (Windows XP Service Pack 3) sur plus de 700 ordinateurs à travers les différentes lignes de production",
         "Créer des scripts pour extraire et migrer des règles de pare-feu",
         "Fournir un support technique de niveau 1-2"
       ],
