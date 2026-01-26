@@ -9,8 +9,8 @@ on:
   pull_request:
     branches:
       - main
-    # paths:
-    #   - "resume-*.json"
+    paths:
+      - "resume-*.json"
 
 jobs:
   validate-resume:
@@ -31,7 +31,7 @@ jobs:
       - name: Install validation dependencies
         run: bun add resumed
 
-      - name: Validate resume
+      - name: Validate resume schema
         id: validate
         run: |
           # Note: resume-base.json is the canonical CV file per repository conventions
