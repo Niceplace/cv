@@ -9,8 +9,8 @@ on:
   pull_request:
     branches:
       - main
-    paths:
-      - "resume-*.json"
+    # paths:
+    #   - "resume-*.json"
 
 jobs:
   validate-resume:
@@ -100,13 +100,16 @@ jobs:
         with:
           bun-version: latest
 
-      - name: Install resumed cli and render themes
+      - name: Install resumed cli
         run: |
           bun add -g resumed
-          bun add -g jsonresume-theme-bold-header-statement
-          bun add -g jsonresume-theme-nordic-minimal
-          bun add -g jsonresume-theme-french-atelier
-          bun add -g jsonresume-theme-sales-hunter
+
+      - name: Install resume render themes
+        run: |
+          bun add jsonresume-theme-bold-header-statement
+          # bun add -g jsonresume-theme-nordic-minimal
+          # bun add -g jsonresume-theme-french-atelier
+          # bun add -g jsonresume-theme-sales-hunter
 
       - name: Ensure rendered/ folder exists
         run: |
