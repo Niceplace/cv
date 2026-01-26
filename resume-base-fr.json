@@ -40,7 +40,7 @@
         "Résoudre des défis techniques complexes via un rôle de support en rotation couvrant les conflits de dépendances Gradle, l'utilisation et la gestion du portail développeur Port, l'application des standards API et l'analyse de problèmes de nature variées reliées à l'utilisation de Github Actions.",
         "Diriger et assister plusieurs projets dans le cadre d'une migration de portail développeur interne de OpsLevel vers Port. Assurer une transition en douceur en impliquant les équipes de support spécialisées et la communication avec le fournisseur de services.",
         "Concevoir l'infrastructure d'outils d'IA d'entreprise avec AWS Bedrock, automatisation la création de profils et la configuration d'outil client en offrant un point d'entrée unique avec configuration minimale permettant à 200+ développeurs d'utiliser Claude Code rapidement.",
-        "Accompagner les équipes de support spécialisées d'outillage (Mobile, Frontend, Backend, Sécurité) afin d'établir des standards de conformité dans leurs domaines respectif. Agir en tant que point de contact principal et la plateforme Port.",
+        "Accompagner les équipes de support spécialisées d'outillage (Mobile, Frontend, Backend, Sécurité) afin d'établir des standards de conformité dans leurs domaines respectifs. Agir en tant que point de contact principal et la plateforme Port.",
         "Implanter et configurer des plateformes d'entreprise incluant Port (portail développeur interne), DX (métriques) et les intégrations Claude Code, établissant des standards d'infrastructure et d'excellence opérationnelle.",
         "Optimiser les pipelines (CI/CD) en réduisant les coûts et les temps d'exécution globaux. Réduire le temps d'exécution pour les tests, optimiser la gestion des dépendances avec Renovate."
       ],
@@ -256,7 +256,7 @@
     },
     {
       "name": "Infrastructure de mon laboratoire maison",
-      "description": "Référence pour la configuration de l'infrastructure de mes serveurs et postes de travails locaux",
+      "description": "Référence pour la configuration de l'infrastructure de mes serveurs et postes de travail locaux",
       "url": "https://github.com/Niceplace/labrador-maison",
       "startDate": "2022",
       "technologies": [
