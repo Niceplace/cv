@@ -5,12 +5,12 @@ on:
     branches:
       - main
     paths:
-      - 'resume-*.json'
+      - "resume-*.json"
   pull_request:
     branches:
       - main
     paths:
-      - 'resume-*.json'
+      - "resume-*.json"
 
 jobs:
   validate-resume:
@@ -35,13 +35,13 @@ jobs:
         id: validate
         run: |
           # Note: resume-base.json is the canonical CV file per repository conventions
-          
+
           # Run validation using the TypeScript script with Bun runtime
           set +e
           VALIDATION_RESULT=$(bun .github/scripts/validate-resume.ts resume-base.json 2>&1)
           VALIDATION_EXIT_CODE=$?
           set -e
-          
+
           if [ "$VALIDATION_EXIT_CODE" -eq 0 ]; then
             echo "validation_status=success" >> "$GITHUB_OUTPUT"
           else
@@ -68,26 +68,26 @@ jobs:
         run: exit 1
 
   publish-resume:
-      needs: validate-resume
-      runs-on: ubuntu-latest
-      if: github.event_name == 'push' && github.ref == 'refs/heads/main'
-      permissions:
-        contents: read
-        
-      steps:
-        - name: Checkout code
-          uses: actions/checkout@v6.0.1
+    needs: validate-resume
+    runs-on: ubuntu-latest
+    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+    permissions:
+      contents: read
 
-        - name: Publish resume to gist
-          env:
-            GH_TOKEN: ${{ secrets.GH_GIST_TOKEN }}
-          run: |
-            gh gist edit 8e587fe79ca40a637589b1d2d5c9373d resume-base.json
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v6.0.1
+
+      - name: Publish resume to gist
+        env:
+          GH_TOKEN: ${{ secrets.GH_GIST_TOKEN }}
+        run: |
+          gh gist edit 8e587fe79ca40a637589b1d2d5c9373d resume-base.json
 
   render-resume:
     needs: validate-resume
     runs-on: ubuntu-latest
-    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+    # if: github.event_name == 'push' && github.ref == 'refs/heads/main'
     permissions:
       contents: write
 
@@ -100,26 +100,33 @@ jobs:
         with:
           bun-version: latest
 
-      - name: Install render themes
+      - name: Install resumed cli and render themes
         run: |
-          bun add jsonresume-theme-bold-header-statement
-          bun add jsonresume-theme-nordic-minimal
-          bun add jsonresume-theme-french-atelier
-          bun add jsonresume-theme-sales-hunter
+          bun add -g resumed
+          bun add -g jsonresume-theme-bold-header-statement
+          bun add -g jsonresume-theme-nordic-minimal
+          bun add -g jsonresume-theme-french-atelier
+          bun add -g jsonresume-theme-sales-hunter
+
+      - name: Ensure rendered/ folder exists
+        run: |
+          if [[ ! -d "rendered" ]]; then
+            echo "Error: rendered/ directory should not exist to render the CV into it, ensure it exists."
+            exit 1
+          fi
+        shell: bash
 
       - name: Render resume with bold-header-statement theme
-        run: |
-          mkdir -p rendered
-          npx resumed render resume-base.json --theme jsonresume-theme-bold-header-statement --output rendered/resume-bold-header-statement.html
+        run: resumed render resume-base.json --theme jsonresume-theme-bold-header-statement --output rendered/resume-bold-header-statement.html
 
       - name: Render resume with nordic-minimal theme
-        run: npx resumed render resume-base.json --theme jsonresume-theme-nordic-minimal --output rendered/resume-nordic-minimal.html
+        run: resumed render resume-base.json --theme jsonresume-theme-nordic-minimal --output rendered/resume-nordic-minimal.html
 
       - name: Render resume with french-atelier theme
-        run: npx resumed render resume-base.json --theme jsonresume-theme-french-atelier --output rendered/resume-french-atelier.html
+        run: resumed render resume-base.json --theme jsonresume-theme-french-atelier --output rendered/resume-french-atelier.html
 
       - name: Render resume with sales-hunter theme
-        run: npx resumed render resume-base.json --theme jsonresume-theme-sales-hunter --output rendered/resume-sales-hunter.html
+        run: resumed render resume-base.json --theme jsonresume-theme-sales-hunter --output rendered/resume-sales-hunter.html
 
       - name: Check for changes in rendered files
         id: check_changes
@@ -140,10 +147,10 @@ jobs:
       - name: Commit rendered files
         if: steps.check_changes.outputs.changes_detected == 'true'
         run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add rendered/
-          git commit -m "chore: update rendered CV files"
+          git config user.name "render-cv[bot]"
+          git config user.email "render-cv[bot]@users.noreply.github.com"
+          git add --all
+          git commit -a -m "chore: update rendered CV files"
 
       - name: Create pull request
         if: steps.check_changes.outputs.changes_detected == 'true'
@@ -155,4 +162,4 @@ jobs:
             --base main \
             --head "$BRANCH_NAME" \
             --title "chore: update rendered CV files" \
-            --body "This PR updates the rendered CV HTML files. Generated automatically by the validate-cv workflow."
+            --body "This PR updates automatically re-rendered CV HTML files since the contents of the resume have changed."
