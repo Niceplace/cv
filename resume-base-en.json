@@ -36,7 +36,7 @@
       "summary": "Led enterprise developer experience initiatives including service catalog migration, microservice infrastructure automation and rollout of AI tooling across the engineering organization.",
       "highlights": [
         "Created content in the form of written and video guides to support the engineering onboarding process for new employees. Participated in several backend and tooling focused systems design interviews.",
-        "Resolved complex technical challenges through a rotation support role spanning Gradle dependency conflicts, Kubernetes deployments, API standards enforcement, and various issues related to Github Action workflows.",
+        "Resolved complex technical challenges through a rotation support role spanning Gradle dependency conflicts, Kubernetes deployments, API standards enforcement, and various issues related to GitHub Action workflows.",
         "Implemented infrastructure-as-code solutions using Terraform and GitHub Actions for managing blueprints, scorecards, automations, and self-service actions in Port.",
         "Architected enterprise developer experience platforms including Port (software catalog), DX (engineering metrics), and Claude Code integrations.",
         "Coached and assisted other platform teams (Mobile, Frontend, Security) to help them establish a baseline of engineering standards through scorecards while acting as the main point of contact between teams and our vendor.",

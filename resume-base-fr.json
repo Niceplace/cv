@@ -3,7 +3,6 @@
   "basics": {
     "name": "Simon Beaulieu",
     "label": "Développeur Logiciel Principal, Expérience Développeur",
-    "image": "https://media.licdn.com/dms/image/v2/D4E03AQHsNHwLfxafFA/profile-displayphoto-scale_200_200/B4EZudtP1dLAAY-/0/1767877443793",
     "email": "s.beaulie2@gmail.com",
     "phone": "+14383916940",
     "summary": "Développeur logiciel généraliste avec près d'une décennie d'expérience. Passionné par les CLIs, l'intégration et le déploiement en continu (CI/CD), l'automatisation logicielle et les outils IA",
@@ -37,10 +36,10 @@
       "summary": "Contribuer à l'amélioration de l'expérience développeur par la simplification des processus et la création et maintenance d'outillage. Gestion et contribution à divers projets dans les domaines d'automatisation d'infrastructure, de catalogue de services, de gestion de dépendances et de distribution et configuration d'outils d'IA.",
       "highlights": [
         "Créer du contenu sous forme de guides écrits et vidéo pour supporter le processus d'intégration des nouveaux employés en ingénierie. Participer à plusieurs entretiens de design de systèmes orientés backend et outillage.",
-        "Résoudre des défis techniques complexes via un rôle de support en rotation couvrant les conflits de dépendances Gradle, l'utilisation et la gestion du portail développeur Port, l'application des standards API et l'analyse de problèmes de nature variées reliées à l'utilisation de Github Actions.",
+        "Résoudre des défis techniques complexes via un rôle de support en rotation couvrant les conflits de dépendances Gradle, l'utilisation et la gestion du portail développeur Port, l'application des standards API et l'analyse de problèmes de nature variées reliées à l'utilisation de GitHub Actions.",
         "Diriger et assister plusieurs projets dans le cadre d'une migration de portail développeur interne de OpsLevel vers Port. Assurer une transition en douceur en impliquant les équipes de support spécialisées et la communication avec le fournisseur de services.",
         "Concevoir l'infrastructure d'outils d'IA d'entreprise avec AWS Bedrock, automatisation la création de profils et la configuration d'outil client en offrant un point d'entrée unique avec configuration minimale permettant à 200+ développeurs d'utiliser Claude Code rapidement.",
-        "Accompagner les équipes de support spécialisées d'outillage (Mobile, Frontend, Backend, Sécurité) afin d'établir des standards de conformité dans leurs domaines respectifs. Agir en tant que point de contact principal et la plateforme Port.",
+        "Accompagner les équipes de support spécialisées d'outillage (Mobile, Frontend, Backend, Sécurité) afin d'établir des standards de conformité dans leurs domaines respectifs. Agir en tant que point de contact principal avec l'équipe de support de la plateforme Port.",
         "Implanter et configurer des plateformes d'entreprise incluant Port (portail développeur interne), DX (métriques) et les intégrations Claude Code, établissant des standards d'infrastructure et d'excellence opérationnelle.",
         "Optimiser les pipelines (CI/CD) en réduisant les coûts et les temps d'exécution globaux. Réduire le temps d'exécution pour les tests, optimiser la gestion des dépendances avec Renovate."
       ],
@@ -249,7 +248,7 @@
         "Zed",
         "Mistral.ai",
         "Z.ai",
-        "Github Actions",
+        "GitHub Actions",
         "React",
         "JsonResume"
       ]
