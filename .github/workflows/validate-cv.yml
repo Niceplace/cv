@@ -9,8 +9,8 @@ on:
   pull_request:
     branches:
       - main
-    # paths:
-    #   - "resume-*.json"
+    paths:
+      - "resume-*.json"
 
 jobs:
   validate-resume:
@@ -87,7 +87,7 @@ jobs:
   render-resume:
     needs: validate-resume
     runs-on: ubuntu-latest
-    # if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
     permissions:
       contents: write
       pull-requests: write
