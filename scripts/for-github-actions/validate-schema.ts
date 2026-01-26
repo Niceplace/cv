@@ -8,8 +8,9 @@
 const resumeFiles = ['resume-json/resume-en.json', 'resume-json/resume-fr.json']
 
 interface ValidationError {
-  path: string
-  message: string
+  path: string;
+  message: string;
+  resolution?: string;
 }
 
 interface FileValidationResult {
@@ -63,6 +64,25 @@ async function validateFiles(
 }
 
 /**
+ * Propose fixes for common validation errors
+ */
+function proposeErrorFixes(error: ValidationError): void {
+  // Provide helpful context for common error patterns
+  if (error.message && error.message.includes("does not match pattern")) {
+    if (error.path && error.path.includes("Date")) {
+      error.resolution = `Dates must be in ISO 8601 format: YYYY-MM-DD, YYYY-MM, or YYYY
+        Examples: "2023-06", "2023", "2023-06-15"`;
+    }
+  } else if (
+    error.message &&
+    error.message.includes('does not conform to the "uri" format')
+  ) {
+    error.resolution = `URLs must be valid URIs (e.g., "https://example.com")
+        Empty strings are not valid. Use a proper URL or remove the field.`;
+  }
+}
+
+/**
  * Report validation errors for all files
  */
 function reportValidationErrors(results: FileValidationResult[]): void {
@@ -80,26 +100,22 @@ function reportValidationErrors(results: FileValidationResult[]): void {
     console.error(`   Errors: ${result.errors.length}\n`);
     
     result.errors.forEach((error: ValidationError, index: number) => {
-      console.error(`   Error ${index + 1}:
-     Location: ${error.path || "unknown"}
-     Issue: ${error.message}`);
-
-      // Provide helpful context for common error patterns
-      if (error.message && error.message.includes("does not match pattern")) {
-        if (error.path && error.path.includes("Date")) {
-          console.error(
-            `     → Dates must be in ISO 8601 format: YYYY-MM-DD, YYYY-MM, or YYYY
-        Examples: "2023-06", "2023", "2023-06-15"`,
-          );
-        }
-      } else if (
-        error.message &&
-        error.message.includes('does not conform to the "uri" format')
-      ) {
-        console.error(
-          `     → URLs must be valid URIs (e.g., "https://example.com")
-        Empty strings are not valid. Use a proper URL or remove the field.`,
-        );
+      // Propose fixes for this error
+      proposeErrorFixes(error);
+      
+      // Display error details generically
+      console.error(`   Error ${index + 1}:`);
+      
+      if (error.path) {
+        console.error(`     Location: ${error.path}`);
+      }
+      
+      if (error.message) {
+        console.error(`     Issue: ${error.message}`);
+      }
+      
+      if (error.resolution) {
+        console.error(`     → ${error.resolution}`);
       }
     });
   });
