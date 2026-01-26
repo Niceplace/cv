@@ -1,16 +1,16 @@
-name: Validate and publish resume
+name: Validate, render and publish resume
 
 on:
   push:
     branches:
       - main
     paths:
-      - 'resume-*.json'
+      - "resume-*.json"
   pull_request:
     branches:
       - main
-    paths:
-      - 'resume-*.json'
+    # paths:
+    #   - "resume-*.json"
 
 jobs:
   validate-resume:
@@ -21,10 +21,10 @@ jobs:
 
     steps:
       - name: Checkout code
-        uses: actions/checkout@v6.0.1
+        uses: actions/checkout@8e8c483db84b4bee98b60c0593521ed34d9990e8 #v6.0.1
 
       - name: Setup Bun
-        uses: oven-sh/setup-bun@v2
+        uses: oven-sh/setup-bun@3d267786b128fe76c2f16a390aa2448b815359f3 #v2.1.2
         with:
           bun-version: latest
 
@@ -35,13 +35,13 @@ jobs:
         id: validate
         run: |
           # Note: resume-base.json is the canonical CV file per repository conventions
-          
+
           # Run validation using the TypeScript script with Bun runtime
           set +e
           VALIDATION_RESULT=$(bun .github/scripts/validate-resume.ts resume-base.json 2>&1)
           VALIDATION_EXIT_CODE=$?
           set -e
-          
+
           if [ "$VALIDATION_EXIT_CODE" -eq 0 ]; then
             echo "validation_status=success" >> "$GITHUB_OUTPUT"
           else
@@ -68,18 +68,84 @@ jobs:
         run: exit 1
 
   publish-resume:
-      needs: validate-resume
-      runs-on: ubuntu-latest
-      if: github.event_name == 'push' && github.ref == 'refs/heads/main'
-      permissions:
-        contents: read
-        
-      steps:
-        - name: Checkout code
-          uses: actions/checkout@v6.0.1
+    needs: validate-resume
+    runs-on: ubuntu-latest
+    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+    permissions:
+      contents: read
 
-        - name: Publish resume to gist
-          env:
-            GH_TOKEN: ${{ secrets.GH_GIST_TOKEN }}
-          run: |
-            gh gist edit 8e587fe79ca40a637589b1d2d5c9373d resume-base.json
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@8e8c483db84b4bee98b60c0593521ed34d9990e8 #v6.0.1
+
+      - name: Publish resume to gist
+        env:
+          GH_TOKEN: ${{ secrets.GH_GIST_TOKEN }}
+        run: |
+          gh gist edit 8e587fe79ca40a637589b1d2d5c9373d resume-base.json
+
+  render-resume:
+    needs: validate-resume
+    runs-on: ubuntu-latest
+    # if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+    permissions:
+      contents: write
+      pull-requests: write
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@8e8c483db84b4bee98b60c0593521ed34d9990e8 #v6.0.1
+
+      - name: Setup Bun
+        uses: oven-sh/setup-bun@3d267786b128fe76c2f16a390aa2448b815359f3 #v2.1.2
+        with:
+          bun-version: latest
+
+      - name: Install resumed cli
+        run: |
+          bun add -g resumed
+
+      - name: Install packages for local theme
+        run: |
+          cd bold-header-niceplace && bun install
+
+      - name: Ensure rendered/ folder exists
+        run: |
+          if [[ ! -d "rendered" ]]; then
+            echo "Error: rendered/ directory should not exist to render the CV into it, ensure it exists."
+            exit 1
+          fi
+        shell: bash
+
+      - name: Render resume with all relevant themes
+        run: bun run render-resume.js
+
+      - name: Detect changed files in rendered/
+        id: changed-files
+        uses: tj-actions/changed-files@e0021407031f5be11a464abee9a0776171c79891 #v47.0.1
+        with:
+          files: rendered/** # Only track changes in rendered/
+          files_ignore: rendered/.gitkeep # Optional: Ignore .gitkeep if present
+
+      - name: Commit rendered files
+        if: steps.changed-files.outputs.any_changed == 'true'
+        run: |
+          BRANCH_NAME="update-rendered-cv-${{ github.run_id }}"
+          git config user.name "render-cv[bot]"
+          git config user.email "render-cv[bot]@users.noreply.github.com"
+          git checkout -b $BRANCH_NAME
+          git add rendered/*
+          git commit -m "chore: update rendered CV files"
+          git push origin $BRANCH_NAME
+
+      - name: Create pull request
+        if: steps.changed-files.outputs.any_changed == 'true'
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          BRANCH_NAME="${{ steps.create_branch.outputs.branch_name }}"
+          gh pr create \
+            --base main \
+            --head "$BRANCH_NAME" \
+            --title "chore: update rendered CV files" \
+            --body "This PR updates automatically re-rendered CV HTML files since the contents of the resume have changed."

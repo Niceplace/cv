@@ -1,7 +1,7 @@
+# node_modules
 node_modules/
-package.json
-package-lock.json
-bun.lockb
-*.js
-!.github/scripts/*.ts
-!.github/scripts/tsconfig.json
+
+
+
+# One-off scripts created by AI agents
+ai-support-scripts/

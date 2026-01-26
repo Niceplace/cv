@@ -1,16 +1,16 @@
 {
   "$schema": "https://raw.githubusercontent.com/jsonresume/resume-schema/v1.0.0/schema.json",
   "basics": {
+    "name": "Simon Beaulieu",
     "label": "Senior DevX Engineer",
     "image": "https://media.licdn.com/dms/image/v2/D4E03AQHsNHwLfxafFA/profile-displayphoto-scale_200_200/B4EZudtP1dLAAY-/0/1767877443793",
     "email": "s.beaulie2@gmail.com",
     "phone": "+14383916940",
-    "url": "https://www.linkedin.com/in/sbeaulie2",
-    "summary": "Generalist Senior Software Engineer with close to a decade of experience in the field. Highly passionate about CLIs, CI/CD, Automation and tooling.",
+    "summary": "Generalist Software Engineer with close to a decade of experience in the field. Highly passionate about CLIs, CI/CD, Automation and tooling.",
     "location": {
       "address": "",
       "postalCode": "",
-      "city": "",
+      "city": "Montreal",
       "countryCode": "CA",
       "region": "Quebec"
     },
@@ -19,6 +19,11 @@
         "network": "LinkedIn",
         "username": "sbeaulie2",
         "url": "https://www.linkedin.com/in/sbeaulie2"
+      },
+      {
+        "network": "Github",
+        "username": "Niceplace",
+        "url": "https://www.github.com/Niceplace"
       }
     ]
   },
@@ -29,9 +34,18 @@
       "url": "https://www.linkedin.com/company/pleo-company",
       "startDate": "2023-06",
       "endDate": "2026-01",
-      "summary": "- Implemented infrastructure-as-code solutions using Terraform and GitHub Actions for managing blueprints, scorecards, automations, and self-service actions in Port, ensuring maintainability and scalability.\n- Architected enterprise developer experience platforms including Port (software catalog), DX (engineering metrics), and Claude Code integrations, establishing infrastructure standards and operational excellence across 300+ engineering resources.\n- Mentored other platform teams (Mobile, Frontend, Security) to help them establish a baseline of engineering standards through scorecards while acting as the main point of contact between teams and our vendor.\n- Led and assisted with migrations of engineering SaaS tools (Internal developer portal, Engineering metrics) involving infrastructure-as-code refactoring, stakeholder communication, and minimal-downtime transitions impacting all engineering teams.\n- Optimized CI/CD pipelines and automation workflows across 50+ repositories, reducing build times, standardizing dependency management with Renovate, and enabling self-service deployments through Port's orchestration platform.\n- Architected enterprise AI tooling infrastructure using AWS Bedrock, implementing cost-tracked inference profiles and centralized configuration management enabling 200+ engineers to use Claude Code with zero configuration to support their development workflows.\n- Resolved complex technical challenges through a rotation support role spanning Gradle dependency conflicts, GitHub OAuth integrations, Kubernetes deployments, API standards enforcement, and cloud infrastructure configuration to unblock teams and maintain system reliability.\n- Created content as written and video guides to support the engineering onboarding process for new employees. Participated in several backend and tooling focused systems design interviews.",
-      "highlights": [],
-      "location": "Montreal, Quebec, Canada"
+      "summary": "Led enterprise developer experience initiatives including infrastructure automation with Terraform and AI tooling across 300+ resources.",
+      "highlights": [
+        "Implemented infrastructure-as-code solutions using Terraform and GitHub Actions for managing blueprints, scorecards, automations, and self-service actions in Port, ensuring maintainability and scalability.",
+        "Architected enterprise developer experience platforms including Port (software catalog), DX (engineering metrics), and Claude Code integrations, establishing infrastructure standards and operational excellence across 300+ engineering resources.",
+        "Mentored other platform teams (Mobile, Frontend, Security) to help them establish a baseline of engineering standards through scorecards while acting as the main point of contact between teams and our vendor.",
+        "Led and assisted with migrations of engineering SaaS tools (Internal developer portal, Engineering metrics) involving infrastructure-as-code refactoring, stakeholder communication, and minimal-downtime transitions impacting all engineering teams.",
+        "Optimized CI/CD pipelines and automation workflows across 50+ repositories, reducing build times, standardizing dependency management with Renovate, and enabling self-service deployments through Port's orchestration platform.",
+        "Architected enterprise AI tooling infrastructure using AWS Bedrock, implementing cost-tracked inference profiles and centralized configuration management enabling 200+ engineers to use Claude Code with zero configuration to support their development workflows.",
+        "Resolved complex technical challenges through a rotation support role spanning Gradle dependency conflicts, GitHub OAuth integrations, Kubernetes deployments, API standards enforcement, and cloud infrastructure configuration to unblock teams and maintain system reliability.",
+        "Created content as written and video guides to support the engineering onboarding process for new employees. Participated in several backend and tooling focused systems design interviews."
+      ],
+      "location": "Remote from Montreal, Quebec, Canada"
     },
     {
       "name": "Pleo",
@@ -49,9 +63,20 @@
       "url": "https://www.linkedin.com/company/pleo-company",
       "startDate": "2020-01",
       "endDate": "2022-07",
-      "summary": "- Play a key role in a special project to measure DORA metrics for the engineering organisation\n- Revamp the bug triaging & prioritizing process involving customer support & engineering teams by measuring key metrics against SLAs\n- Coach development teams to increase quality in their projects with better tooling and processes\n- Advocate for quality in general in the company, with a focus on build pipelines and test driven development\n- Participate in the development and implementation of tooling to help with quality automation\n- Gather metrics across multiple systems (Source code management, Mobile device statistics, Project management tools) to help orient decisions for the quality team\n- Coach development teams to increase quality in their projects with better tooling and processes\n- Advocate for quality in general in the company, with a focus on build pipelines and test driven development\n- Participate in the development and implementation of tooling to help with quality automation\n- Gather metrics across multiple systems (Source code management, Mobile device statistics, Project management tools) to help orient decisions for the quality team",
-      "highlights": [],
-      "location": "Montreal, Quebec, Canada"
+      "summary": "Championed quality practices through DORA metrics implementation, bug triage process improvements, and team coaching on testing tooling.",
+      "highlights": [
+        "Play a key role in a special project to measure DORA metrics for the engineering organisation",
+        "Revamp the bug triaging & prioritizing process involving customer support & engineering teams by measuring key metrics against SLAs",
+        "Coach development teams to increase quality in their projects with better tooling and processes",
+        "Advocate for quality in general in the company, with a focus on build pipelines and test driven development",
+        "Participate in the development and implementation of tooling to help with quality automation",
+        "Gather metrics across multiple systems (Source code management, Mobile device statistics, Project management tools) to help orient decisions for the quality team",
+        "Coach development teams to increase quality in their projects with better tooling and processes",
+        "Advocate for quality in general in the company, with a focus on build pipelines and test driven development",
+        "Participate in the development and implementation of tooling to help with quality automation",
+        "Gather metrics across multiple systems (Source code management, Mobile device statistics, Project management tools) to help orient decisions for the quality team"
+      ],
+      "location": "Remote from Montreal, Quebec, Canada"
     },
     {
       "name": "PremiumBeat (a Shutterstock Company)",
@@ -59,8 +84,15 @@
       "url": "https://www.linkedin.com/company/shutterstock",
       "startDate": "2019-04",
       "endDate": "2019-12",
-      "summary": "- Led a small project to refactor a reporting tool to help measure test trends (pass/fail rate, changes in tests, etc.)\n- Analyzed E2E testing frameworks and submitted propositions, implemented proof of concepts and bootstrapped new test projects with newer technologies\n- Participated in company wide quality efforts to improve code quality in applications, provide better tooling and encourage better quality practices\n- Advised from a technical standpoint during SoX audits\n- Contributed to the optimization and maintenance of build pipelines (Jenkins) for various projects\n- Participated in interview processes and helped new members of the team during their onboarding",
-      "highlights": [],
+      "summary": "Led testing framework analysis and CI/CD optimization while participating in company-wide quality initiatives and SoX compliance audits.",
+      "highlights": [
+        "Led a small project to refactor a reporting tool to help measure test trends (pass/fail rate, changes in tests, etc.)",
+        "Analyzed E2E testing frameworks and submitted propositions, implemented proof of concepts and bootstrapped new test projects with newer technologies",
+        "Participated in company wide quality efforts to improve code quality in applications, provide better tooling and encourage better quality practices",
+        "Advised from a technical standpoint during SoX audits",
+        "Contributed to the optimization and maintenance of build pipelines (Jenkins) for various projects",
+        "Participated in interview processes and helped new members of the team during their onboarding"
+      ],
       "location": "Montreal, Quebec, Canada"
     },
     {
@@ -69,8 +101,14 @@
       "url": "https://www.linkedin.com/company/shutterstock",
       "startDate": "2017-09",
       "endDate": "2019-04",
-      "summary": "- Used technical expertise and domain knowledge to advise various teams in the auditing process (Sarbanes-Oxley compliance)\n- Participated in the quality and compliance aspects for the development of large scale web applications\n- Used existing test architecture to maintain and develop testing frameworks (Cypress, TestCafe, Puppeteer, Selenium, Jest, Mocha)\n- Proposed architecture improvements for test automation stack, experimented with proof of concepts and implemented new solutions to improve testing reliability\n- Migrated and maintained existing CI/CD process for web apps (Jenkins, Docker)",
-      "highlights": [],
+      "summary": "Supported quality compliance for large-scale applications and maintained testing frameworks including Cypress, TestCafe, Puppeteer, and Selenium.",
+      "highlights": [
+        "Used technical expertise and domain knowledge to advise various teams in the auditing process (Sarbanes-Oxley compliance)",
+        "Participated in the quality and compliance aspects for the development of large scale web applications",
+        "Used existing test architecture to maintain and develop testing frameworks (Cypress, TestCafe, Puppeteer, Selenium, Jest, Mocha)",
+        "Proposed architecture improvements for test automation stack, experimented with proof of concepts and implemented new solutions to improve testing reliability",
+        "Migrated and maintained existing CI/CD process for web apps (Jenkins, Docker)"
+      ],
       "location": "Montreal, Quebec, Canada"
     },
     {
@@ -79,8 +117,15 @@
       "url": "https://www.linkedin.com/company/bell",
       "startDate": "2016-05",
       "endDate": "2017-08",
-      "summary": "- Created an Ansible playbook to automatically configure development VM environments with Java/Node, Eclipse, Maven and Git\n- Managed multiple RHEL 7 servers and performed Linux systems administration tasks\n- Built, deployed, configured and supported multiple applications using Docker and Docker-compose across multiple servers\n- Evaluated DevOps and software development technological solutions and made recommendations\n- Participated in software development projects using Java (Spring Boot, JHipster, Docker)\n- Tested new technologies involving Linux containers and proposed solutions aligned with IT team objectives",
-      "highlights": [],
+      "summary": "Implemented infrastructure automation using Ansible and Docker while managing Linux servers and supporting software development projects.",
+      "highlights": [
+        "Created an Ansible playbook to automatically configure development VM environments with Java/Node, Eclipse, Maven and Git",
+        "Managed multiple RHEL 7 servers and performed Linux systems administration tasks",
+        "Built, deployed, configured and supported multiple applications using Docker and Docker-compose across multiple servers",
+        "Evaluated DevOps and software development technological solutions and made recommendations",
+        "Participated in software development projects using Java (Spring Boot, JHipster, Docker)",
+        "Tested new technologies involving Linux containers and proposed solutions aligned with IT team objectives"
+      ],
       "location": "Montreal, Quebec, Canada"
     },
     {
@@ -89,8 +134,13 @@
       "url": "https://www.linkedin.com/company/bell",
       "startDate": "2015-01",
       "endDate": "2015-04",
-      "summary": "- Participated in the design of a cloud architecture with OpenStack (Green field installation)\n- Gained knowledge on the inner workings of OpenStack Neutron to advise senior Architects with their decisions\n- Created a proof of concept web application to automatically deploy virtual firewalls in remote environments\n- Developed web solutions using Python, HTML, and Twitter Bootstrap for automated VM deployment on VMware ESXi",
-      "highlights": [],
+      "summary": "Designed cloud architectures using OpenStack and developed automation solutions for enterprise infrastructure deployment.",
+      "highlights": [
+        "Participated in the design of a cloud architecture with OpenStack (Green field installation)",
+        "Gained knowledge on the inner workings of OpenStack Neutron to advise senior Architects with their decisions",
+        "Created a proof of concept web application to automatically deploy virtual firewalls in remote environments",
+        "Developed web solutions using Python, HTML, and Twitter Bootstrap for automated VM deployment on VMware ESXi"
+      ],
       "location": "Montreal, Quebec, Canada"
     },
     {
@@ -99,8 +149,15 @@
       "url": "https://www.linkedin.com/company/expertus-an-ibm-company",
       "startDate": "2013-04",
       "endDate": "2014-08",
-      "summary": "- Responsible for the application build process and build process improvement\n- Performed various fixes in legacy versions of the application and assisted the quality assurance and support team during all stages of testing and deployment\n- Developed software using J2EE, Struts, and Vaadin\n- Provided bug fixing and level 3 support\n- Automated builds with Maven and Bash\n- Installed and configured a build server using Jenkins",
-      "highlights": [],
+      "summary": "Developed software applications using J2EE and Struts while automating build processes with Maven and Jenkins.",
+      "highlights": [
+        "Responsible for the application build process and build process improvement",
+        "Performed various fixes in legacy versions of the application and assisted the quality assurance and support team during all stages of testing and deployment",
+        "Developed software using J2EE, Struts, and Vaadin",
+        "Provided bug fixing and level 3 support",
+        "Automated builds with Maven and Bash",
+        "Installed and configured a build server using Jenkins"
+      ],
       "location": "Montreal, Quebec, Canada"
     },
     {
@@ -109,8 +166,13 @@
       "url": "https://apisoft.xyz/about",
       "startDate": "2012-01",
       "endDate": "2012-04",
-      "summary": "- Participated in the development of a database module for an alert management software solution\n- Tested existing code and fixed errors\n- Implemented file-based database management with Java\n- Performed unit testing in Java with JUnit",
-      "highlights": [],
+      "summary": "Contributed to engineering excellence through technical initiatives, automation, and team collaboration.",
+      "highlights": [
+        "Participated in the development of a database module for an alert management software solution",
+        "Tested existing code and fixed errors",
+        "Implemented file-based database management with Java",
+        "Performed unit testing in Java with JUnit"
+      ],
       "location": "Lachine, Quebec, Canada"
     },
     {
@@ -119,8 +181,16 @@
       "url": "https://www.linkedin.com/company/ibm-canada-ibm-canada-limitee",
       "startDate": "2010-05",
       "endDate": "2011-08",
-      "summary": "Summer job and internship, back to school from Sept 2010 to Jan 2011\n- Scheduled down-time on a large array of production machines to apply fixes and updates to attached computers\n- Deployed Windows XP Service Pack 3 manually on 700+ computers across a production line\n- Programmed scripts to extract firewall rules from existing configuration files for migration to newer versions\n- Provided level 1-2 technical support for production environments\n- Deployed and managed Symantec Anti-virus on Windows XP systems\n- Configured Symantec Endpoint Protection firewall rules\n- Performed initial configuration on new computers and replaced faulty hardware components",
-      "highlights": [],
+      "summary": "Provided level 1-2 technical support, deployed system updates, and managed antivirus configurations across production environments.",
+      "highlights": [
+        "Scheduled down-time on a large array of production machines to apply fixes and updates to attached computers",
+        "Deployed Windows XP Service Pack 3 manually on 700+ computers across a production line",
+        "Programmed scripts to extract firewall rules from existing configuration files for migration to newer versions",
+        "Provided level 1-2 technical support for production environments",
+        "Deployed and managed Symantec Anti-virus on Windows XP systems",
+        "Configured Symantec Endpoint Protection firewall rules",
+        "Performed initial configuration on new computers and replaced faulty hardware components"
+      ],
       "location": "Bromont, Quebec, Canada"
     }
   ],
