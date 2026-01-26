@@ -93,10 +93,10 @@ jobs:
 
     steps:
       - name: Checkout code
-        uses: actions/checkout@v6.0.1
+        uses: actions/checkout@8e8c483db84b4bee98b60c0593521ed34d9990e8 #v6.0.1
 
       - name: Setup Bun
-        uses: oven-sh/setup-bun@v2
+        uses: oven-sh/setup-bun@3d267786b128fe76c2f16a390aa2448b815359f3 #v2.1.2
         with:
           bun-version: latest
 
@@ -104,12 +104,9 @@ jobs:
         run: |
           bun add -g resumed
 
-      - name: Install resume render themes
+      - name: Install packages for local theme
         run: |
-          bun add jsonresume-theme-bold-header-statement
-          # bun add -g jsonresume-theme-nordic-minimal
-          # bun add -g jsonresume-theme-french-atelier
-          # bun add -g jsonresume-theme-sales-hunter
+          cd bold-header-niceplace && bun install
 
       - name: Ensure rendered/ folder exists
         run: |
@@ -119,44 +116,33 @@ jobs:
           fi
         shell: bash
 
-      - name: Render resume with bold-header-statement theme
-        run: resumed render resume-base.json --theme jsonresume-theme-bold-header-statement --output rendered/resume-bold-header-statement.html
+      - name: Render resume with all relevant themes
+        run: bun run render-resume.js
 
-      - name: Render resume with nordic-minimal theme
-        run: resumed render resume-base.json --theme jsonresume-theme-nordic-minimal --output rendered/resume-nordic-minimal.html
-
-      - name: Render resume with french-atelier theme
-        run: resumed render resume-base.json --theme jsonresume-theme-french-atelier --output rendered/resume-french-atelier.html
-
-      - name: Render resume with sales-hunter theme
-        run: resumed render resume-base.json --theme jsonresume-theme-sales-hunter --output rendered/resume-sales-hunter.html
-
-      - name: Check for changes in rendered files
-        id: check_changes
-        run: |
-          git diff --exit-code rendered/ || {
-            echo "changes_detected=true" >> "$GITHUB_OUTPUT"
-            echo "Detected changes in rendered files"
-          }
+      - name: Detect changed files in rendered/
+        id: changed-files
+        uses: tj-actions/changed-files@e0021407031f5be11a464abee9a0776171c79891 #v47.0.1
+        with:
+          files: rendered/** # Only track changes in rendered/
+          files_ignore: rendered/.gitkeep # Optional: Ignore .gitkeep if present
 
       - name: Create new branch for rendered CV
-        if: steps.check_changes.outputs.changes_detected == 'true'
+        if: steps.changed-files.outputs.any_changed == 'true'
         run: |
-          BRANCH_NAME="update-rendered-cv-$(date +%Y%m%d-%H%M%S)"
+          BRANCH_NAME="update-rendered-cv-${{ github.run_id }}"
           echo "branch_name=$BRANCH_NAME" >> "$GITHUB_OUTPUT"
-          git checkout -b "$BRANCH_NAME"
         id: create_branch
 
       - name: Commit rendered files
-        if: steps.check_changes.outputs.changes_detected == 'true'
+        if: steps.changed-files.outputs.any_changed == 'true'
         run: |
           git config user.name "render-cv[bot]"
           git config user.email "render-cv[bot]@users.noreply.github.com"
-          git add --all
-          git commit -a -m "chore: update rendered CV files"
+          git add rendered/
+          git commit -m "chore: update rendered CV files"
 
       - name: Create pull request
-        if: steps.check_changes.outputs.changes_detected == 'true'
+        if: steps.changed-files.outputs.any_changed == 'true'
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
