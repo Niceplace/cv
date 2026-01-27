@@ -1,0 +1,313 @@
+{
+  "$schema": "https://raw.githubusercontent.com/jsonresume/resume-schema/v1.0.0/schema.json",
+  "basics": {
+    "name": "Simon Beaulieu",
+    "label": "Senior DevX Engineer",
+    "email": "s.beaulie2@gmail.com",
+    "phone": "+1438-391-6940",
+    "location": {
+      "address": "",
+      "postalCode": "",
+      "city": "Montreal",
+      "countryCode": "CA",
+      "region": "Quebec"
+    },
+    "profiles": [
+      {
+        "network": "LinkedIn",
+        "username": "sbeaulie2",
+        "url": "https://www.linkedin.com/in/sbeaulie2"
+      },
+      {
+        "network": "GitHub",
+        "username": "Niceplace",
+        "url": "https://www.github.com/Niceplace"
+      }
+    ]
+  },
+  "work": [
+    {
+      "name": "Pleo",
+      "position": "Senior Software Engineer, Developer Experience",
+      "url": "https://www.linkedin.com/company/pleo-company",
+      "startDate": "2023-06",
+      "endDate": "2026-01",
+      "summary": "Led enterprise developer experience initiatives including service catalog migration, microservice infrastructure automation and rollout of AI tooling across the engineering organization.",
+      "highlights": [
+        "Created onboarding content (written/video guides) and participated in backend/tooling systems design interviews.",
+        "Resolved technical challenges in Gradle, Kubernetes, API standards, and GitHub Actions through rotation support.",
+        "Coached platform teams (Mobile, Frontend, Security) on engineering standards via scorecards and vendor coordination.",
+        "Led SaaS tool migration for internal developer platform (OpsLevel -> Port.io) with infrastructure refactoring, stakeholder communication, and minimal-downtime transitions.",
+        "Enabled AI tooling with AWS Bedrock, automating inference profiles and Claude Code configuration for 200+ engineers."
+      ],
+      "location": "Remote from Montreal, Quebec, Canada"
+    },
+    {
+      "name": "Pleo",
+      "position": "Senior Software Engineer in Test",
+      "url": "https://www.linkedin.com/company/pleo-company",
+      "startDate": "2022-06",
+      "endDate": "2023-06",
+      "summary": "",
+      "highlights": [
+        "Play a key role in a special project to measure DORA metrics for the engineering organisation",
+        "Maintain and improve a custom ETL platform to collect and analyze data supporting quality metrics across the organization",
+        "Revamp the bug triaging & prioritizing process involving customer support & engineering teams by measuring key metrics against SLAs",
+        "Create automation solutions to improve test efficiency"
+      ],
+      "location": "Montreal, Quebec, Canada"
+    },
+    {
+      "name": "Pleo",
+      "position": "Test Engineer",
+      "url": "https://www.linkedin.com/company/pleo-company",
+      "startDate": "2020-01",
+      "endDate": "2022-07",
+      "summary": "Championed quality practices through DORA metrics implementation, bug triage process improvements, and team coaching on testing tooling.",
+      "highlights": [
+        "Revamped bug triage process with SLA metrics for customer support and engineering teams",
+        "Coached teams on quality improvements with better tooling and build pipelines",
+        "Built custom ETL tool to collect metrics from Github, mobile stats, and project management tools",
+        "Developed quality automation tooling"
+      ],
+      "location": "Remote from Montreal, Quebec, Canada"
+    },
+    {
+      "name": "PremiumBeat (a Shutterstock Company)",
+      "position": "Software Engineer In Test II",
+      "url": "https://www.linkedin.com/company/shutterstock",
+      "startDate": "2019-04",
+      "endDate": "2019-12",
+      "summary": "Led testing framework analysis and CI/CD optimization while participating in company-wide quality initiatives and SoX compliance audits.",
+      "highlights": [
+        "Refactored reporting tool to track test trends (pass/fail rates, test changes)",
+        "Analyzed E2E frameworks, proposed solutions, and implemented POCs for new test projects",
+        "Improved code quality through better tooling and practices company-wide",
+        "Provided technical advice during SoX audits",
+        "Optimized and maintained Jenkins build pipelines",
+        "Conducted interviews and onboarded new team members"
+      ],
+      "location": "Montreal, Quebec, Canada"
+    },
+    {
+      "name": "PremiumBeat (a Shutterstock Company)",
+      "position": "Software Engineer in Test I",
+      "url": "https://www.linkedin.com/company/shutterstock",
+      "startDate": "2017-09",
+      "endDate": "2019-04",
+      "summary": "Supported quality compliance for large-scale applications and maintained testing frameworks including Cypress, TestCafe, Puppeteer, and Selenium.",
+      "highlights": [
+        "Advised teams on Sarbanes-Oxley compliance",
+        "Supported quality and compliance for large-scale web applications",
+        "Maintained and developed testing frameworks (Cypress, TestCafe, Puppeteer, Selenium, Jest, Mocha)",
+        "Proposed and implemented test automation improvements",
+        "Migrated and maintained CI/CD processes (Jenkins, Docker)"
+      ],
+      "location": "Montreal, Quebec, Canada"
+    },
+    {
+      "name": "Bell",
+      "position": "Specialist, Technology",
+      "url": "https://www.linkedin.com/company/bell",
+      "startDate": "2016-05",
+      "endDate": "2017-08",
+      "summary": "Implemented infrastructure automation using Ansible and Docker while managing Linux servers and supporting software development projects.",
+      "highlights": [
+        "Automated VM configuration with Ansible for Java/Node, Eclipse, Maven and Git",
+        "Managed RHEL 7 servers and performed Linux administration",
+        "Built and deployed applications using Docker and Docker-compose",
+        "Evaluated and recommended DevOps/software development solutions",
+        "Developed Java projects with Spring Boot, JHipster and Docker",
+        "Tested Linux container technologies and proposed solutions"
+      ],
+      "location": "Montreal, Quebec, Canada"
+    },
+    {
+      "name": "Bell",
+      "position": "IT Technical Architect",
+      "url": "https://www.linkedin.com/company/bell",
+      "startDate": "2015-01",
+      "endDate": "2015-04",
+      "summary": "Designed cloud architectures using OpenStack and developed automation solutions for enterprise infrastructure deployment.",
+      "highlights": [
+        "Advised senior architects on OpenStack Neutron",
+        "Built POC web app for remote virtual firewall deployment",
+        "Developed Python/HTML/Twitter Bootstrap solutions for VMware ESXi VM automation"
+      ],
+      "location": "Montreal, Quebec, Canada"
+    },
+    {
+      "name": "Expertus Technologies",
+      "position": "Intern Java Developer",
+      "url": "https://www.linkedin.com/company/expertus-an-ibm-company",
+      "startDate": "2013-04",
+      "endDate": "2014-08",
+      "summary": "Developed software applications using J2EE and Struts while automating build processes with Maven and Jenkins.",
+      "highlights": [
+        "Owned the application build process and implemented improvements to streamline workflows",
+        "Fixed legacy application issues and supported QA/support teams through testing and deployment phases",
+        "Developed software applications using J2EE, Struts, and Vaadin frameworks",
+        "Set up and configured Jenkins build server to automate Maven and Bash-based builds"
+      ],
+      "location": "Montreal, Quebec, Canada"
+    },
+    {
+      "name": "APISOFT Technovision Corporation",
+      "position": "Developer / Q&A (Internship)",
+      "url": "https://apisoft.xyz/about",
+      "startDate": "2012-01",
+      "endDate": "2012-04",
+      "summary": "Contributed to engineering excellence through technical initiatives, automation, and team collaboration.",
+      "highlights": [
+        "Participated in the development of a database module for an alert management software solution",
+        "Tested existing code and fixed errors",
+        "Implemented file-based database management with Java",
+        "Performed unit testing in Java with JUnit"
+      ],
+      "location": "Lachine, Quebec, Canada"
+    },
+    {
+      "name": "IBM Canada Ltd.",
+      "position": "Computer Technician",
+      "url": "https://www.linkedin.com/company/ibm-canada-ibm-canada-limitee",
+      "startDate": "2010-05",
+      "endDate": "2011-08",
+      "summary": "Provided level 1-2 technical support, deployed system updates, and managed antivirus configurations across production environments.",
+      "highlights": [
+        "Deployed Windows XP Service Pack 3 manually on 700+ computers across a production line",
+        "Programmed scripts to extract firewall rules from existing configuration files for migration to newer versions",
+        "Provided level 1-2 technical support for production environments",
+        "Deployed and managed Symantec Anti-virus on Windows XP systems",
+        "Configured Symantec Endpoint Protection firewall rules",
+        "Performed initial configuration on new computers and replaced faulty hardware components"
+      ],
+      "location": "Bromont, Quebec, Canada"
+    }
+  ],
+  "volunteer": [],
+  "education": [
+    {
+      "institution": "Université du Québec - Ecole de Technologie supérieure",
+      "url": "https://www.etsmtl.ca/",
+      "area": "IT Engineering",
+      "studyType": "Bachelor's Degree",
+      "startDate": "2011",
+      "endDate": "2016",
+      "score": "3.55/4.3",
+      "courses": [],
+      "summary": "Bachelor's degree in IT engineering. This degree is oriented towards training generalist engineers that can understand and work with major technologies present in today's enterprises (development, systems administration, networking, administration, project management)"
+    },
+    {
+      "institution": "Cégep de Granby Haute-Yamaska",
+      "url": "https://cegepgranby.ca/programme/dec-techniques-de-linformatique",
+      "area": "Computer Science",
+      "studyType": "Technical degree",
+      "startDate": "2008",
+      "endDate": "2011",
+      "score": "29.0",
+      "courses": [],
+      "summary": "Activities and societies: Tutoring in programming and computer science courses"
+    }
+  ],
+  "awards": [],
+  "certificates": [],
+  "publications": [],
+  "skills": [
+    {
+      "name": "Programming Languages",
+      "keywords": ["Typescript", "Kotlin", "Golang", "Bash"]
+    },
+
+    {
+      "name": "DevOps & Cloud",
+      "keywords": [
+        "AWS",
+        "AWS Bedrock",
+        "Ansible",
+        "Docker & Docker-compose",
+        "Terraform",
+        "Kubernetes"
+      ]
+    },
+    {
+      "name": "CI/CD & Automation",
+      "keywords": ["Concourse CI", "GitHub Actions", "Jenkins"]
+    },
+    {
+      "name": "Testing",
+      "keywords": ["Cypress", "JUnit", "Jest", "Mocha", "Puppeteer", "Selenium", "TestCafe"]
+    },
+    {
+      "name": "Databases",
+      "keywords": ["SqLite", "PostgreSQL"]
+    },
+    {
+      "name": "Tools & Platforms",
+      "keywords": [
+        "Claude Code",
+        "Github Copilot",
+        "LiteLLM",
+        "Port.io",
+        "OpsLevel",
+        "Swarmia",
+        "DX"
+      ]
+    }
+  ],
+  "languages": [
+    {
+      "language": "French",
+      "fluency": "Native"
+    },
+    {
+      "language": "English",
+      "fluency": "Bilingual (highly proficient)"
+    }
+  ],
+  "interests": [
+    {
+      "name": "Woodworking"
+    },
+    {
+      "name": "Sharpening"
+    },
+    {
+      "name": "Dust collection and air quality"
+    },
+    {
+      "name": "Hand tools"
+    }
+  ],
+  "references": [],
+  "projects": [
+    {
+      "name": "Over-engineering my CV",
+      "description": "Using AI tooling and JsonResume to make things a little more challenging while updating my CV",
+      "url": "https://github.com/Niceplace/cv",
+      "startDate": "2026",
+      "technologies": [
+        "Copilot",
+        "Zed",
+        "Mistral.ai",
+        "Z.ai",
+        "GitHub Actions",
+        "React",
+        "JsonResume"
+      ]
+    },
+    {
+      "name": "Infrastructure of my home lab",
+      "description": "Reference for the configuration of my local servers and workstations",
+      "url": "https://github.com/Niceplace/labrador-maison",
+      "startDate": "2022",
+      "technologies": ["Docker & Docker-compose", "Concourse CI", "Traefik", "Bash"]
+    },
+    {
+      "name": "Multi-purpose CLI",
+      "description": "Exploration of the GO language and development of CLI for various personal uses",
+      "url": "https://github.com/Niceplace/mastercrab",
+      "startDate": "2025",
+      "technologies": ["Golang", "Cobra", "Viper", "SqLite"]
+    }
+  ]
+}

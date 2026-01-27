@@ -10,11 +10,34 @@ I will leverage copilot to build the tooling around this repository and fix it b
 
 # Features
 
-- A `base` version of the resume @ [resume-base](./resume-base.json)
-- All variations of said resume to fit job postings that I am interested in
-    - Naming convention will be `resume-$POSITION-$COMPANY.json`, ex: `resume-devx-engineer-linkedin.json`
+- A `base` version of the resume data in two languages: [English](./resume-json/resume-en.json) and [French](./resume-json/resume-fr.json)
 - Automated validation of resume formats against the json resume [schema](https://jsonresume.org/schema)
 - Automated publishing (only for the base version) of the CV against the [public gist](https://gist.github.com/Niceplace/8e587fe79ca40a637589b1d2d5c9373d) of my resume
+- Multiple resume themes with flexible rendering
+
+# Rendering Resumes
+
+Render resume with a specific theme:
+
+```bash
+bun run render modern-classic
+```
+
+Render with default theme (nordic-minimal):
+
+```bash
+bun run render
+```
+
+Available themes:
+
+- nordic-minimal
+- modern-classic
+- french-atelier
+- tailwind
+- typewriter-modern
+
+Rendered HTML files are saved in the `rendered/` directory with the naming convention `{lang}-resume-{theme}.html`
 
 # Out of scope
 
