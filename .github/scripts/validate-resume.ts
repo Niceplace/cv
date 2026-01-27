@@ -10,6 +10,12 @@ const resumeFiles = ["resume-base-en.json", "resume-base-fr.json"];
 interface ValidationError {
   path: string;
   message: string;
+  resolution?: string;
+}
+
+interface FileValidationResult {
+  file: string;
+  errors: ValidationError[];
 }
 
 class ImportError extends Error {}
@@ -22,6 +28,101 @@ const loadModule = async (modulePath: string) => {
   }
 };
 
+/**
+ * Validate all resume files and collect any errors
+ */
+async function validateFiles(
+  resumed: any,
+  files: string[]
+): Promise<FileValidationResult[]> {
+  const validationResults: FileValidationResult[] = [];
+  
+  for (const file of files) {
+    try {
+      await resumed.validate(file);
+      console.log(
+        `✓ ${file}'s schema is valid according to JsonResume's schema.`,
+      );
+    } catch (err: unknown) {
+      // Collect validation errors for this file
+      if (Array.isArray(err)) {
+        validationResults.push({ file, errors: err });
+      } else {
+        // For non-validation errors (e.g., file not found), treat as a single error
+        validationResults.push({
+          file,
+          errors: [{
+            path: file,
+            message: err instanceof Error ? err.message : String(err)
+          }]
+        });
+      }
+    }
+  }
+  
+  return validationResults;
+}
+
+/**
+ * Propose fixes for common validation errors
+ */
+function proposeErrorFixes(error: ValidationError): void {
+  // Provide helpful context for common error patterns
+  if (error.message && error.message.includes("does not match pattern")) {
+    if (error.path && error.path.includes("Date")) {
+      error.resolution = `Dates must be in ISO 8601 format: YYYY-MM-DD, YYYY-MM, or YYYY. Examples: "2023-06", "2023", "2023-06-15"`;
+    }
+  } else if (
+    error.message &&
+    error.message.includes('does not conform to the "uri" format')
+  ) {
+    error.resolution = `URLs must be valid URIs (e.g., "https://example.com"). Empty strings are not valid. Use a proper URL or remove the field.`;
+  }
+}
+
+/**
+ * Report validation errors for all files
+ */
+function reportValidationErrors(results: FileValidationResult[]): void {
+  const totalErrors = results.reduce(
+    (sum, result) => sum + result.errors.length,
+    0
+  );
+  
+  console.error(
+    `\n❌ Resume validation failed for ${results.length} file(s) with ${totalErrors} total error(s):\n`,
+  );
+  
+  results.forEach((result) => {
+    console.error(`\n📄 File: ${result.file}`);
+    console.error(`   Errors: ${result.errors.length}\n`);
+    
+    result.errors.forEach((error: ValidationError, index: number) => {
+      // Propose fixes for this error
+      proposeErrorFixes(error);
+      
+      // Display error details generically
+      console.error(`   Error ${index + 1}:`);
+      
+      if (error.path) {
+        console.error(`     Location: ${error.path}`);
+      }
+      
+      if (error.message) {
+        console.error(`     Issue: ${error.message}`);
+      }
+      
+      if (error.resolution) {
+        console.error(`     → ${error.resolution}`);
+      }
+    });
+  });
+  
+  console.error(
+    `\nFor the complete JSON Resume schema specification, visit: https://github.com/jsonresume/resume-schema/blob/master/schema.json\n`,
+  );
+}
+
 async function main() {
   try {
     // Import the resumed module (ES6 module)
@@ -33,13 +134,15 @@ async function main() {
       throw new Error("validate function not found in resumed module");
     }
 
-    // Validate all resume files in scope
-    for (const file of resumeFiles) {
-      await resumed.validate(file);
-      console.log(
-        `${file}'s schema is valid according to JsonResume's schema.`,
-      );
+    // Validate all resume files in scope and collect errors
+    const validationResults = await validateFiles(resumed, resumeFiles);
+    
+    // If any files had validation errors, report them all and exit
+    if (validationResults.length > 0) {
+      reportValidationErrors(validationResults);
+      process.exit(1);
     }
+    
     process.exit(0);
   } catch (err: unknown) {
     if (err instanceof ImportError) {
@@ -47,45 +150,11 @@ async function main() {
         `Failed to import resumed module: Ensure package "resumed" is installed`,
       );
       console.error(err);
+      process.exit(1);
     }
-    // Check if it's the expected validation error array from @jsonresume/schema
-    else if (Array.isArray(err)) {
-      console.error(
-        `❌ Resume validation failed with ${err.length} error(s):\n`,
-      );
-
-      err.forEach((error: ValidationError, index: number) => {
-        console.error(`Error ${index + 1}:
-          Location: ${error.path || "unknown"}
-          Issue: ${error.message}`);
-
-        // Provide helpful context for common error patterns
-        if (error.message && error.message.includes("does not match pattern")) {
-          if (error.path && error.path.includes("Date")) {
-            console.error(
-              `  → Dates must be in ISO 8601 format: YYYY-MM-DD, YYYY-MM, or YYYY
-              \n     Examples: "2023-06", "2023", "2023-06-15"`,
-            );
-          }
-        } else if (
-          error.message &&
-          error.message.includes('does not conform to the "uri" format')
-        ) {
-          console.error(
-            `  → URLs must be valid URIs (e.g., "https://example.com")
-            Empty strings are not valid. Use a proper URL or remove the field.`,
-          );
-        }
-      });
-
-      console.error(
-        `For the complete JSON Resume schema specification, visit: https://github.com/jsonresume/resume-schema/blob/master/schema.json\n`,
-      );
-    } else {
-      // Some other error (file not found, JSON parse error, etc.)
-      console.error("\n❌ Validation encountered an error:\n");
-      console.error(err.message || err);
-    }
+    // Any other unexpected errors during module loading or setup
+    console.error("\n❌ Validation encountered an unexpected error:\n");
+    console.error(err instanceof Error ? err.message : err);
     process.exit(1);
   }
 }
