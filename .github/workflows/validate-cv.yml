@@ -102,20 +102,12 @@ jobs:
         with:
           bun-version: latest
 
-      - name: Install resumed cli
+      - name: Install dependencies
         run: |
-          bun add -g resumed
-
-      - name: Ensure rendered/ folder exists
-        run: |
-          if [[ ! -d "rendered" ]]; then
-            echo "Error: rendered/ directory should not exist to render the CV into it, ensure it exists."
-            exit 1
-          fi
-        shell: bash
+          bun install
 
       - name: Render resume with all relevant themes
-        run: bun run render
+        run: bun render
 
       - name: Detect changed files in rendered/
         id: changed-files
