@@ -70,15 +70,13 @@ function proposeErrorFixes(error: ValidationError): void {
   // Provide helpful context for common error patterns
   if (error.message && error.message.includes("does not match pattern")) {
     if (error.path && error.path.includes("Date")) {
-      error.resolution = `Dates must be in ISO 8601 format: YYYY-MM-DD, YYYY-MM, or YYYY
-        Examples: "2023-06", "2023", "2023-06-15"`;
+      error.resolution = `Dates must be in ISO 8601 format: YYYY-MM-DD, YYYY-MM, or YYYY. Examples: "2023-06", "2023", "2023-06-15"`;
     }
   } else if (
     error.message &&
     error.message.includes('does not conform to the "uri" format')
   ) {
-    error.resolution = `URLs must be valid URIs (e.g., "https://example.com")
-        Empty strings are not valid. Use a proper URL or remove the field.`;
+    error.resolution = `URLs must be valid URIs (e.g., "https://example.com"). Empty strings are not valid. Use a proper URL or remove the field.`;
   }
 }
 
