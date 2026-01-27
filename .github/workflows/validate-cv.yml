@@ -5,16 +5,15 @@ on:
     branches:
       - main
     paths:
-      - "resume-*.json"
+      - 'resume-*.json'
   pull_request:
     branches:
       - main
     paths:
-      - "resume-*.json"
-      - "render-resume.js"
-      - "bold-header-niceplace/**"
-      - ".github/scripts/**"
-      - ".github/workflows/validate-cv.yml"
+      - 'resume-*.json'
+      - 'scripts/**'
+      - 'themes/**'
+      - '.github/workflows/validate-cv.yml'
 
 jobs:
   validate-resume:
@@ -42,7 +41,7 @@ jobs:
 
           # Run validation using the TypeScript script with Bun runtime
           set +e
-          VALIDATION_RESULT=$(bun .github/scripts/validate-resume.ts 2>&1)
+          VALIDATION_RESULT=$(bun scripts/for-github-actions/validate-schema.ts 2>&1)
           VALIDATION_EXIT_CODE=$?
           set -e
 
@@ -65,7 +64,7 @@ jobs:
         run: |
           # Use the TypeScript post-pr-comment script with Bun runtime
           # Pass validation output via environment variable to avoid bash escaping issues
-          bun .github/scripts/post-pr-comment.ts "$VALIDATION_OUTPUT" "${{ github.event.pull_request.number }}"
+          bun scripts/for-github-actions/post-pr-comment.ts "$VALIDATION_OUTPUT" "${{ github.event.pull_request.number }}"
 
       - name: Fail workflow if validation failed
         if: steps.validate.outputs.validation_status == 'failed'
@@ -109,10 +108,6 @@ jobs:
         run: |
           bun add -g resumed
 
-      - name: Install packages for local theme
-        run: |
-          cd bold-header-niceplace && bun install
-
       - name: Ensure rendered/ folder exists
         run: |
           if [[ ! -d "rendered" ]]; then
@@ -122,7 +117,7 @@ jobs:
         shell: bash
 
       - name: Render resume with all relevant themes
-        run: bun run render-resume.js
+        run: bun run render
 
       - name: Detect changed files in rendered/
         id: changed-files
