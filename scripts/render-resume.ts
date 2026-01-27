@@ -59,7 +59,7 @@ async function renderTheme(themeName: string) {
 
     const html = render(resumeData)
     const outputPath = join(renderOutputDir, `${lang}-resume-${themeName}.html`)
-    // Will create "render" directory if it doesn't exist
+    // Will create "rendered" directory if it doesn't exist
     await Bun.write(outputPath, html, { createPath: true })
 
     console.log(`Rendered: ${outputPath}`)
