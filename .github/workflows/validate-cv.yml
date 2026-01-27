@@ -37,8 +37,6 @@ jobs:
       - name: Validate resume schema
         id: validate
         run: |
-          # Note: resume-base.json is the canonical CV file per repository conventions
-
           # Run validation using the TypeScript script with Bun runtime
           set +e
           VALIDATION_RESULT=$(bun scripts/for-github-actions/validate-schema.ts 2>&1)
@@ -85,7 +83,7 @@ jobs:
         env:
           GH_TOKEN: ${{ secrets.GH_GIST_TOKEN }}
         run: |
-          gh gist edit 8e587fe79ca40a637589b1d2d5c9373d resume-base-en.json
+          gh gist edit 8e587fe79ca40a637589b1d2d5c9373d resume-json/resume-en.json
 
   render-resume:
     needs: validate-resume

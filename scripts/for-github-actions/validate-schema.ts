@@ -5,7 +5,7 @@
  * Uses Bun runtime with TypeScript support
  */
 
-const resumeFiles = ['resume-base/resume-en.json', 'resume-json/resume-fr.json']
+const resumeFiles = ['resume-json/resume-en.json', 'resume-json/resume-fr.json']
 
 interface ValidationError {
   path: string
