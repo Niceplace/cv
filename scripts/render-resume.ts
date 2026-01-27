@@ -8,6 +8,7 @@ const __filename = fileURLToPath(import.meta.url)
 const __dirname = dirname(__filename)
 
 const themesDir = join(__dirname, '..', 'themes')
+const renderOutputDir = join(__dirname, '..', 'rendered')
 
 interface ResumeData {
   [key: string]: unknown
@@ -57,8 +58,9 @@ async function renderTheme(themeName: string) {
     const resumeData: ResumeData = await resumeFile.json()
 
     const html = render(resumeData)
-    const outputPath = join(__dirname, '..', 'rendered', `${lang}-resume-${themeName}.html`)
-    await Bun.write(outputPath, html)
+    const outputPath = join(renderOutputDir, `${lang}-resume-${themeName}.html`)
+    // Will create "render" directory if it doesn't exist
+    await Bun.write(outputPath, html, { createPath: true })
 
     console.log(`Rendered: ${outputPath}`)
   }
