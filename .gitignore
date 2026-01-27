@@ -1,7 +1,8 @@
 # node_modules
 node_modules/
 
-
-
 # One-off scripts created by AI agents
 ai-support-scripts/
+
+# Ignore cover letters
+cover-letters/
