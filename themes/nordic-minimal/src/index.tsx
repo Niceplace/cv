@@ -71,6 +71,7 @@ interface Project {
   endDate?: string
   description?: string
   highlights?: string[]
+  skills?: string[]
 }
 
 interface ResumeData {

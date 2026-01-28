@@ -9,8 +9,7 @@
       "address": "",
       "postalCode": "",
       "city": "Montreal",
-      "countryCode": "CA",
-      "region": "Quebec"
+      "countryCode": "CAN"
     },
     "profiles": [
       {
@@ -42,13 +41,11 @@
       ],
       "location": "Remote from Montreal, Quebec, Canada",
       "skills": [
-        "Cloud & Infrastructure",
-        "CI/CD & Automation",
-        "Developer Tools & Platforms",
-        "AI & Machine Learning",
-        "API Development",
-        "Programming Languages",
-        "Monitoring & Observability"
+        "Service catalog (OpsLevel, Port.io, Terraform)",
+        "Pipelines CI/CD (Github Actions, Renovate)",
+        "CLI development (Typescript)",
+        "AI tooling (AWS Bedrock, Claude Code, Github Copilot, LiteLLM)",
+        "Technical leadership (Proposing & Leading technical projects, X-team collaboration)"
       ]
     },
     {
@@ -66,10 +63,10 @@
       ],
       "location": "Montreal, Quebec, Canada",
       "skills": [
-        "Quality Engineering",
-        "Data Engineering",
-        "Process Improvement",
-        "Testing Tools"
+        "Custom ETL tooling (Sqlite, Typescript, FiveTran)",
+        "Data Analysis (SQL, Dbt)",
+        "Automated Testing (Cypress, Jest, Mocha, Mockito, Junit)",
+        "Project management"
       ]
     },
     {
@@ -87,11 +84,10 @@
       ],
       "location": "Remote from Montreal, Quebec, Canada",
       "skills": [
-        "Quality Metrics",
-        "Data & Analytics",
-        "Quality Assurance",
-        "Development Tools",
-        "Process Improvement"
+        "Custom ETL (Typescript, Rest, Octokit, Fivetran)",
+        "Data Analysis (SQL, Dbt)",
+        "Automated Testing (Cypress, Jest, Mocha, Mockito, Junit)",
+        "Project management"
       ]
     },
     {
@@ -111,12 +107,10 @@
       ],
       "location": "Montreal, Quebec, Canada",
       "skills": [
-        "Testing Frameworks",
-        "E2E Testing",
-        "CI/CD & DevOps",
-        "Compliance & Security",
-        "Code Quality & Metrics",
-        "Technical Leadership"
+        "Automated Testing (Cypress, Puppeteer, Selenium)",
+        "Compliance & Audit (SoX)",
+        "Continuous Integration (Jenkins, TeamCity)",
+        "Quality Measurement Tools (Xray)"
       ]
     },
     {
@@ -135,11 +129,9 @@
       ],
       "location": "Montreal, Quebec, Canada",
       "skills": [
-        "Testing Frameworks",
-        "Automation Tools",
-        "CI/CD & DevOps",
-        "Compliance & QA",
-        "Application Types"
+        "Automated Testing (Jest, Mocha, Cypress, TestCafe, Puppeteer, Selenium)",
+        "Continuous Integration (Jenkins)",
+        "Compliance & Audit (SoX)"
       ]
     },
     {
@@ -159,10 +151,9 @@
       ],
       "location": "Montreal, Quebec, Canada",
       "skills": [
-        "DevOps & Infrastructure",
-        "Software Development",
-        "Development Tools",
-        "System Administration"
+        "DevOps & Infrastructure (Ansible, Docker, Docker-compose, RHEL System Administration)",
+        "Software Development (Java, Spring Boot, JHipster)",
+        "Development Tools (Eclipse, Maven, Git)"
       ]
     },
     {
@@ -179,11 +170,10 @@
       ],
       "location": "Montreal, Quebec, Canada",
       "skills": [
-        "Cloud Infrastructure",
-        "Programming & Development",
-        "Frontend Technologies",
-        "Automation & DevOps",
-        "Technical Architecture"
+        "Cloud Infrastructure (OpenStack, OpenStack Neutron, VMware ESXi, Cloud Architecture, Virtualization)",
+        "Software development (Python, HTML&CSS, Bash)",
+        "Frontend (Twitter Bootstrap)",
+        "Technical Architecture (TOSCA)"
       ]
     },
     {
@@ -201,11 +191,9 @@
       ],
       "location": "Montreal, Quebec, Canada",
       "skills": [
-        "Programming Languages & Frameworks",
-        "Build & Development Tools",
-        "Development Processes",
-        "Quality Assurance & Testing",
-        "Deployment & Operations"
+        "Software development (J2EE, Struts)",
+        "Automation and management tools (Maven, Jenkins, Bash)",
+        "Quality assurance & Testing (JUnit, Manual tests)"
       ]
     },
     {
@@ -223,10 +211,9 @@
       ],
       "location": "Lachine, Quebec, Canada",
       "skills": [
-        "Programming Languages",
-        "Database Technologies",
-        "Testing & Quality Assurance",
-        "Software Development"
+        "Software development (Java)",
+        "Database technologies",
+        "Testing (JUnit, unit testing, integration testing)"
       ]
     },
     {
@@ -246,15 +233,9 @@
       ],
       "location": "Bromont, Quebec, Canada",
       "skills": [
-        "Operating Systems",
-        "Security Software",
-        "Hardware",
-        "Technical Support",
-        "System Administration",
-        "Network Technologies",
-        "Software Installation & Maintenance",
-        "Troubleshooting & Diagnostics",
-        "Customer Service",
+        "Technical support (I and II)",
+        "Software installation and maintenance",
+        "Troubleshooting and diagnostics",
         "Documentation"
       ]
     }
@@ -287,48 +268,6 @@
   "awards": [],
   "certificates": [],
   "publications": [],
-  "skills": [
-    {
-      "name": "Programming Languages",
-      "keywords": ["Typescript", "Kotlin", "Golang", "Bash"]
-    },
-
-    {
-      "name": "DevOps & Cloud",
-      "keywords": [
-        "AWS",
-        "AWS Bedrock",
-        "Ansible",
-        "Docker & Docker-compose",
-        "Terraform",
-        "Kubernetes"
-      ]
-    },
-    {
-      "name": "CI/CD & Automation",
-      "keywords": ["Concourse CI", "GitHub Actions", "Jenkins"]
-    },
-    {
-      "name": "Testing",
-      "keywords": ["Cypress", "JUnit", "Jest", "Mocha", "Puppeteer", "Selenium", "TestCafe"]
-    },
-    {
-      "name": "Databases",
-      "keywords": ["SqLite", "PostgreSQL"]
-    },
-    {
-      "name": "Tools & Platforms",
-      "keywords": [
-        "Claude Code",
-        "Github Copilot",
-        "LiteLLM",
-        "Port.io",
-        "OpsLevel",
-        "Swarmia",
-        "DX"
-      ]
-    }
-  ],
   "languages": [
     {
       "language": "French",
@@ -336,7 +275,7 @@
     },
     {
       "language": "English",
-      "fluency": "Bilingual (highly proficient)"
+      "fluency": "Bilingual (written & spoken)"
     }
   ],
   "interests": [
@@ -359,30 +298,39 @@
       "name": "Over-engineering my CV",
       "description": "Using AI tooling and JsonResume to make things a little more challenging while updating my CV",
       "url": "https://github.com/Niceplace/cv",
+      "urlText": "Github link",
       "startDate": "2026",
-      "technologies": [
-        "Copilot",
-        "Zed",
-        "Mistral.ai",
-        "Z.ai",
-        "GitHub Actions",
-        "React",
-        "JsonResume"
-      ]
+      "skills": ["Copilot", "Zed", "Mistral.ai", "Z.ai", "GitHub Actions", "React", "JsonResume"]
     },
     {
       "name": "Infrastructure of my home lab",
       "description": "Reference for the configuration of my local servers and workstations",
       "url": "https://github.com/Niceplace/labrador-maison",
+      "urlText": "Github link",
       "startDate": "2022",
-      "technologies": ["Docker & Docker-compose", "Concourse CI", "Traefik", "Bash"]
+      "skills": ["Docker & Docker-compose", "Concourse CI", "Traefik", "Bash"]
     },
     {
       "name": "Multi-purpose CLI",
       "description": "Exploration of the GO language and development of CLI for various personal uses",
       "url": "https://github.com/Niceplace/mastercrab",
+      "urlText": "Github link",
       "startDate": "2025",
-      "technologies": ["Golang", "Cobra", "Viper", "SqLite"]
+      "skills": ["Go (Cobra, Viper)", "Database (SQLite)"]
     }
-  ]
+  ],
+  "meta": {
+    "lang": "EN",
+    "sectionTitles": {
+      "projects": "Projects",
+      "education": "Education",
+      "references": "References",
+      "experience": "Experience",
+      "contact": "Contact",
+      "languages": "Languages",
+      "interests": "Interests",
+      "projectSkills": "Tech stack",
+      "experienceSkills": "Skills"
+    }
+  }
 }

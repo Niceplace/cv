@@ -2,15 +2,14 @@
   "$schema": "https://raw.githubusercontent.com/jsonresume/resume-schema/v1.0.0/schema.json",
   "basics": {
     "name": "Simon Beaulieu",
-    "label": "Développeur Logiciel Principal, Expérience Développeur",
+    "label": "Développeur Senior, Expérience Développeur",
     "email": "s.beaulie2@gmail.com",
     "phone": "+1438-391-6940",
     "location": {
       "address": "",
       "postalCode": "",
       "city": "Montréal",
-      "countryCode": "CA",
-      "region": "Québec"
+      "countryCode": "CAN"
     },
     "profiles": [
       {
@@ -28,34 +27,32 @@
   "work": [
     {
       "name": "Pleo",
-      "position": "Développeur Logiciel Senior, Expérience Développeur",
+      "position": "Développeur Senior, Outillage",
       "url": "https://www.linkedin.com/company/pleo-company",
       "startDate": "2023-06",
       "endDate": "2026-01",
       "summary": "Contribuer à l'amélioration de l'expérience développeur par la simplification des processus et la création et maintenance d'outillage. Gestion et contribution à divers projets dans les domaines d'automatisation d'infrastructure, de catalogue de services, de gestion de dépendances et de distribution et configuration d'outils d'IA.",
       "highlights": [
-        "Créer des guides écrits et vidéo pour l'intégration des nouveaux employés et participer aux entretiens de design de systèmes backend et d'outillage.",
-        "Résoudre des défis techniques complexes via un rôle de support en rotation, couvrant les conflits de dépendances Gradle, l'utilisation du portail Port, l'application des standards API et l'analyse de problèmes GitHub Actions.",
-        "Diriger et assister la migration du portail développeur de OpsLevel vers Port, assurant une transition en douceur avec les équipes de support et le fournisseur.",
-        "Concevoir l'infrastructure d'outils d'IA avec AWS Bedrock, automatiser la configuration pour 200+ développeurs utilisant Claude Code.",
-        "Accompagner les équipes de support spécialisées (Mobile, Frontend, Backend, Sécurité) pour établir des standards de conformité et servir de point de contact avec l'équipe Port.",
-        "Implanter et configurer Port (portail développeur), DX (métriques) et les intégrations Claude Code, établissant des standards d'infrastructure et d'excellence opérationnelle.",
-        "Optimiser les pipelines CI/CD pour réduire les coûts et les temps d'exécution et optimiser la gestion des dépendances avec Renovate."
+        "Créer des guides pour les nouveaux employés et participer aux entretiens de design technique.",
+        "Résoudre des défis techniques complexes en support (Gradle, Port, API, GitHub Actions).",
+        "Diriger la migration du portail développeur de OpsLevel vers Port.",
+        "Concevoir l'infrastructure d'outils d'IA avec AWS Bedrock pour 200+ développeurs.",
+        "Accompagner les équipes pour établir des standards de conformité et servir de point de contact avec Port.",
+        "Implanter et configurer Port, DX et Claude Code, établissant des standards d'infrastructure.",
+        "Optimiser les pipelines CI/CD et la gestion des dépendances avec Renovate."
       ],
       "location": "Télétravail depuis Montréal, Québec, Canada",
       "skills": [
-        "Cloud & Infrastructure",
-        "CI/CD & Automatisation",
-        "Outils Développeur & Plateformes",
-        "IA & Machine Learning",
-        "Développement API",
-        "Langages de Programmation",
-        "Monitoring & Observabilité"
+        "Catalogue de services (OpsLevel, Port.io, Terraform)",
+        "Pipelines CI/CD (Github Actions, Renovate)",
+        "Développpement de CLI (Typescript)",
+        "Outillage IA (AWS Bedrock, Claude Code, Github Copilot, LiteLLM)",
+        "Leadership technique (Proposition et direction de projets techniques, Collaboration interéquipes)"
       ]
     },
     {
       "name": "Pleo",
-      "position": "Développeur Logiciel Senior en Ingénierie de la qualité",
+      "position": "Développeur Senior en Test",
       "url": "https://www.linkedin.com/company/pleo-company",
       "startDate": "2022-06",
       "endDate": "2023-06",
@@ -69,15 +66,15 @@
       ],
       "location": "Montréal, Québec, Canada",
       "skills": [
-        "Ingénierie de la Qualité",
-        "Ingénierie des Données",
-        "Amélioration des Processus",
-        "Outils de Test"
+        "Outillage de rappatriement de données (Sqlite, Typescript, FiveTran)",
+        "Analyse de données (SQL, Dbt)",
+        "Observabilité et gestion des tests instables (Datadog, Github Actions, Jest, Cypress, Junit)",
+        "Classification de la priorité des coquilles (bug)"
       ]
     },
     {
       "name": "Pleo",
-      "position": "Développeur Logiciel en Ingénierie de la qualité",
+      "position": "Développeur en Test",
       "url": "https://www.linkedin.com/company/pleo-company",
       "startDate": "2020-01",
       "endDate": "2022-07",
@@ -90,16 +87,15 @@
       ],
       "location": "Montréal, Québec, Canada",
       "skills": [
-        "Métriques de Qualité",
-        "Données et Analyse",
-        "Assurance Qualité",
-        "Outils de Développement",
-        "Amélioration des Processus"
+        "Outillage de rappatriement de données (Typescript, Rest, Octokit, FiveTran)",
+        "Données et Analyse (SQL, Dbt)",
+        "Tests automatisés (Cypress, Jest, Mocha, Mockito, Junit)",
+        "Classification de la priorité des coquilles (bug)"
       ]
     },
     {
-      "name": "PremiumBeat (une société Shutterstock)",
-      "position": "Développeur Logiciel en Test II",
+      "name": "PremiumBeat (Shutterstock)",
+      "position": "Développeur de Test II",
       "url": "https://www.linkedin.com/company/shutterstock",
       "startDate": "2019-04",
       "endDate": "2019-12",
@@ -113,17 +109,15 @@
       ],
       "location": "Montréal, Québec, Canada",
       "skills": [
-        "Frameworks de test",
-        "Tests de bout en bout",
-        "CI/CD & DevOps",
-        "Conformité & Sécurité",
-        "Qualité de code & Métriques",
-        "Leadership technique"
+        "Test automatisés (Cypress, Pupeteer, Selenium)",
+        "Conformité & Audit (SoX)",
+        "Pipelines CI/CD (Jenkins)",
+        "Outillage de mesure de la qualité (Xray)"
       ]
     },
     {
-      "name": "PremiumBeat (une société Shutterstock)",
-      "position": "Développeur Logiciel en Test I",
+      "name": "PremiumBeat (Shutterstock)",
+      "position": "Développeur de Test I",
       "url": "https://www.linkedin.com/company/shutterstock",
       "startDate": "2017-09",
       "endDate": "2019-04",
@@ -136,11 +130,9 @@
       ],
       "location": "Montréal, Québec, Canada",
       "skills": [
-        "Frameworks de Test (Jest, Mocha)",
-        "Outils d'Automatisation (Cypress, TestCafe, Puppeteer, Selenium)",
-        "CI/CD & DevOps (Jenkins, Docker)",
-        "Conformité & QA (SoX Compliance)",
-        "Types d'Applications (Applications Web à Grande Échelle)"
+        "Test automatisés (Jest, Mocha, Cypress, TestCafe, Pupeteer, Selenium)",
+        "Intégration continue (Jenkins)",
+        "Conformité & Audit (SoX)"
       ]
     },
     {
@@ -159,10 +151,9 @@
       ],
       "location": "Montréal, Québec, Canada",
       "skills": [
-        "DevOps & Infrastructure (Ansible, Docker, Docker-compose, Technologies de conteneurs Linux, RHEL 7, Administration Linux)",
-        "Développement de logiciels (Java, Spring Boot, JHipster, Maven, Git)",
-        "Outils de développement (Eclipse, Maven, Git)",
-        "Administration système"
+        "DevOps & Infrastructure (Ansible, Docker, Docker-compose, Administration Systèmes RHEL)",
+        "Développement de logiciels (Java, Spring Boot, JHipster)",
+        "Outils de développement (Eclipse, Maven, Git)"
       ]
     },
     {
@@ -180,10 +171,9 @@
       "location": "Montréal, Québec, Canada",
       "skills": [
         "Infrastructure Cloud (OpenStack, OpenStack Neutron, VMware ESXi, Architecture Cloud, Virtualisation)",
-        "Programmation et Développement (Python, HTML, Développement Web, Scripting)",
+        "Développement logiciel (Python, HTML&CSS, Bash)",
         "Technologies Frontend (Twitter Bootstrap, Développement UI, Design Web)",
-        "Automatisation et DevOps",
-        "Architecture Technique"
+        "Architecture Technique (TOSCA)"
       ]
     },
     {
@@ -201,11 +191,9 @@
       ],
       "location": "Montréal, Québec, Canada",
       "skills": [
-        "Langages de programmation & Frameworks (J2EE, Struts, Vaadin)",
-        "Outils de développement & compilation (Maven, Jenkins, Bash)",
-        "Processus de développement",
-        "Assurance qualité & Tests",
-        "Déploiement & Opérations"
+        "Développement logiciel (J2EE, Struts)",
+        "Outil d'automatisation et de gestion (Maven, Jenkins, Bash)",
+        "Assurance qualité & Tests (JUnit, Tests manuels)"
       ]
     },
     {
@@ -223,14 +211,13 @@
       ],
       "location": "Lachine, Québec, Canada",
       "skills": [
-        "Langages de programmation (Java)",
+        "Développement logiciel (Java)",
         "Technologies de base de données",
-        "Test et assurance qualité (JUnit, Méthodologies de test, Correction d'erreurs, Assurance qualité)",
-        "Développement logiciel"
+        "Tests (JUnit, Tests unitaires, Tests d'intégration)"
       ]
     },
     {
-      "name": "IBM Canada Ltd.",
+      "name": "IBM Canada",
       "position": "Technicien Informatique",
       "url": "https://www.linkedin.com/company/ibm-canada-ibm-canada-limitee",
       "startDate": "2010-05",
@@ -243,15 +230,9 @@
       ],
       "location": "Bromont, Québec, Canada",
       "skills": [
-        "Systèmes d'exploitation",
-        "Logiciels de sécurité",
-        "Matériel informatique",
-        "Support technique",
-        "Administration système",
-        "Technologies réseau",
+        "Support technique (I et II)",
         "Installation et maintenance logicielle",
         "Dépannage et diagnostics",
-        "Service client",
         "Documentation"
       ]
     }
@@ -291,7 +272,7 @@
     },
     {
       "language": "Anglais",
-      "fluency": "Bilingue"
+      "fluency": "Bilingue (parlé & écrit)"
     }
   ],
   "interests": [
@@ -314,30 +295,44 @@
       "name": "Sur-ingénierie du rendu de mon CV",
       "description": "Utilisation d'outils d'IA et JsonResume pour ajouter un défi durant la mise à jour de mon CV",
       "url": "https://github.com/Niceplace/cv",
+      "urlText": "Lien Github",
       "startDate": "2026",
-      "technologies": [
-        "Copilot",
-        "Zed",
-        "Mistral.ai",
-        "Z.ai",
-        "GitHub Actions",
-        "React",
-        "JsonResume"
+      "skills": [
+        "Outils IA (Zed, OpenCode, Github Copilot)",
+        "IA (Mistral, Z.ai)",
+        "NodeJS (Bun, React, Typescript)",
+        "GitHub Actions"
       ]
     },
     {
       "name": "Infrastructure de mon laboratoire maison",
       "description": "Référence pour la configuration de l'infrastructure de mes serveurs et postes de travail locaux",
       "url": "https://github.com/Niceplace/labrador-maison",
+      "urlText": "Lien Github",
       "startDate": "2022",
-      "technologies": ["Docker & Docker-compose", "Concourse CI", "Traefik", "Bash"]
+      "skills": ["Docker & Docker-compose", "Concourse CI", "Traefik", "Bash"]
     },
     {
       "name": "CLI à usages multiples",
       "description": "Exploration du language GO et développement de CLI pour divers usages personnels",
       "url": "https://github.com/Niceplace/mastercrab",
+      "urlText": "Lien Github",
       "startDate": "2025",
-      "technologies": ["Golang", "Cobra", "Viper", "SqLite"]
+      "skills": ["Go (Cobra, Viper)", "Base de données (SQLite)"]
     }
-  ]
+  ],
+  "meta": {
+    "lang": "FR",
+    "sectionTitles": {
+      "projects": "Projets",
+      "education": "Éducation",
+      "references": "Références",
+      "experience": "Expérience",
+      "contact": "Coordonnées",
+      "languages": "Langues",
+      "interests": "Intérêts",
+      "projectSkills": "Technologies",
+      "experienceSkills": "Compétences"
+    }
+  }
 }

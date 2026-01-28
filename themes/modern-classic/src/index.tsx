@@ -4,7 +4,7 @@ import { ServerStyleSheet } from 'styled-components'
 import Resume from './Resume.tsx'
 import type { ResumeData } from './Resume.tsx'
 
-export function render(resume: Partial<ResumeData>) {
+export function render(resume: Partial<ResumeData> & { meta?: ResumeData['meta'] }) {
   const sheet = new ServerStyleSheet()
 
   try {
