@@ -37,7 +37,7 @@ interface WorkItem {
   summary?: string
   highlights?: string[]
   location?: string
-  skills?: SkillCategory[]
+  skills?: string[]
 }
 
 interface EducationItem {
@@ -47,11 +47,6 @@ interface EducationItem {
   startDate?: string | Date
   endDate?: string | Date | null
   score?: string
-}
-
-interface SkillCategory {
-  name?: string
-  keywords?: string[]
 }
 
 interface Project {
@@ -92,6 +87,11 @@ interface Publication {
 interface Language {
   language?: string
   fluency?: string
+}
+
+interface Skill {
+  name?: string
+  keywords?: string[]
 }
 
 interface Interest {
@@ -379,16 +379,9 @@ function WorkExperience({ work = [] }: WorkExperienceProps) {
           {job.skills && job.skills.length > 0 && (
             <WorkContent>
               <div style={{ marginTop: '16px', padding: '16px', backgroundColor: '#fefce8', borderLeft: '2px solid #333333' }}>
-                {job.skills.map((skillCategory, index) => (
-                  <div key={index} style={{ marginBottom: index < job.skills.length - 1 ? '12px' : '0' }}>
-                    <div style={{ fontFamily: 'Work Sans, sans-serif', fontSize: '14px', fontWeight: '600', color: '#333333', marginBottom: '8px', textTransform: 'uppercase', letterSpacing: '0.5px' }}>
-                      {skillCategory.name}
-                    </div>
-                    <div style={{ fontFamily: 'Courier Prime, monospace', fontSize: '13px', color: '#555555', lineHeight: '1.6' }}>
-                      {skillCategory.keywords.join(', ')}
-                    </div>
-                  </div>
-                ))}
+                <div style={{ fontFamily: 'Courier Prime, monospace', fontSize: '13px', color: '#555555', lineHeight: '1.6' }}>
+                  {job.skills.join(', ')}
+                </div>
               </div>
             </WorkContent>
           )}
