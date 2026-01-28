@@ -2,15 +2,14 @@
   "$schema": "https://raw.githubusercontent.com/jsonresume/resume-schema/v1.0.0/schema.json",
   "basics": {
     "name": "Simon Beaulieu",
-    "label": "Développeur Logiciel Principal, Expérience Développeur",
+    "label": "Développeur Senior, Expérience Développeur",
     "email": "s.beaulie2@gmail.com",
     "phone": "+1438-391-6940",
     "location": {
       "address": "",
       "postalCode": "",
       "city": "Montréal",
-      "countryCode": "CA",
-      "region": "Québec"
+      "countryCode": "CAN"
     },
     "profiles": [
       {
@@ -28,25 +27,32 @@
   "work": [
     {
       "name": "Pleo",
-      "position": "Développeur Logiciel Senior, Expérience Développeur",
+      "position": "Développeur Senior, Outillage",
       "url": "https://www.linkedin.com/company/pleo-company",
       "startDate": "2023-06",
       "endDate": "2026-01",
       "summary": "Contribuer à l'amélioration de l'expérience développeur par la simplification des processus et la création et maintenance d'outillage. Gestion et contribution à divers projets dans les domaines d'automatisation d'infrastructure, de catalogue de services, de gestion de dépendances et de distribution et configuration d'outils d'IA.",
       "highlights": [
-        "Créer des guides écrits et vidéo pour l'intégration des nouveaux employés et participer aux entretiens de design de systèmes backend et d'outillage.",
-        "Résoudre des défis techniques complexes via un rôle de support en rotation, couvrant les conflits de dépendances Gradle, l'utilisation du portail Port, l'application des standards API et l'analyse de problèmes GitHub Actions.",
-        "Diriger et assister la migration du portail développeur de OpsLevel vers Port, assurant une transition en douceur avec les équipes de support et le fournisseur.",
-        "Concevoir l'infrastructure d'outils d'IA avec AWS Bedrock, automatiser la configuration pour 200+ développeurs utilisant Claude Code.",
-        "Accompagner les équipes de support spécialisées (Mobile, Frontend, Backend, Sécurité) pour établir des standards de conformité et servir de point de contact avec l'équipe Port.",
-        "Implanter et configurer Port (portail développeur), DX (métriques) et les intégrations Claude Code, établissant des standards d'infrastructure et d'excellence opérationnelle.",
-        "Optimiser les pipelines CI/CD pour réduire les coûts et les temps d'exécution et optimiser la gestion des dépendances avec Renovate."
+        "Créer des guides pour les nouveaux employés et participer aux entretiens de design technique.",
+        "Résoudre des défis techniques complexes en support (Gradle, Port, API, GitHub Actions).",
+        "Diriger la migration du portail développeur de OpsLevel vers Port.",
+        "Concevoir l'infrastructure d'outils d'IA avec AWS Bedrock pour 200+ développeurs.",
+        "Accompagner les équipes pour établir des standards de conformité et servir de point de contact avec Port.",
+        "Implanter et configurer Port, DX et Claude Code, établissant des standards d'infrastructure.",
+        "Optimiser les pipelines CI/CD et la gestion des dépendances avec Renovate."
       ],
-      "location": "Télétravail depuis Montréal, Québec, Canada"
+      "location": "Télétravail depuis Montréal, Québec, Canada",
+      "skills": [
+        "Catalogue de services (OpsLevel, Port.io, Terraform)",
+        "Pipelines CI/CD (Github Actions, Renovate)",
+        "Développement de CLI (Typescript)",
+        "Outillage IA (AWS Bedrock, Claude Code, Github Copilot, LiteLLM)",
+        "Leadership technique (Proposition et direction de projets techniques, Collaboration interéquipes)"
+      ]
     },
     {
       "name": "Pleo",
-      "position": "Développeur Logiciel Senior en Ingénierie de la qualité",
+      "position": "Développeur Senior en Test",
       "url": "https://www.linkedin.com/company/pleo-company",
       "startDate": "2022-06",
       "endDate": "2023-06",
@@ -58,11 +64,17 @@
         "Créer des solutions d'automatisation pour améliorer l'efficacité des tests",
         "Analyser et optimiser les pipelines CI/CD pour les projets de test"
       ],
-      "location": "Montréal, Québec, Canada"
+      "location": "Montréal, Québec, Canada",
+      "skills": [
+        "Outillage de rappatriement de données (Sqlite, Typescript, FiveTran)",
+        "Analyse de données (SQL, Dbt)",
+        "Observabilité et gestion des tests instables (Datadog, Github Actions, Jest, Cypress, Junit)",
+        "Classification de la priorité des coquilles (bug)"
+      ]
     },
     {
       "name": "Pleo",
-      "position": "Développeur Logiciel en Ingénierie de la qualité",
+      "position": "Développeur en Test",
       "url": "https://www.linkedin.com/company/pleo-company",
       "startDate": "2020-01",
       "endDate": "2022-07",
@@ -73,11 +85,17 @@
         "Coacher les équipes de développement sur les meilleures pratiques de test et d'automatisation",
         "Développer des outils pour automatiser les tests et améliorer la qualité des produits"
       ],
-      "location": "Montréal, Québec, Canada"
+      "location": "Montréal, Québec, Canada",
+      "skills": [
+        "Outillage de rappatriement de données (Typescript, Rest, Octokit, FiveTran)",
+        "Données et Analyse (SQL, Dbt)",
+        "Tests automatisés (Cypress, Jest, Mocha, Mockito, Junit)",
+        "Classification de la priorité des coquilles (bug)"
+      ]
     },
     {
-      "name": "PremiumBeat (une société Shutterstock)",
-      "position": "Développeur Logiciel en Test II",
+      "name": "PremiumBeat (Shutterstock)",
+      "position": "Développeur de Test II",
       "url": "https://www.linkedin.com/company/shutterstock",
       "startDate": "2019-04",
       "endDate": "2019-12",
@@ -89,11 +107,17 @@
         "Participer aux initiatives qualité de l'entreprise pour améliorer les pratiques de développement",
         "Optimiser les pipelines Jenkins pour divers projets"
       ],
-      "location": "Montréal, Québec, Canada"
+      "location": "Montréal, Québec, Canada",
+      "skills": [
+        "Test automatisés (Cypress, Pupeteer, Selenium)",
+        "Conformité & Audit (SoX)",
+        "Pipelines CI/CD (Jenkins)",
+        "Outillage de mesure de la qualité (Xray)"
+      ]
     },
     {
-      "name": "PremiumBeat (une société Shutterstock)",
-      "position": "Développeur Logiciel en Test I",
+      "name": "PremiumBeat (Shutterstock)",
+      "position": "Développeur de Test I",
       "url": "https://www.linkedin.com/company/shutterstock",
       "startDate": "2017-09",
       "endDate": "2019-04",
@@ -104,7 +128,12 @@
         "Proposer et implémenter des améliorations architecturales pour la pile d'automatisation des tests",
         "Migrer et maintenir les processus CI/CD pour les applications web"
       ],
-      "location": "Montréal, Québec, Canada"
+      "location": "Montréal, Québec, Canada",
+      "skills": [
+        "Test automatisés (Jest, Mocha, Cypress, TestCafe, Pupeteer, Selenium)",
+        "Intégration continue (Jenkins)",
+        "Conformité & Audit (SoX)"
+      ]
     },
     {
       "name": "Bell",
@@ -120,7 +149,12 @@
         "Évaluer et recommander des solutions technologiques DevOps",
         "Participer à des projets de développement logiciel avec Java et Spring Boot"
       ],
-      "location": "Montréal, Québec, Canada"
+      "location": "Montréal, Québec, Canada",
+      "skills": [
+        "DevOps & Infrastructure (Ansible, Docker, Docker-compose, Administration Systèmes RHEL)",
+        "Développement de logiciels (Java, Spring Boot, JHipster)",
+        "Outils de développement (Eclipse, Maven, Git)"
+      ]
     },
     {
       "name": "Bell",
@@ -134,7 +168,13 @@
         "Développer une application web de preuve de concept pour le déploiement automatique de pare-feux virtuels",
         "Créer des solutions web pour le déploiement automatisé de VM sur VMware ESXi"
       ],
-      "location": "Montréal, Québec, Canada"
+      "location": "Montréal, Québec, Canada",
+      "skills": [
+        "Infrastructure Cloud (OpenStack, OpenStack Neutron, VMware ESXi, Architecture Cloud, Virtualisation)",
+        "Développement logiciel (Python, HTML&CSS, Bash)",
+        "Technologies Frontend (Twitter Bootstrap, Développement UI, Design Web)",
+        "Architecture Technique (TOSCA)"
+      ]
     },
     {
       "name": "Expertus Technologies",
@@ -149,7 +189,12 @@
         "Développer des logiciels avec J2EE, Struts et Vaadin",
         "Automatiser les builds avec Maven et Bash et configurer et maintenir un serveur de build Jenkins"
       ],
-      "location": "Montréal, Québec, Canada"
+      "location": "Montréal, Québec, Canada",
+      "skills": [
+        "Développement logiciel (J2EE, Struts)",
+        "Outil d'automatisation et de gestion (Maven, Jenkins, Bash)",
+        "Assurance qualité & Tests (JUnit, Tests manuels)"
+      ]
     },
     {
       "name": "APISOFT Technovision Corporation",
@@ -164,10 +209,15 @@
         "Implémenter la gestion de base de données basée sur des fichiers avec Java",
         "Effectuer des tests unitaires avec JUnit"
       ],
-      "location": "Lachine, Québec, Canada"
+      "location": "Lachine, Québec, Canada",
+      "skills": [
+        "Développement logiciel (Java)",
+        "Technologies de base de données",
+        "Tests (JUnit, Tests unitaires, Tests d'intégration)"
+      ]
     },
     {
-      "name": "IBM Canada Ltd.",
+      "name": "IBM Canada",
       "position": "Technicien Informatique",
       "url": "https://www.linkedin.com/company/ibm-canada-ibm-canada-limitee",
       "startDate": "2010-05",
@@ -178,7 +228,13 @@
         "Créer des scripts pour extraire et migrer des règles de pare-feu",
         "Fournir un support technique de niveau 1-2"
       ],
-      "location": "Bromont, Québec, Canada"
+      "location": "Bromont, Québec, Canada",
+      "skills": [
+        "Support technique (I et II)",
+        "Installation et maintenance logicielle",
+        "Dépannage et diagnostics",
+        "Documentation"
+      ]
     }
   ],
   "volunteer": [],
@@ -209,47 +265,6 @@
   "awards": [],
   "certificates": [],
   "publications": [],
-  "skills": [
-    {
-      "name": "Programming Languages",
-      "keywords": ["Typescript", "Kotlin", "Golang", "Bash"]
-    },
-    {
-      "name": "DevOps & Cloud",
-      "keywords": [
-        "AWS",
-        "AWS Bedrock",
-        "Ansible",
-        "Docker & Docker-compose",
-        "Terraform",
-        "Kubernetes"
-      ]
-    },
-    {
-      "name": "CI/CD & Automation",
-      "keywords": ["Concourse CI", "GitHub Actions", "Jenkins"]
-    },
-    {
-      "name": "Testing",
-      "keywords": ["Cypress", "JUnit", "Jest", "Mocha", "Puppeteer", "Selenium", "TestCafe"]
-    },
-    {
-      "name": "Databases",
-      "keywords": ["SqLite", "PostgreSQL"]
-    },
-    {
-      "name": "Tools & Platforms",
-      "keywords": [
-        "Claude Code",
-        "Github Copilot",
-        "LiteLLM",
-        "Port.io",
-        "OpsLevel",
-        "Swarmia",
-        "DX"
-      ]
-    }
-  ],
   "languages": [
     {
       "language": "Français",
@@ -257,7 +272,7 @@
     },
     {
       "language": "Anglais",
-      "fluency": "Bilingue"
+      "fluency": "Bilingue (parlé & écrit)"
     }
   ],
   "interests": [
@@ -280,30 +295,44 @@
       "name": "Sur-ingénierie du rendu de mon CV",
       "description": "Utilisation d'outils d'IA et JsonResume pour ajouter un défi durant la mise à jour de mon CV",
       "url": "https://github.com/Niceplace/cv",
+      "urlText": "Lien Github",
       "startDate": "2026",
-      "technologies": [
-        "Copilot",
-        "Zed",
-        "Mistral.ai",
-        "Z.ai",
-        "GitHub Actions",
-        "React",
-        "JsonResume"
+      "skills": [
+        "Outils IA (Zed, OpenCode, Github Copilot)",
+        "IA (Mistral, Z.ai)",
+        "NodeJS (Bun, React, Typescript)",
+        "GitHub Actions"
       ]
     },
     {
       "name": "Infrastructure de mon laboratoire maison",
       "description": "Référence pour la configuration de l'infrastructure de mes serveurs et postes de travail locaux",
       "url": "https://github.com/Niceplace/labrador-maison",
+      "urlText": "Lien Github",
       "startDate": "2022",
-      "technologies": ["Docker & Docker-compose", "Concourse CI", "Traefik", "Bash"]
+      "skills": ["Docker & Docker-compose", "Concourse CI", "Traefik", "Bash"]
     },
     {
       "name": "CLI à usages multiples",
       "description": "Exploration du language GO et développement de CLI pour divers usages personnels",
       "url": "https://github.com/Niceplace/mastercrab",
+      "urlText": "Lien Github",
       "startDate": "2025",
-      "technologies": ["Golang", "Cobra", "Viper", "SqLite"]
+      "skills": ["Go (Cobra, Viper)", "Base de données (SQLite)"]
     }
-  ]
+  ],
+  "meta": {
+    "lang": "FR",
+    "sectionTitles": {
+      "projects": "Projets",
+      "education": "Éducation",
+      "references": "Références",
+      "experience": "Expérience",
+      "contact": "Coordonnées",
+      "languages": "Langues",
+      "interests": "Intérêts",
+      "projectSkills": "Technologies",
+      "experienceSkills": "Compétences"
+    }
+  }
 }

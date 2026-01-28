@@ -9,8 +9,7 @@
       "address": "",
       "postalCode": "",
       "city": "Montreal",
-      "countryCode": "CA",
-      "region": "Quebec"
+      "countryCode": "CAN"
     },
     "profiles": [
       {
@@ -40,7 +39,14 @@
         "Led SaaS tool migration for internal developer platform (OpsLevel -> Port.io) with infrastructure refactoring, stakeholder communication, and minimal-downtime transitions.",
         "Enabled AI tooling with AWS Bedrock, automating inference profiles and Claude Code configuration for 200+ engineers."
       ],
-      "location": "Remote from Montreal, Quebec, Canada"
+      "location": "Remote from Montreal, Quebec, Canada",
+      "skills": [
+        "Service catalog (OpsLevel, Port.io, Terraform)",
+        "Pipelines CI/CD (Github Actions, Renovate)",
+        "CLI development (Typescript)",
+        "AI tooling (AWS Bedrock, Claude Code, Github Copilot, LiteLLM)",
+        "Technical leadership (Proposing & Leading technical projects, X-team collaboration)"
+      ]
     },
     {
       "name": "Pleo",
@@ -55,7 +61,13 @@
         "Revamp the bug triaging & prioritizing process involving customer support & engineering teams by measuring key metrics against SLAs",
         "Create automation solutions to improve test efficiency"
       ],
-      "location": "Montreal, Quebec, Canada"
+      "location": "Montreal, Quebec, Canada",
+      "skills": [
+        "Custom ETL tooling (Sqlite, Typescript, FiveTran)",
+        "Data Analysis (SQL, Dbt)",
+        "Automated Testing (Cypress, Jest, Mocha, Mockito, Junit)",
+        "Project management"
+      ]
     },
     {
       "name": "Pleo",
@@ -70,7 +82,13 @@
         "Built custom ETL tool to collect metrics from Github, mobile stats, and project management tools",
         "Developed quality automation tooling"
       ],
-      "location": "Remote from Montreal, Quebec, Canada"
+      "location": "Remote from Montreal, Quebec, Canada",
+      "skills": [
+        "Custom ETL (Typescript, Rest, Octokit, Fivetran)",
+        "Data Analysis (SQL, Dbt)",
+        "Automated Testing (Cypress, Jest, Mocha, Mockito, Junit)",
+        "Project management"
+      ]
     },
     {
       "name": "PremiumBeat (a Shutterstock Company)",
@@ -87,7 +105,13 @@
         "Optimized and maintained Jenkins build pipelines",
         "Conducted interviews and onboarded new team members"
       ],
-      "location": "Montreal, Quebec, Canada"
+      "location": "Montreal, Quebec, Canada",
+      "skills": [
+        "Automated Testing (Cypress, Puppeteer, Selenium)",
+        "Compliance & Audit (SoX)",
+        "Continuous Integration (Jenkins, TeamCity)",
+        "Quality Measurement Tools (Xray)"
+      ]
     },
     {
       "name": "PremiumBeat (a Shutterstock Company)",
@@ -103,7 +127,12 @@
         "Proposed and implemented test automation improvements",
         "Migrated and maintained CI/CD processes (Jenkins, Docker)"
       ],
-      "location": "Montreal, Quebec, Canada"
+      "location": "Montreal, Quebec, Canada",
+      "skills": [
+        "Automated Testing (Jest, Mocha, Cypress, TestCafe, Puppeteer, Selenium)",
+        "Continuous Integration (Jenkins)",
+        "Compliance & Audit (SoX)"
+      ]
     },
     {
       "name": "Bell",
@@ -120,7 +149,12 @@
         "Developed Java projects with Spring Boot, JHipster and Docker",
         "Tested Linux container technologies and proposed solutions"
       ],
-      "location": "Montreal, Quebec, Canada"
+      "location": "Montreal, Quebec, Canada",
+      "skills": [
+        "DevOps & Infrastructure (Ansible, Docker, Docker-compose, RHEL System Administration)",
+        "Software Development (Java, Spring Boot, JHipster)",
+        "Development Tools (Eclipse, Maven, Git)"
+      ]
     },
     {
       "name": "Bell",
@@ -134,7 +168,13 @@
         "Built POC web app for remote virtual firewall deployment",
         "Developed Python/HTML/Twitter Bootstrap solutions for VMware ESXi VM automation"
       ],
-      "location": "Montreal, Quebec, Canada"
+      "location": "Montreal, Quebec, Canada",
+      "skills": [
+        "Cloud Infrastructure (OpenStack, OpenStack Neutron, VMware ESXi, Cloud Architecture, Virtualization)",
+        "Software development (Python, HTML&CSS, Bash)",
+        "Frontend (Twitter Bootstrap)",
+        "Technical Architecture (TOSCA)"
+      ]
     },
     {
       "name": "Expertus Technologies",
@@ -149,7 +189,12 @@
         "Developed software applications using J2EE, Struts, and Vaadin frameworks",
         "Set up and configured Jenkins build server to automate Maven and Bash-based builds"
       ],
-      "location": "Montreal, Quebec, Canada"
+      "location": "Montreal, Quebec, Canada",
+      "skills": [
+        "Software development (J2EE, Struts)",
+        "Automation and management tools (Maven, Jenkins, Bash)",
+        "Quality assurance & Testing (JUnit, Manual tests)"
+      ]
     },
     {
       "name": "APISOFT Technovision Corporation",
@@ -164,7 +209,12 @@
         "Implemented file-based database management with Java",
         "Performed unit testing in Java with JUnit"
       ],
-      "location": "Lachine, Quebec, Canada"
+      "location": "Lachine, Quebec, Canada",
+      "skills": [
+        "Software development (Java)",
+        "Database technologies",
+        "Testing (JUnit, unit testing, integration testing)"
+      ]
     },
     {
       "name": "IBM Canada Ltd.",
@@ -181,7 +231,13 @@
         "Configured Symantec Endpoint Protection firewall rules",
         "Performed initial configuration on new computers and replaced faulty hardware components"
       ],
-      "location": "Bromont, Quebec, Canada"
+      "location": "Bromont, Quebec, Canada",
+      "skills": [
+        "Technical support (I and II)",
+        "Software installation and maintenance",
+        "Troubleshooting and diagnostics",
+        "Documentation"
+      ]
     }
   ],
   "volunteer": [],
@@ -212,48 +268,6 @@
   "awards": [],
   "certificates": [],
   "publications": [],
-  "skills": [
-    {
-      "name": "Programming Languages",
-      "keywords": ["Typescript", "Kotlin", "Golang", "Bash"]
-    },
-
-    {
-      "name": "DevOps & Cloud",
-      "keywords": [
-        "AWS",
-        "AWS Bedrock",
-        "Ansible",
-        "Docker & Docker-compose",
-        "Terraform",
-        "Kubernetes"
-      ]
-    },
-    {
-      "name": "CI/CD & Automation",
-      "keywords": ["Concourse CI", "GitHub Actions", "Jenkins"]
-    },
-    {
-      "name": "Testing",
-      "keywords": ["Cypress", "JUnit", "Jest", "Mocha", "Puppeteer", "Selenium", "TestCafe"]
-    },
-    {
-      "name": "Databases",
-      "keywords": ["SqLite", "PostgreSQL"]
-    },
-    {
-      "name": "Tools & Platforms",
-      "keywords": [
-        "Claude Code",
-        "Github Copilot",
-        "LiteLLM",
-        "Port.io",
-        "OpsLevel",
-        "Swarmia",
-        "DX"
-      ]
-    }
-  ],
   "languages": [
     {
       "language": "French",
@@ -261,7 +275,7 @@
     },
     {
       "language": "English",
-      "fluency": "Bilingual (highly proficient)"
+      "fluency": "Bilingual (written & spoken)"
     }
   ],
   "interests": [
@@ -284,30 +298,39 @@
       "name": "Over-engineering my CV",
       "description": "Using AI tooling and JsonResume to make things a little more challenging while updating my CV",
       "url": "https://github.com/Niceplace/cv",
+      "urlText": "Github link",
       "startDate": "2026",
-      "technologies": [
-        "Copilot",
-        "Zed",
-        "Mistral.ai",
-        "Z.ai",
-        "GitHub Actions",
-        "React",
-        "JsonResume"
-      ]
+      "skills": ["Copilot", "Zed", "Mistral.ai", "Z.ai", "GitHub Actions", "React", "JsonResume"]
     },
     {
       "name": "Infrastructure of my home lab",
       "description": "Reference for the configuration of my local servers and workstations",
       "url": "https://github.com/Niceplace/labrador-maison",
+      "urlText": "Github link",
       "startDate": "2022",
-      "technologies": ["Docker & Docker-compose", "Concourse CI", "Traefik", "Bash"]
+      "skills": ["Docker & Docker-compose", "Concourse CI", "Traefik", "Bash"]
     },
     {
       "name": "Multi-purpose CLI",
       "description": "Exploration of the GO language and development of CLI for various personal uses",
       "url": "https://github.com/Niceplace/mastercrab",
+      "urlText": "Github link",
       "startDate": "2025",
-      "technologies": ["Golang", "Cobra", "Viper", "SqLite"]
+      "skills": ["Go (Cobra, Viper)", "Database (SQLite)"]
     }
-  ]
+  ],
+  "meta": {
+    "lang": "EN",
+    "sectionTitles": {
+      "projects": "Projects",
+      "education": "Education",
+      "references": "References",
+      "experience": "Experience",
+      "contact": "Contact",
+      "languages": "Languages",
+      "interests": "Interests",
+      "projectSkills": "Tech stack",
+      "experienceSkills": "Skills"
+    }
+  }
 }

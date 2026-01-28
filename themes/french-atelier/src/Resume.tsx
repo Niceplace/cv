@@ -4,10 +4,7 @@ import {
   Section,
   SectionTitle,
   DateRange,
-  Badge,
-  BadgeList,
   ContactInfo,
-  Link,
 } from '../../../core/src/index.ts'
 
 interface Location {
@@ -45,6 +42,7 @@ interface WorkItem {
   summary?: string
   highlights?: string[]
   location?: string
+  skills?: Skill[]
 }
 
 interface EducationItem {
@@ -357,44 +355,6 @@ const HighlightsList = styled.ul`
   }
 `
 
-const SkillsContainer = styled.div`
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 28px;
-`
-
-const SkillCategory = styled.div`
-  h4 {
-    font-family: 'Playfair Display', Georgia, serif;
-    font-size: 18px;
-    font-weight: 700;
-    color: #1a1a1a;
-    margin: 0 0 14px 0;
-  }
-`
-
-const StyledBadgeList = styled(BadgeList)`
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-`
-
-const StyledBadge = styled(Badge)`
-  font-size: 13px;
-  padding: 6px 14px;
-  background: #f5f0f6;
-  border: 1px solid #3b0a45;
-  color: #3b0a45;
-  font-weight: 500;
-  border-radius: 0;
-  transition: all 0.2s;
-
-  &:hover {
-    background: #3b0a45;
-    color: white;
-  }
-`
-
 const SimpleCard = styled.div`
   margin-bottom: 24px;
   padding-left: 20px;
@@ -476,6 +436,20 @@ function Resume({ resume }: ResumeProps) {
                   ))}
                 </HighlightsList>
               )}
+              {job.skills && job.skills.length > 0 && (
+                <div style={{ marginTop: '16px', padding: '12px', backgroundColor: '#f5f0f6', border: '1px solid #3b0a45' }}>
+                  {job.skills.map((skillCategory, index) => (
+                    <div key={index} style={{ marginBottom: index < job.skills.length - 1 ? '10px' : '0' }}>
+                      <div style={{ fontFamily: 'Playfair Display, Georgia, serif', fontSize: '14px', fontWeight: '600', color: '#1a1a1a', marginBottom: '6px' }}>
+                        {skillCategory.name}
+                      </div>
+                      <div style={{ fontSize: '13px', color: '#4a4a4a', lineHeight: '1.6' }}>
+                        {skillCategory.keywords.join(', ')}
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              )}
             </WorkItem>
           ))}
         </StyledSection>
@@ -512,23 +486,7 @@ function Resume({ resume }: ResumeProps) {
         </StyledSection>
       )}
 
-      {skills.length > 0 && (
-        <StyledSection>
-          <StyledSectionTitle>Skills</StyledSectionTitle>
-          <SkillsContainer>
-            {skills.map((skill, index) => (
-              <SkillCategory key={index}>
-                <h4>{skill.name}</h4>
-                <StyledBadgeList>
-                  {skill.keywords?.map((keyword, i) => (
-                    <StyledBadge key={i}>{keyword}</StyledBadge>
-                  ))}
-                </StyledBadgeList>
-              </SkillCategory>
-            ))}
-          </SkillsContainer>
-        </StyledSection>
-      )}
+
 
       {projects.length > 0 && (
         <StyledSection>
