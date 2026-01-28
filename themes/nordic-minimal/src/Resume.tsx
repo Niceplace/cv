@@ -647,6 +647,19 @@ function Resume({ resume }: ResumeProps) {
                       ))}
                     </Highlights>
                   )}
+
+                  {job.skills && job.skills.length > 0 && (
+                    <div className="job-skills">
+                      <h4 className="job-skills-title">Skills</h4>
+                      <div className="job-skills-content">
+                        {job.skills.map((skill, i) => (
+                          <span key={i} className="skill-tag">
+                            {skill}
+                          </span>
+                        ))}
+                      </div>
+                    </div>
+                  )}
                 </ExperienceItem>
               ))}
             </StyledSection>
