@@ -37,6 +37,7 @@ interface WorkItem {
   summary?: string
   highlights?: string[]
   location?: string
+  skills?: SkillCategory[]
 }
 
 interface EducationItem {
@@ -48,7 +49,7 @@ interface EducationItem {
   score?: string
 }
 
-interface Skill {
+interface SkillCategory {
   name?: string
   keywords?: string[]
 }
@@ -312,6 +313,10 @@ const SkillCategory = styled.div<React.HTMLAttributes<HTMLDivElement>>`
   border: 2px solid #333333;
 `
 
+const WorkContent = styled.div<React.HTMLAttributes<HTMLDivElement>>`
+  padding-left: 0;
+`
+
 const SkillName = styled.h4<React.HTMLAttributes<HTMLHeadingElement>>`
   font-family: 'Work Sans', sans-serif;
   font-size: 14px;
@@ -371,6 +376,22 @@ function WorkExperience({ work = [] }: WorkExperienceProps) {
               ))}
             </Highlights>
           )}
+          {job.skills && job.skills.length > 0 && (
+            <WorkContent>
+              <div style={{ marginTop: '16px', padding: '16px', backgroundColor: '#fefce8', borderLeft: '2px solid #333333' }}>
+                {job.skills.map((skillCategory, index) => (
+                  <div key={index} style={{ marginBottom: index < job.skills.length - 1 ? '12px' : '0' }}>
+                    <div style={{ fontFamily: 'Work Sans, sans-serif', fontSize: '14px', fontWeight: '600', color: '#333333', marginBottom: '8px', textTransform: 'uppercase', letterSpacing: '0.5px' }}>
+                      {skillCategory.name}
+                    </div>
+                    <div style={{ fontFamily: 'Courier Prime, monospace', fontSize: '13px', color: '#555555', lineHeight: '1.6' }}>
+                      {skillCategory.keywords.join(', ')}
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </WorkContent>
+          )}
         </WorkItem>
       ))}
     </>
@@ -414,6 +435,32 @@ function Skills({ skills = [] }: SkillsProps) {
   return (
     <SkillsGrid>
       {skills.map((skill, index) => (
+        <SkillCategory key={index}>
+          <SkillName>{skill.name}</SkillName>
+          {skill.keywords?.length > 0 && <SkillTags>{skill.keywords.join(', ')}</SkillTags>}
+        </SkillCategory>
+      ))}
+    </SkillsGrid>
+  )
+}
+
+interface LanguagesSkillsProps {
+  languages?: Language[]
+  interests?: Interest[]
+  [key: string]: unknown
+}
+
+function LanguagesSkills({ languages = [], interests = [] }: LanguagesSkillsProps) {
+  if (!languages?.length && !interests?.length) return null
+
+  const allSkills = [
+    ...(languages?.map((l) => ({ name: l.language, keywords: [l.fluency] })) || []),
+    ...(interests || [])
+  ]
+
+  return (
+    <SkillsGrid>
+      {allSkills.map((skill, index) => (
         <SkillCategory key={index}>
           <SkillName>{skill.name}</SkillName>
           {skill.keywords?.length > 0 && <SkillTags>{skill.keywords.join(', ')}</SkillTags>}
@@ -577,13 +624,6 @@ function Resume({ resume }: ResumeProps) {
         <Section>
           <StyledSectionTitle>Experience</StyledSectionTitle>
           <WorkExperience work={work} />
-        </Section>
-      )}
-
-      {skills?.length > 0 && (
-        <Section>
-          <StyledSectionTitle>Skills</StyledSectionTitle>
-          <Skills skills={skills} />
         </Section>
       )}
 

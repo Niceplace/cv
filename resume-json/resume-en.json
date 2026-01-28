@@ -40,7 +40,16 @@
         "Led SaaS tool migration for internal developer platform (OpsLevel -> Port.io) with infrastructure refactoring, stakeholder communication, and minimal-downtime transitions.",
         "Enabled AI tooling with AWS Bedrock, automating inference profiles and Claude Code configuration for 200+ engineers."
       ],
-      "location": "Remote from Montreal, Quebec, Canada"
+      "location": "Remote from Montreal, Quebec, Canada",
+      "skills": [
+        "Cloud & Infrastructure",
+        "CI/CD & Automation",
+        "Developer Tools & Platforms",
+        "AI & Machine Learning",
+        "API Development",
+        "Programming Languages",
+        "Monitoring & Observability"
+      ]
     },
     {
       "name": "Pleo",
@@ -55,7 +64,13 @@
         "Revamp the bug triaging & prioritizing process involving customer support & engineering teams by measuring key metrics against SLAs",
         "Create automation solutions to improve test efficiency"
       ],
-      "location": "Montreal, Quebec, Canada"
+      "location": "Montreal, Quebec, Canada",
+      "skills": [
+        "Quality Engineering",
+        "Data Engineering",
+        "Process Improvement",
+        "Testing Tools"
+      ]
     },
     {
       "name": "Pleo",
@@ -70,7 +85,14 @@
         "Built custom ETL tool to collect metrics from Github, mobile stats, and project management tools",
         "Developed quality automation tooling"
       ],
-      "location": "Remote from Montreal, Quebec, Canada"
+      "location": "Remote from Montreal, Quebec, Canada",
+      "skills": [
+        "Quality Metrics",
+        "Data & Analytics",
+        "Quality Assurance",
+        "Development Tools",
+        "Process Improvement"
+      ]
     },
     {
       "name": "PremiumBeat (a Shutterstock Company)",
@@ -87,7 +109,15 @@
         "Optimized and maintained Jenkins build pipelines",
         "Conducted interviews and onboarded new team members"
       ],
-      "location": "Montreal, Quebec, Canada"
+      "location": "Montreal, Quebec, Canada",
+      "skills": [
+        "Testing Frameworks",
+        "E2E Testing",
+        "CI/CD & DevOps",
+        "Compliance & Security",
+        "Code Quality & Metrics",
+        "Technical Leadership"
+      ]
     },
     {
       "name": "PremiumBeat (a Shutterstock Company)",
@@ -103,7 +133,14 @@
         "Proposed and implemented test automation improvements",
         "Migrated and maintained CI/CD processes (Jenkins, Docker)"
       ],
-      "location": "Montreal, Quebec, Canada"
+      "location": "Montreal, Quebec, Canada",
+      "skills": [
+        "Testing Frameworks",
+        "Automation Tools",
+        "CI/CD & DevOps",
+        "Compliance & QA",
+        "Application Types"
+      ]
     },
     {
       "name": "Bell",
@@ -120,7 +157,13 @@
         "Developed Java projects with Spring Boot, JHipster and Docker",
         "Tested Linux container technologies and proposed solutions"
       ],
-      "location": "Montreal, Quebec, Canada"
+      "location": "Montreal, Quebec, Canada",
+      "skills": [
+        "DevOps & Infrastructure",
+        "Software Development",
+        "Development Tools",
+        "System Administration"
+      ]
     },
     {
       "name": "Bell",
@@ -134,7 +177,14 @@
         "Built POC web app for remote virtual firewall deployment",
         "Developed Python/HTML/Twitter Bootstrap solutions for VMware ESXi VM automation"
       ],
-      "location": "Montreal, Quebec, Canada"
+      "location": "Montreal, Quebec, Canada",
+      "skills": [
+        "Cloud Infrastructure",
+        "Programming & Development",
+        "Frontend Technologies",
+        "Automation & DevOps",
+        "Technical Architecture"
+      ]
     },
     {
       "name": "Expertus Technologies",
@@ -149,7 +199,14 @@
         "Developed software applications using J2EE, Struts, and Vaadin frameworks",
         "Set up and configured Jenkins build server to automate Maven and Bash-based builds"
       ],
-      "location": "Montreal, Quebec, Canada"
+      "location": "Montreal, Quebec, Canada",
+      "skills": [
+        "Programming Languages & Frameworks",
+        "Build & Development Tools",
+        "Development Processes",
+        "Quality Assurance & Testing",
+        "Deployment & Operations"
+      ]
     },
     {
       "name": "APISOFT Technovision Corporation",
@@ -164,7 +221,13 @@
         "Implemented file-based database management with Java",
         "Performed unit testing in Java with JUnit"
       ],
-      "location": "Lachine, Quebec, Canada"
+      "location": "Lachine, Quebec, Canada",
+      "skills": [
+        "Programming Languages",
+        "Database Technologies",
+        "Testing & Quality Assurance",
+        "Software Development"
+      ]
     },
     {
       "name": "IBM Canada Ltd.",
@@ -181,7 +244,19 @@
         "Configured Symantec Endpoint Protection firewall rules",
         "Performed initial configuration on new computers and replaced faulty hardware components"
       ],
-      "location": "Bromont, Quebec, Canada"
+      "location": "Bromont, Quebec, Canada",
+      "skills": [
+        "Operating Systems",
+        "Security Software",
+        "Hardware",
+        "Technical Support",
+        "System Administration",
+        "Network Technologies",
+        "Software Installation & Maintenance",
+        "Troubleshooting & Diagnostics",
+        "Customer Service",
+        "Documentation"
+      ]
     }
   ],
   "volunteer": [],

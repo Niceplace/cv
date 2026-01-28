@@ -34,6 +34,10 @@ interface ResumeData {
     summary?: string
     highlights?: string[]
     location?: string
+    skills?: Array<{
+      name?: string
+      keywords?: string[]
+    }>
   }>
   volunteer?: Array<{
     organization?: string
@@ -365,6 +369,22 @@ const Work = ({ work }: { work: ResumeData['work'] }) => {
                 ))}
               </WorkHighlights>
             )}
+            {w.skills && w.skills.length > 0 && (
+              <WorkContent>
+                <div style={{ marginTop: '16px', padding: '12px', backgroundColor: '#f3f4f6', borderRadius: '4px' }}>
+                  {w.skills.map((skillCategory, index) => (
+                    <div key={index} style={{ marginBottom: index < w.skills.length - 1 ? '12px' : '0' }}>
+                      <div style={{ fontSize: '13px', fontWeight: '600', color: '#111827', marginBottom: '4px' }}>
+                        {skillCategory.name}
+                      </div>
+                      <div style={{ fontSize: '12px', color: '#4b5563' }}>
+                        {skillCategory.keywords.join(', ')}
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </WorkContent>
+            )}
           </WorkContent>
         </WorkCard>
       ))}
@@ -392,24 +412,6 @@ const Education = ({ education }: { education: ResumeData['education'] }) => {
             </WorkTitle>
           )}
           {edu.score && <WorkContent>Score: {edu.score}</WorkContent>}
-        </WorkCard>
-      ))}
-    </Section>
-  )
-}
-
-const Skills = ({ skills }: { skills: ResumeData['skills'] }) => {
-  if (!skills?.length) return null
-
-  return (
-    <Section>
-      <SectionTitle>Skills</SectionTitle>
-      {skills.map((skill, index) => (
-        <WorkCard key={index}>
-          <WorkHeader>
-            <CompanyName>{skill.name}</CompanyName>
-          </WorkHeader>
-          {skill.keywords?.length > 0 && <WorkContent>{skill.keywords.join(', ')}</WorkContent>}
         </WorkCard>
       ))}
     </Section>
@@ -450,7 +452,6 @@ const Resume = ({ resume }: { resume: ResumeData }) => {
       <About basics={resume.basics} />
       <Work work={resume.work} />
       <Education education={resume.education} />
-      <Skills skills={resume.skills} />
       <Projects projects={resume.projects} />
     </Layout>
   )

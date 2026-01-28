@@ -36,6 +36,7 @@ export interface WorkItem {
   endDate: string
   summary: string
   highlights: string[]
+  skills: { name: string; keywords: string[] }[]
 }
 
 export interface VolunteerItem {
@@ -381,40 +382,6 @@ const InterestItem = styled.li`
   }
 `
 
-const SkillsGrid = styled.div`
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-  gap: 20px;
-
-  @media print {
-    break-inside: avoid;
-  }
-`
-
-const SkillCategory = styled.div`
-  padding: 16px;
-  background: #f3f4f6;
-  border-radius: 6px;
-  border-left: 3px solid #0066cc;
-
-  @media print {
-    break-inside: avoid;
-  }
-`
-
-const SkillName = styled.h4`
-  font-size: 15px;
-  font-weight: 600;
-  color: #111827;
-  margin: 0 0 8px 0;
-`
-
-const SkillTags = styled.div`
-  font-size: 14px;
-  color: #6b7280;
-  line-height: 1.6;
-`
-
 interface ResumeProps {
   resume: Partial<ResumeData>
 }
@@ -466,23 +433,22 @@ function Resume({ resume }: ResumeProps) {
                     <li key={i}>{highlight}</li>
                   ))}
                 </Highlights>
-              )}
-            </WorkItemStyled>
+                {job.skills && job.skills.length > 0 && (
+                  <div style={{ marginTop: '16px', padding: '12px', backgroundColor: '#f3f4f6', borderRadius: '4px', borderLeft: '3px solid #0066cc' }}>
+                    {job.skills.map((skillCategory, index) => (
+                      <div key={index} style={{ marginBottom: index < job.skills.length - 1 ? '12px' : '0' }}>
+                        <div style={{ fontSize: '14px', fontWeight: '600', color: '#111827', marginBottom: '6px' }}>
+                          {skillCategory.name}
+                        </div>
+                        <div style={{ fontSize: '13px', color: '#4b5563', lineHeight: '1.6' }}>
+                          {skillCategory.keywords.join(', ')}
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                )}
+              </WorkItemStyled>
           ))}
-        </Section>
-      )}
-
-      {skills?.length > 0 && (
-        <Section>
-          <StyledSectionTitle>Skills</StyledSectionTitle>
-          <SkillsGrid>
-            {skills.map((skill, index) => (
-              <SkillCategory key={index}>
-                <SkillName>{skill.name}</SkillName>
-                {skill.keywords?.length > 0 && <SkillTags>{skill.keywords.join(', ')}</SkillTags>}
-              </SkillCategory>
-            ))}
-          </SkillsGrid>
         </Section>
       )}
 

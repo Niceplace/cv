@@ -42,7 +42,16 @@
         "Implanter et configurer Port (portail développeur), DX (métriques) et les intégrations Claude Code, établissant des standards d'infrastructure et d'excellence opérationnelle.",
         "Optimiser les pipelines CI/CD pour réduire les coûts et les temps d'exécution et optimiser la gestion des dépendances avec Renovate."
       ],
-      "location": "Télétravail depuis Montréal, Québec, Canada"
+      "location": "Télétravail depuis Montréal, Québec, Canada",
+      "skills": [
+        "Cloud & Infrastructure",
+        "CI/CD & Automatisation",
+        "Outils Développeur & Plateformes",
+        "IA & Machine Learning",
+        "Développement API",
+        "Langages de Programmation",
+        "Monitoring & Observabilité"
+      ]
     },
     {
       "name": "Pleo",
@@ -58,7 +67,13 @@
         "Créer des solutions d'automatisation pour améliorer l'efficacité des tests",
         "Analyser et optimiser les pipelines CI/CD pour les projets de test"
       ],
-      "location": "Montréal, Québec, Canada"
+      "location": "Montréal, Québec, Canada",
+      "skills": [
+        "Ingénierie de la Qualité",
+        "Ingénierie des Données",
+        "Amélioration des Processus",
+        "Outils de Test"
+      ]
     },
     {
       "name": "Pleo",
@@ -73,7 +88,14 @@
         "Coacher les équipes de développement sur les meilleures pratiques de test et d'automatisation",
         "Développer des outils pour automatiser les tests et améliorer la qualité des produits"
       ],
-      "location": "Montréal, Québec, Canada"
+      "location": "Montréal, Québec, Canada",
+      "skills": [
+        "Métriques de Qualité",
+        "Données et Analyse",
+        "Assurance Qualité",
+        "Outils de Développement",
+        "Amélioration des Processus"
+      ]
     },
     {
       "name": "PremiumBeat (une société Shutterstock)",
@@ -89,7 +111,15 @@
         "Participer aux initiatives qualité de l'entreprise pour améliorer les pratiques de développement",
         "Optimiser les pipelines Jenkins pour divers projets"
       ],
-      "location": "Montréal, Québec, Canada"
+      "location": "Montréal, Québec, Canada",
+      "skills": [
+        "Frameworks de test",
+        "Tests de bout en bout",
+        "CI/CD & DevOps",
+        "Conformité & Sécurité",
+        "Qualité de code & Métriques",
+        "Leadership technique"
+      ]
     },
     {
       "name": "PremiumBeat (une société Shutterstock)",
@@ -104,7 +134,14 @@
         "Proposer et implémenter des améliorations architecturales pour la pile d'automatisation des tests",
         "Migrer et maintenir les processus CI/CD pour les applications web"
       ],
-      "location": "Montréal, Québec, Canada"
+      "location": "Montréal, Québec, Canada",
+      "skills": [
+        "Frameworks de Test (Jest, Mocha)",
+        "Outils d'Automatisation (Cypress, TestCafe, Puppeteer, Selenium)",
+        "CI/CD & DevOps (Jenkins, Docker)",
+        "Conformité & QA (SoX Compliance)",
+        "Types d'Applications (Applications Web à Grande Échelle)"
+      ]
     },
     {
       "name": "Bell",
@@ -120,7 +157,13 @@
         "Évaluer et recommander des solutions technologiques DevOps",
         "Participer à des projets de développement logiciel avec Java et Spring Boot"
       ],
-      "location": "Montréal, Québec, Canada"
+      "location": "Montréal, Québec, Canada",
+      "skills": [
+        "DevOps & Infrastructure (Ansible, Docker, Docker-compose, Technologies de conteneurs Linux, RHEL 7, Administration Linux)",
+        "Développement de logiciels (Java, Spring Boot, JHipster, Maven, Git)",
+        "Outils de développement (Eclipse, Maven, Git)",
+        "Administration système"
+      ]
     },
     {
       "name": "Bell",
@@ -134,7 +177,14 @@
         "Développer une application web de preuve de concept pour le déploiement automatique de pare-feux virtuels",
         "Créer des solutions web pour le déploiement automatisé de VM sur VMware ESXi"
       ],
-      "location": "Montréal, Québec, Canada"
+      "location": "Montréal, Québec, Canada",
+      "skills": [
+        "Infrastructure Cloud (OpenStack, OpenStack Neutron, VMware ESXi, Architecture Cloud, Virtualisation)",
+        "Programmation et Développement (Python, HTML, Développement Web, Scripting)",
+        "Technologies Frontend (Twitter Bootstrap, Développement UI, Design Web)",
+        "Automatisation et DevOps",
+        "Architecture Technique"
+      ]
     },
     {
       "name": "Expertus Technologies",
@@ -149,7 +199,14 @@
         "Développer des logiciels avec J2EE, Struts et Vaadin",
         "Automatiser les builds avec Maven et Bash et configurer et maintenir un serveur de build Jenkins"
       ],
-      "location": "Montréal, Québec, Canada"
+      "location": "Montréal, Québec, Canada",
+      "skills": [
+        "Langages de programmation & Frameworks (J2EE, Struts, Vaadin)",
+        "Outils de développement & compilation (Maven, Jenkins, Bash)",
+        "Processus de développement",
+        "Assurance qualité & Tests",
+        "Déploiement & Opérations"
+      ]
     },
     {
       "name": "APISOFT Technovision Corporation",
@@ -164,7 +221,13 @@
         "Implémenter la gestion de base de données basée sur des fichiers avec Java",
         "Effectuer des tests unitaires avec JUnit"
       ],
-      "location": "Lachine, Québec, Canada"
+      "location": "Lachine, Québec, Canada",
+      "skills": [
+        "Langages de programmation (Java)",
+        "Technologies de base de données",
+        "Test et assurance qualité (JUnit, Méthodologies de test, Correction d'erreurs, Assurance qualité)",
+        "Développement logiciel"
+      ]
     },
     {
       "name": "IBM Canada Ltd.",
@@ -178,7 +241,19 @@
         "Créer des scripts pour extraire et migrer des règles de pare-feu",
         "Fournir un support technique de niveau 1-2"
       ],
-      "location": "Bromont, Québec, Canada"
+      "location": "Bromont, Québec, Canada",
+      "skills": [
+        "Systèmes d'exploitation",
+        "Logiciels de sécurité",
+        "Matériel informatique",
+        "Support technique",
+        "Administration système",
+        "Technologies réseau",
+        "Installation et maintenance logicielle",
+        "Dépannage et diagnostics",
+        "Service client",
+        "Documentation"
+      ]
     }
   ],
   "volunteer": [],
@@ -209,47 +284,6 @@
   "awards": [],
   "certificates": [],
   "publications": [],
-  "skills": [
-    {
-      "name": "Programming Languages",
-      "keywords": ["Typescript", "Kotlin", "Golang", "Bash"]
-    },
-    {
-      "name": "DevOps & Cloud",
-      "keywords": [
-        "AWS",
-        "AWS Bedrock",
-        "Ansible",
-        "Docker & Docker-compose",
-        "Terraform",
-        "Kubernetes"
-      ]
-    },
-    {
-      "name": "CI/CD & Automation",
-      "keywords": ["Concourse CI", "GitHub Actions", "Jenkins"]
-    },
-    {
-      "name": "Testing",
-      "keywords": ["Cypress", "JUnit", "Jest", "Mocha", "Puppeteer", "Selenium", "TestCafe"]
-    },
-    {
-      "name": "Databases",
-      "keywords": ["SqLite", "PostgreSQL"]
-    },
-    {
-      "name": "Tools & Platforms",
-      "keywords": [
-        "Claude Code",
-        "Github Copilot",
-        "LiteLLM",
-        "Port.io",
-        "OpsLevel",
-        "Swarmia",
-        "DX"
-      ]
-    }
-  ],
   "languages": [
     {
       "language": "Français",

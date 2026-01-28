@@ -72,6 +72,10 @@ interface Work {
   endDate?: string
   summary?: string
   highlights?: string[]
+  skills?: Array<{
+    name?: string
+    keywords?: string[]
+  }>
 }
 
 interface Education {
@@ -455,21 +459,6 @@ function Resume({ resume }: ResumeProps) {
             </StyledSection>
           )}
 
-          {/* Skills */}
-          {skills && skills.length > 0 && (
-            <StyledSection>
-              <StyledSectionTitle>Skills</StyledSectionTitle>
-              {skills.map((skill, index) => (
-                <SkillCategory key={index}>
-                  {skill.name && <SkillName>{skill.name}</SkillName>}
-                  {skill.keywords && skill.keywords.length > 0 && (
-                    <SkillKeywords>{skill.keywords.join(' • ')}</SkillKeywords>
-                  )}
-                </SkillCategory>
-              ))}
-            </StyledSection>
-          )}
-
           {/* Languages */}
           {languages && languages.length > 0 && (
             <StyledSection>
@@ -517,6 +506,19 @@ function Resume({ resume }: ResumeProps) {
                         <Highlight key={i}>{highlight}</Highlight>
                       ))}
                     </Highlights>
+                  )}
+
+                  {job.skills && job.skills.length > 0 && (
+                    <div className="job-skills">
+                      <h4 className="job-skills-title">Skills</h4>
+                      <div className="job-skills-content">
+                        {job.skills.map((skill, i) => (
+                          <span key={i} className="skill-tag">
+                            {skill}
+                          </span>
+                        ))}
+                      </div>
+                    </div>
                   )}
                 </ExperienceItem>
               ))}
@@ -575,6 +577,19 @@ function Resume({ resume }: ResumeProps) {
                         <Highlight key={i}>{highlight}</Highlight>
                       ))}
                     </Highlights>
+                  )}
+
+                  {project.skills && project.skills.length > 0 && (
+                    <div className="job-skills">
+                      <h4 className="job-skills-title">Skills</h4>
+                      <div className="job-skills-content">
+                        {project.skills.map((skill, i) => (
+                          <span key={i} className="skill-tag">
+                            {skill}
+                          </span>
+                        ))}
+                      </div>
+                    </div>
                   )}
                 </ExperienceItem>
               ))}
