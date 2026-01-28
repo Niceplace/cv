@@ -34,7 +34,7 @@ interface ResumeData {
     summary?: string
     highlights?: string[]
     location?: string
-    skills?: Array<{
+    skills?: string[] | Array<{
       name?: string
       keywords?: string[]
     }>
@@ -372,16 +372,26 @@ const Work = ({ work }: { work: ResumeData['work'] }) => {
             {w.skills && w.skills.length > 0 && (
               <WorkContent>
                 <div style={{ marginTop: '16px', padding: '12px', backgroundColor: '#f3f4f6', borderRadius: '4px' }}>
-                  {w.skills.map((skillCategory, index) => (
-                    <div key={index} style={{ marginBottom: index < w.skills.length - 1 ? '12px' : '0' }}>
-                      <div style={{ fontSize: '13px', fontWeight: '600', color: '#111827', marginBottom: '4px' }}>
-                        {skillCategory.name}
-                      </div>
-                      <div style={{ fontSize: '12px', color: '#4b5563' }}>
-                        {skillCategory.keywords.join(', ')}
-                      </div>
+                  {typeof w.skills[0] === 'string' ? (
+                    <div style={{ fontSize: '12px', color: '#4b5563' }}>
+                      {(w.skills as string[]).join(', ')}
                     </div>
-                  ))}
+                  ) : (
+                    (w.skills as Array<{ name?: string; keywords?: string[] }>).map((skillCategory, index) => (
+                      <div key={index} style={{ marginBottom: index < w.skills.length - 1 ? '12px' : '0' }}>
+                        {skillCategory.name && (
+                          <div style={{ fontSize: '13px', fontWeight: '600', color: '#111827', marginBottom: '4px' }}>
+                            {skillCategory.name}
+                          </div>
+                        )}
+                        {skillCategory.keywords && skillCategory.keywords.length > 0 && (
+                          <div style={{ fontSize: '12px', color: '#4b5563' }}>
+                            {skillCategory.keywords.join(', ')}
+                          </div>
+                        )}
+                      </div>
+                    ))
+                  )}
                 </div>
               </WorkContent>
             )}
