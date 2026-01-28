@@ -13,31 +13,25 @@ I will leverage copilot to build the tooling around this repository and fix it b
 - A `base` version of the resume data in two languages: [English](./resume-json/resume-en.json) and [French](./resume-json/resume-fr.json)
 - Automated validation of resume formats against the json resume [schema](https://jsonresume.org/schema)
 - Automated publishing (only for the base version) of the CV against the [public gist](https://gist.github.com/Niceplace/8e587fe79ca40a637589b1d2d5c9373d) of my resume
-- Multiple resume themes with flexible rendering
+- **Rendered HTML CV published to GitHub Pages** - View the latest version at `https://niceplace.github.io/cv/`
 
-# Rendering Resumes
+## GitHub Pages Setup
 
-Render resume with a specific theme:
+The CV is automatically rendered to HTML and published to GitHub Pages on every push to the `main` branch that modifies the `rendered/` directory.
 
-```bash
-bun run render modern-classic
-```
+### How to Enable GitHub Pages (One-time setup)
 
-Render with default theme (nordic-minimal):
+1. Go to the repository **Settings** → **Pages**
+2. Under **Source**, select **GitHub Actions**
+3. Save the settings
 
-```bash
-bun run render
-```
+Once enabled, the CV will be automatically deployed to `https://niceplace.github.io/cv/` whenever changes are pushed to the `rendered/` directory on the `main` branch.
 
-Available themes:
-
-- nordic-minimal
-- modern-classic
-- french-atelier
-- tailwind
-- typewriter-modern
-
-Rendered HTML files are saved in the `rendered/` directory with the naming convention `{lang}-resume-{theme}.html`
+The deployment uses GitHub's free tier, which provides:
+- Free hosting for public repositories
+- Automatic HTTPS
+- Fast CDN distribution
+- No build minute limits for public repositories
 
 # Out of scope
 

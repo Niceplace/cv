@@ -1,0 +1,47 @@
+name: Deploy CV to GitHub Pages
+
+on:
+  # Runs on pushes to main that affect the rendered CV
+  push:
+    branches:
+      - main
+    paths:
+      - 'rendered/**'
+      - '.github/workflows/deploy-pages.yml'
+  
+  # Allows manual trigger from Actions tab
+  workflow_dispatch:
+
+# Sets permissions for GitHub Pages deployment
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# Allow one concurrent deployment
+concurrency:
+  group: "pages"
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@8e8c483db84b4bee98b60c0593521ed34d9990e8 #v6.0.1
+      
+      - name: Setup Pages
+        uses: actions/configure-pages@4b4cf8f0e3cce836d288935dc6f57e053d935312 #v5.0.0
+      
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@84bb4cd4b733d5c320c9c9cfbc354937524f4d64 #v3.0.1
+        with:
+          # Upload the rendered directory
+          path: 'rendered'
+      
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@5057b7e0d76ded90cec13763330f25f29d0e5e44 #v4.0.7
