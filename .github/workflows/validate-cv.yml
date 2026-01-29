@@ -64,6 +64,15 @@ jobs:
           # Pass validation output via environment variable to avoid bash escaping issues
           bun scripts/for-github-actions/post-pr-comment.ts "$VALIDATION_OUTPUT" "${{ github.event.pull_request.number }}"
 
+      - name: Post PR comment on validation success
+        if: steps.validate.outputs.validation_status == 'success' && github.event_name == 'pull_request'
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          # Use the TypeScript post-pr-comment script with Bun runtime
+          # Pass "success" to indicate validation passed
+          bun scripts/for-github-actions/post-pr-comment.ts "success" "${{ github.event.pull_request.number }}"
+
       - name: Fail workflow if validation failed
         if: steps.validate.outputs.validation_status == 'failed'
         run: exit 1

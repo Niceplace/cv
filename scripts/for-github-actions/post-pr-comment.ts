@@ -22,6 +22,7 @@ if (Bun.argv.length !== 4) {
 const validationOutput = Bun.argv[2]
 const prNumber = Bun.argv[3]
 
+// Allow "success" as a special case for validation output
 if (!validationOutput) {
   console.error('Error: Validation output cannot be empty')
   process.exit(1)
@@ -55,19 +56,25 @@ if (!githubRepo) {
 // Create a unique identifier for our validation comment
 const COMMENT_MARKER = '<!-- resume-validation-workflow-comment -->'
 
-// Create comment body
-const commentBody = `${COMMENT_MARKER}
-## ❌ Resume Validation Failed
+// Determine if validation passed or failed
+const isSuccess = validationOutput === 'success'
 
-The resume validation failed with the following errors:
+// Create comment body based on validation result
+const commentBody = `${COMMENT_MARKER}
+${isSuccess ? '## ✅ Resume Validation Passed' : '## ❌ Resume Validation Failed'}
+
+${isSuccess
+  ? 'All resume files passed validation successfully!'
+  : `The resume validation failed with the following errors:
 
 \`\`\`
 ${validationOutput}
 \`\`\`
 
-Please fix the validation errors and push changes again.`
+Please fix the validation errors and push changes again.`}
+`
 
-async function main() {
+const main = async (): Promise<void> => {
   try {
     // Fetch PR comments using GitHub API
     const commentsResponse = await fetch(

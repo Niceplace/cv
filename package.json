@@ -3,7 +3,7 @@
   "type": "module",
   "scripts": {
     "render": "bun run scripts/render-resume.ts",
-    "validate-schema": "bun run scripts/github-actions/validate-schema.ts",
+    "validate-schema": "bun run scripts/for-github-actions/validate-schema.ts",
     "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
     "lint:fix": "eslint . --ext .js,.jsx,.ts,.tsx --fix",
     "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md}\"",
