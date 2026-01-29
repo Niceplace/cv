@@ -55,7 +55,7 @@ jobs:
           bun install
 
       - name: Render CV for GitHub Pages (phone stripped)
-        run: bun run scripts/for-github-actions/render-for-github-pages.ts nordic-minimal --strip-phone
+        run: bun run scripts/render-resume.ts nordic-minimal --output-dir github-pages --strip-phone
 
       - name: Verify phone number is stripped
         run: |
