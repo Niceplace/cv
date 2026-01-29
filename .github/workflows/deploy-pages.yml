@@ -32,7 +32,7 @@ permissions:
 
 # Allow one concurrent deployment
 concurrency:
-  group: "pages"
+  group: 'pages'
   cancel-in-progress: true
 
 jobs:
@@ -66,10 +66,10 @@ jobs:
           echo "✓ Phone number successfully stripped from all files"
 
       - name: Setup Pages
-        uses: actions/configure-pages@4b4cf8f0e3cce836d288935dc6f57e053d935312 #v5.0.0
+        uses: actions/configure-pages@983d7736d9b0ae728b81ab479565c72886d7745b #v5.0.0
 
       - name: Upload artifact
-        uses: actions/upload-pages-artifact@84bb4cd4b733d5c320c9c9cfbc354937524f4d64 #v3.0.1
+        uses: actions/upload-pages-artifact@7b1f4a764d45c48632c6b24a0339c27f5614fb0b #v4.0.0
         with:
           # Upload the github-pages directory (with phone stripped)
           path: 'github-pages'
@@ -78,4 +78,4 @@ jobs:
         # Only deploy on push to main, not on PRs
         if: github.event_name == 'push' && github.ref == 'refs/heads/main'
         id: deployment
-        uses: actions/deploy-pages@5057b7e0d76ded90ec13763330f25f29d0e5e44 #v4.0.7
+        uses: actions/deploy-pages@d6db90164ac5ed86f2b6aed7e0febac5b3c0c03e #v4.0.5
