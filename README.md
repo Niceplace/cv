@@ -23,7 +23,7 @@ Render resume with a specific theme:
 bun run render modern-classic
 ```
 
-Render with default theme (nordic-minimal):
+Render with default theme (modern-classic):
 
 ```bash
 bun run render
@@ -31,11 +31,7 @@ bun run render
 
 Available themes:
 
-- nordic-minimal
 - modern-classic
-- french-atelier
-- tailwind
-- typewriter-modern
 
 Rendered HTML files are saved in the `rendered/` directory with the naming convention `{lang}-resume-{theme}.html`
 
