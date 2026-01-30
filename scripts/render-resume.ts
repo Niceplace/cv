@@ -58,7 +58,7 @@ function parseArgs(): RenderOptions {
       case '-h':
         printHelp()
         process.exit(0)
-        break
+        // eslint-disable-next-line no-fallthrough
       default:
         // If it doesn't start with -, it's the theme name
         if (!arg.startsWith('-')) {
