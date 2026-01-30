@@ -7,7 +7,7 @@ on:
       - 'resume-*.json'
       - 'scripts/**'
       - 'themes/**'
-      - '.github/workflows/update.yml'
+      - '.github/workflows/publish-to-github-pages.yml'
   workflow_dispatch:
 
 permissions:
@@ -19,12 +19,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout CV repo
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6.0.1 # 8e8c483db84b4bee98b60c0593521ed34d9990e8
         with:
           path: cv
 
       - name: Setup Bun
-        uses: oven-sh/setup-bun@v2
+        uses: oven-sh/setup-bun@v2.1.2 # 3d267786b128fe76c2f16a390aa2448b815359f3
         with:
           bun-version: latest
 
@@ -41,7 +41,7 @@ jobs:
             --combined
 
       - name: Checkout niceplace.github.io
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6.0.1 # 8e8c483db84b4bee98b60c0593521ed34d9990e8
         with:
           repository: Niceplace/niceplace.github.io
           path: target
@@ -53,7 +53,7 @@ jobs:
           cp cv/output/index.html target/cv/index.html
 
       - name: Create Pull Request
-        uses: peter-evans/create-pull-request@v6
+        uses: peter-evans/create-pull-request@v8.1.0 # c0f553fe549906ede9cf27b5156039d195d2ece0
         with:
           path: target
           token: ${{ secrets.PUBLISH_CV_TOKEN }}
