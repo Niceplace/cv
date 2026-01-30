@@ -45,7 +45,7 @@ jobs:
         with:
           repository: Niceplace/niceplace.github.io
           path: target
-          token: ${{ secrets.GH_TOKEN }}
+          token: ${{ secrets.PUBLISH_CV_TOKEN }}
 
       - name: Copy rendered CV
         run: |
@@ -56,7 +56,7 @@ jobs:
         uses: peter-evans/create-pull-request@v6
         with:
           path: target
-          token: ${{ secrets.GH_TOKEN }}
+          token: ${{ secrets.PUBLISH_CV_TOKEN }}
           branch: update-cv
           title: "Update rendered CV"
           body: "Automated CV update from Niceplace/cv"
