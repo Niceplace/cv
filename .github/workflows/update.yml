@@ -1,0 +1,63 @@
+name: Update CV in niceplace.github.io
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'resume-*.json'
+      - 'scripts/**'
+      - 'themes/**'
+      - '.github/workflows/update.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  update-cv:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout CV repo
+        uses: actions/checkout@v4
+        with:
+          path: cv
+
+      - name: Setup Bun
+        uses: oven-sh/setup-bun@v2
+        with:
+          bun-version: latest
+
+      - name: Install dependencies
+        working-directory: cv
+        run: bun install
+
+      - name: Render CV
+        working-directory: cv
+        run: |
+          bun run scripts/render-resume.ts modern-classic \
+            --output-dir output \
+            --strip-phone \
+            --combined
+
+      - name: Checkout niceplace.github.io
+        uses: actions/checkout@v4
+        with:
+          repository: Niceplace/niceplace.github.io
+          path: target
+          token: ${{ secrets.GH_TOKEN }}
+
+      - name: Copy rendered CV
+        run: |
+          mkdir -p target/cv
+          cp cv/output/index.html target/cv/index.html
+
+      - name: Create Pull Request
+        uses: peter-evans/create-pull-request@v6
+        with:
+          path: target
+          token: ${{ secrets.GH_TOKEN }}
+          branch: update-cv
+          title: "Update rendered CV"
+          body: "Automated CV update from Niceplace/cv"
+          commit-message: "Update CV"

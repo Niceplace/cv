@@ -482,6 +482,30 @@ const InterestItem = styled.li`
   }
 `
 
+// Footer component with credits
+const Footer = styled.footer`
+  margin-top: 50px;
+  padding-top: 25px;
+  border-top: 1px solid #e5e7eb;
+  text-align: center;
+  font-size: 0.875rem;
+  color: #9ca3af;
+  font-weight: 400;
+
+  @media print {
+    display: none;
+  }
+`
+
+const FooterLink = styled.a`
+  color: #0066cc;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+`
+
 // Skills display for work experience - inline with full-width background
 const WorkSkillsContainer = styled.div`
   margin: 8px 0 12px 0;
@@ -881,6 +905,21 @@ function Resume({ resume }: ResumeProps) {
             ))}
           </Section>
         )}
+
+        <Footer>
+          Made with &lt;3 using{' '}
+          <FooterLink href="https://github.com/rbardini/resumed" target="_blank" rel="noopener noreferrer">
+            resumed
+          </FooterLink>
+          ,{' '}
+          <FooterLink href="https://github.com/jsonresume/resume-schema" target="_blank" rel="noopener noreferrer">
+            resume-schema
+          </FooterLink>
+          , and the{' '}
+          <FooterLink href="https://github.com/jsonresume/jsonresume.org" target="_blank" rel="noopener noreferrer">
+            modern-classic theme
+          </FooterLink>
+        </Footer>
       </Layout>
     </>
   )
