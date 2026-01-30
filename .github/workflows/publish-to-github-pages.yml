@@ -52,12 +52,40 @@ jobs:
           mkdir -p target/cv
           cp cv/output/index.html target/cv/index.html
 
+      - name: Configure Git
+        working-directory: target
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+
+      - name: Create and checkout branch
+        working-directory: target
+        run: |
+          git checkout -b update-cv || git switch update-cv
+
+      - name: Commit changes
+        working-directory: target
+        run: |
+          git add cv/index.html
+          git commit -m "Update CV" || echo "No changes to commit"
+
+      - name: Push branch
+        working-directory: target
+        run: |
+          git push origin update-cv --force
+
       - name: Create Pull Request
-        uses: peter-evans/create-pull-request@v8.1.0 # c0f553fe549906ede9cf27b5156039d195d2ece0
-        with:
-          path: target
-          token: ${{ secrets.PUBLISH_CV_TOKEN }}
-          branch: update-cv
-          title: "Update rendered CV"
-          body: "Automated CV update from Niceplace/cv"
-          commit-message: "Update CV"
+        working-directory: target
+        env:
+          GH_TOKEN: ${{ secrets.PUBLISH_CV_TOKEN }}
+        run: |
+          # Check if PR already exists
+          if gh pr list --head update-cv --json number --jq '. | length' | grep -q "0"; then
+            gh pr create \
+              --base main \
+              --head update-cv \
+              --title "Update rendered CV" \
+              --body "Automated CV update from Niceplace/cv"
+          else
+            echo "PR already exists"
+          fi
