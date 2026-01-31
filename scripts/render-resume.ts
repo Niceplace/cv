@@ -58,11 +58,13 @@ function parseArgs(): RenderOptions {
       case '-h':
         printHelp()
         process.exit(0)
+        // eslint-disable-next-line no-fallthrough
       default:
         // If it doesn't start with -, it's the theme name
         if (!arg.startsWith('-')) {
           options.theme = arg
         }
+        break
     }
   }
 
@@ -74,7 +76,7 @@ function printHelp() {
 Usage: bun run scripts/render-resume.ts [theme] [options]
 
 Arguments:
-  theme              Theme name to render (default: nordic-minimal)
+  theme              Theme name to render (default: modern-classic)
 
 Options:
   -o, --output-dir   Output directory (default: rendered)
