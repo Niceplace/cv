@@ -49,8 +49,8 @@ jobs:
 
       - name: Copy rendered CV
         run: |
-          mkdir -p target/public/cv
-          cp cv/output/index.html target/public/cv/index.html
+          mkdir -p target/public/resume
+          cp cv/output/index.html target/public/resume/index.html
 
       - name: Configure Git
         working-directory: target
@@ -66,8 +66,8 @@ jobs:
       - name: Commit changes
         working-directory: target
         run: |
-          git add public/cv/index.html
-          git commit -m "Update CV" || echo "No changes to commit"
+          git add public/resume/index.html
+          git commit -m "Update resume" || echo "No changes to commit"
 
       - name: Push branch
         working-directory: target
@@ -84,8 +84,8 @@ jobs:
             gh pr create \
               --base main \
               --head update-cv \
-              --title "Update rendered CV" \
-              --body "Automated CV update from Niceplace/cv"
+              --title "Update rendered resume" \
+              --body "Automated resume update from Niceplace/cv"
           else
             echo "PR already exists"
           fi
