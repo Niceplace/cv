@@ -49,8 +49,8 @@ jobs:
 
       - name: Copy rendered CV
         run: |
-          mkdir -p target/cv
-          cp cv/output/index.html target/cv/index.html
+          mkdir -p target/public/cv
+          cp cv/output/index.html target/public/cv/index.html
 
       - name: Configure Git
         working-directory: target
@@ -66,7 +66,7 @@ jobs:
       - name: Commit changes
         working-directory: target
         run: |
-          git add cv/index.html
+          git add public/cv/index.html
           git commit -m "Update CV" || echo "No changes to commit"
 
       - name: Push branch
